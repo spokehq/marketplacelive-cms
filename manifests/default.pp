@@ -155,7 +155,10 @@ mysql::db { $db_name:
 exec { "import-schema":
       command => "mysql -u ${db_user} --password=${db_pass} ${db_name} < /var/www/db/schema.sql",
       onlyif  => "[ -f /var/www/db/schema.sql ]",
-      require  => Class['phpmyadmin'],
+      require  =>  [
+        Class['mysql::server'],
+        Class['mysql::config']
+        ],
 }
 
 exec { "import-data":
