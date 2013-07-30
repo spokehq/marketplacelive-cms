@@ -1,5 +1,11 @@
+# repo including most config
+$project_path = '/var/www'
+
+# public accessible site path
+$public_path = 'var/www/site'
+
 # what to name the site?
-$dev_site_name = ''
+$dev_site_name = '' # like example.com
 
 # mysql creds, whatever you want them to be
 $db_name    = ''
@@ -52,7 +58,7 @@ apache::vhost { $dev_site_name:
   server_name   => $dev_site_name,
   serveraliases => [
 ],
-  docroot       => '/var/www/site',
+  docroot       => $public_path,
   port          => '80',
   env_variables => [
 ],
@@ -88,7 +94,7 @@ php::pecl::module { 'xhprof':
 
 apache::vhost { 'xhprof':
   server_name => 'xhprof',
-  docroot     => '/var/www/xhprof/xhprof_html',
+  docroot     => '${project_path}/xhprof/xhprof_html',
   port        => 80,
   priority    => '1',
   require     => Php::Pecl::Module['xhprof']
@@ -153,17 +159,17 @@ mysql::db { $db_name:
 }
 
 exec { "import-schema":
-      command => "mysql -u ${db_user} --password=${db_pass} ${db_name} < /var/www/db/schema.sql",
-      onlyif  => "[ -f /var/www/db/schema.sql ]",
+      command => "mysql -u ${db_user} --password=${db_pass} ${db_name} < ${project_path}/db/schema.sql",
+      onlyif  => "[ -f ${project_path}/db/schema.sql ]",
       require  =>  [
         Class['mysql::server'],
         Class['mysql::config']
-        ],
+      ],
 }
 
 exec { "import-data":
-      command => "mysql -u ${db_user} --password=${db_pass} ${db_name} < /var/www/db/data.sql",
-      onlyif  => "[ -f /var/www/db/data.sql ]",
+      command => "mysql -u ${db_user} --password=${db_pass} ${db_name} < ${project_path}/db/data.sql",
+      onlyif  => "[ -f ${project_path}/db/data.sql ]",
       require => Exec['import-schema'],
 }
 
@@ -180,14 +186,24 @@ apache::vhost { 'phpmyadmin':
 }
 
 file { 'git-hooks':
-  path    => '/var/www/.git/hooks/pre-commit',
+  path    => "${project_path}/.git/hooks/pre-commit",
   ensure  => present,
   mode    => 744,
-  content => "#! /bin/sh
-  # export schema
-  mysqldump -u ${db_user} --password=${db_pass} --no-data --no-create-db ${db_name} > db/schema.sql
-  #export data
-  mysqldump -u ${db_user} --password=${db_pass} --no-create-info --skip-extended-insert ${db_name} > db/data.sql
-  git add db/*",
+  content => "
+#! /bin/sh
+# export schema
+mysqldump -u ${db_user} --password=${db_pass} --no-data --no-create-db ${db_name} > db/schema.sql
+#export data
+mysqldump -u ${db_user} --password=${db_pass} --no-create-info --skip-extended-insert ${db_name} > db/data.sql
+git add db/*",
   require => Package['git-core'],
 }
+
+# file to guarantee modulepath is correct
+  file {'/etc/puppet/puppet.conf':
+    path      => '/etc/puppet/puppet.conf',
+    content  => "
+[main]
+  modulepath = ${project_path}/modules",
+    ensure  => present,
+  }
