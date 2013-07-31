@@ -2,7 +2,7 @@
 $project_path = '/var/www'
 
 # public accessible site path
-$public_path = 'var/www/site'
+$public_path = '/var/www/site'
 
 # what to name the site?
 $dev_site_name = '' # like example.com
