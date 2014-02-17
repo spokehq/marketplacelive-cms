@@ -209,10 +209,9 @@ file { 'git-hook-post-checkout':
   content => "
 #! /bin/sh
 
-# truncate files
-# cat /dev/null > db/schema.sql
-# cat /dev/null > db/data.sql
-mysql -u ${db_user} --password=${db_pass} ${db_name} -Nse 'show tables' ${db_name} | while read table; do mysql -e 'drop table $table' ${db_name}; done 
+# drop and recreate database
+mysql -u ${db_user} --password=${db_pass} -e 'DROP DATABASE ${db_name}';
+mysql -u ${db_user} --password=${db_pass} -e 'CREATE DATABASE ${db_name}';
 
 # import schema
 mysql -u ${db_user} --password=${db_pass} ${db_name} < db/schema.sql
