@@ -191,10 +191,13 @@ file { 'git-hook-pre-commit':
   mode    => 744,
   content => "
 #! /bin/sh
+
 # export schema
 mysqldump -u ${db_user} --password=${db_pass} --no-data --no-create-db ${db_name} > db/schema.sql
+
 #export data
 mysqldump -u ${db_user} --password=${db_pass} --no-create-info --skip-extended-insert ${db_name} > db/data.sql
+# be sure we add and commit the new databases
 git add db/*",
   require => Package['git-core'],
 }
@@ -205,9 +208,14 @@ file { 'git-hook-post-checkout':
   mode    => 744,
   content => "
 #! /bin/sh
-# export schema
+
+# truncate files
+cat /dev/null > db/schema.sql
+cat /dev/null > db/data.sql
+
+# import schema
 mysql -u ${db_user} --password=${db_pass} ${db_name} < db/schema.sql
-#export data
+#import data
 mysql -u ${db_user} --password=${db_pass} ${db_name} < db/data.sql
 git add db/*",
   require => Package['git-core'],
