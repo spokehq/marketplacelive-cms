@@ -5,12 +5,12 @@ $project_path = '/var/www'
 $public_path = '/var/www/site'
 
 # what to name the site?
-$dev_site_name = '' # like example.com
+$dev_site_name = 'lamp.dev' # like example.com
 
 # mysql creds, whatever you want them to be
-$db_name    = ''
-$db_user    = ''
-$db_pass    = ''
+$db_name    = 'lamp'
+$db_user    = 'lamp'
+$db_pass    = 'lamp24lamp!'
 
 
 group { 'puppet': ensure => present }
@@ -185,7 +185,7 @@ apache::vhost { 'phpmyadmin':
   require     => Class['phpmyadmin'],
 }
 
-file { 'git-hooks':
+file { 'git-hook-pre-commit':
   path    => "${project_path}/.git/hooks/pre-commit",
   ensure  => present,
   mode    => 744,
@@ -195,6 +195,20 @@ file { 'git-hooks':
 mysqldump -u ${db_user} --password=${db_pass} --no-data --no-create-db ${db_name} > db/schema.sql
 #export data
 mysqldump -u ${db_user} --password=${db_pass} --no-create-info --skip-extended-insert ${db_name} > db/data.sql
+git add db/*",
+  require => Package['git-core'],
+}
+
+file { 'git-hook-post-checkout':
+  path    => "${project_path}/.git/hooks/post-checkout",
+  ensure  => present,
+  mode    => 744,
+  content => "
+#! /bin/sh
+# export schema
+mysql -u ${db_user} --password=${db_pass} ${db_name} < db/schema.sql
+#export data
+mysql -u ${db_user} --password=${db_pass} ${db_name} < db/data.sql
 git add db/*",
   require => Package['git-core'],
 }
