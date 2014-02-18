@@ -5,12 +5,12 @@ $project_path = '/var/www'
 $public_path = '/var/www/site'
 
 # what to name the site?
-$dev_site_name = 'lamp.dev' # like example.com
+$dev_site_name = '' # like example.com
 
 # mysql creds, whatever you want them to be
-$db_name    = 'lamp'
-$db_user    = 'lamp'
-$db_pass    = 'lamp24lamp!'
+$db_name    = ''
+$db_user    = ''
+$db_pass    = ''
 
 
 group { 'puppet': ensure => present }
@@ -158,6 +158,10 @@ mysql::db { $db_name:
   require  => Class['mysql::server'],
 }
 
+class { 'phpmyadmin':
+  require => [Class['mysql::server'], Class['mysql::config'], Class['php']],
+}
+
 exec { "import-schema":
       command => "mysql -u ${db_user} --password=${db_pass} ${db_name} < ${project_path}/db/schema.sql",
       onlyif  => "[ -f ${project_path}/db/schema.sql ]",
@@ -173,9 +177,6 @@ exec { "import-data":
       require => Exec['import-schema'],
 }
 
-class { 'phpmyadmin':
-  require => [Class['mysql::server'], Class['mysql::config'], Class['php']],
-}
 
 apache::vhost { 'phpmyadmin':
   server_name => 'phpmyadmin',
