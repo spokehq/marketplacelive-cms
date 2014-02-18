@@ -1,3 +1,5 @@
+
+
 # repo including most config
 $project_path = '/var/www'
 
@@ -158,9 +160,6 @@ mysql::db { $db_name:
   require  => Class['mysql::server'],
 }
 
-class { 'phpmyadmin':
-  require => [Class['mysql::server'], Class['mysql::config'], Class['php']],
-}
 
 exec { "import-schema":
       command => "mysql -u ${db_user} --password=${db_pass} ${db_name} < ${project_path}/db/schema.sql",
@@ -177,6 +176,9 @@ exec { "import-data":
       require => Exec['import-schema'],
 }
 
+class { 'phpmyadmin':
+  require => [Class['mysql::server'], Class['mysql::config'], Class['php']],
+}
 
 apache::vhost { 'phpmyadmin':
   server_name => 'phpmyadmin',

@@ -1,1 +1,0 @@
-INSERT INTO tutorials_tbl VALUES(null, 'To Kill a Mockingbird', 'Harper Lee', NOW());
