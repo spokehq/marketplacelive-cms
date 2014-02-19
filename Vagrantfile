@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   end
 
   
-  config.vm.synced_folder "./", "/var/www", id: "vagrant-root"
+  config.vm.synced_folder "./", "/var/www", id: "vagrant-root", owner: "www-data", group: "www-data"
   config.vm.provision :shell, :inline => "sudo apt-get update"
 
 
