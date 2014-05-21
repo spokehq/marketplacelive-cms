@@ -44,6 +44,10 @@ package { [
   ensure  => 'installed',
 }
 
+exec { "set-timezone":
+  command =>  "sudo ln -sf /usr/share/zoneinfo/America/Detroit /etc/localtime"
+}
+
 service { 'ufw':
   ensure => 'stopped',
 }
