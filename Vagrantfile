@@ -13,11 +13,15 @@ Vagrant.configure("2") do |config|
 
   
   config.vm.synced_folder "./", "/var/www", id: "vagrant-root", owner: "www-data", group: "www-data"
+
   config.vm.provision :shell, :inline => "sudo apt-get update"
 
+  config.hostsupdater.aliases = ["", ""]
 
   config.vm.provision :shell, :inline => 'echo -e "mysql_root_password=akt@1687
-controluser_password=awesome" > /etc/phpmyadmin.facts;'
+
+
+  controluser_password=awesome" > /etc/phpmyadmin.facts;'
 
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "manifests"

@@ -33,6 +33,11 @@ More documentation:
 
       v.customize ["modifyvm", :id, "--name", "{SOMETHING}.{DEV}"]
 
+      ...
+      
+      config.hostsupdater.aliases = ["{SOMETHING}.{DEV}", "phpmyadmin.{SOMETHING}.{DEV}"]
+
+
 **manifests/default.pp**
 
     Config Vars Section
