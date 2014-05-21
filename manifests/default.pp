@@ -7,12 +7,12 @@ $project_path = '/var/www'
 $public_path = '/var/www/site'
 
 # what to name the site?
-$dev_site_name = 'testsite.dev' # like example.com
+$dev_site_name = '' # like example.com
 
 # mysql creds, whatever you want them to be
-$db_name    = 'testsite'
-$db_user    = 'testsite'
-$db_pass    = 'test24site!'
+$db_name    = ''
+$db_user    = ''
+$db_pass    = ''
 
 
 group { 'puppet': ensure => present }
