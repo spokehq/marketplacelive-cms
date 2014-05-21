@@ -1,4 +1,3 @@
-
 #####The setup includes:
 * box:       precise64 (http://files.vagrantup.com/precise64.box)* webserver: apache
 * database:  mysql
@@ -6,6 +5,7 @@
 
 ####Next steps:
 **If you have not installed Vagrant yet, go to http://downloads.vagrantup.com/**
+** You must also install vagrant-hostsupdater from https://github.com/cogitatio/vagrant-hostsupdater**
 
 ##Starting a new Project
 Fork or clone this Repository
