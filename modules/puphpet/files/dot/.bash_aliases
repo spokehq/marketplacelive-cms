@@ -51,3 +51,7 @@ alias mv='mv -iv'
 alias grep='grep --color=auto -in'
 alias v='vim'
 alias ..='cd ..'
+
+# More handy aliases
+alias pup='sudo puppet apply /var/www/manifests/default.pp'
+alias pub='cd /var/www'
