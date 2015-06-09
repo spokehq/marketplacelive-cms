@@ -94,7 +94,7 @@ class php::params {
   $augeas = false
   $template = ''
   $options = ''
-  $version = 'present'
+  $version = 'latest'
   $service_autorestart = true
   $absent = false
 

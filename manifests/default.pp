@@ -28,6 +28,10 @@ Class['::apt::update'] -> Package <|
 and title != 'software-properties-common'
 |>
 
+apt::ppa { 'install-php5-ppa':
+  require => Package['python-software-properties'],
+  name => 'ppa:ondrej/php5-oldstable',
+}
     
 file { '/home/vagrant/.bash_aliases':
   ensure => 'present',
@@ -40,6 +44,7 @@ package { [
     'curl',
     'git-core',
     'htop',
+    'python-software-properties',
   ]:
   ensure  => 'installed',
 }
