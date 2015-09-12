@@ -1,8 +1,7 @@
-
 #####The setup includes:
 * box:       precise64 (http://files.vagrantup.com/precise64.box)* webserver: apache
 * database:  mysql
-* PHP:       PHP 5.3
+* PHP:       PHP 5.4
 
 ####Next steps:
 **If you have not installed Vagrant yet, go to http://downloads.vagrantup.com/**
