@@ -7,7 +7,7 @@ $project_path = '/var/www'
 $public_path = '/var/www/site'
 
 # what to name the site?
-$dev_site_name = '' # like example.com
+$dev_site_name = '' # like example.dev
 
 # mysql creds, whatever you want them to be
 $db_name    = ''
