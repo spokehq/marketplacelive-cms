@@ -1,2 +1,18 @@
 .DS_Store
 .vagrant
+.idea/
+
+# Wordpress
+#/site/.htaccess
+#/site/sitemap.xml
+#/site/sitemap.xml.gz
+#/site/wp-config.php
+#/site/wp-content/advanced-cache.php
+#/site/wp-content/backup-db/
+#/site/wp-content/backups/
+#/site/wp-content/blogs.dir/
+#/site/wp-content/cache/
+#/site/wp-content/upgrade/
+#/site/wp-content/uploads/
+#/site/wp-content/wp-cache-config.php
+/site/*.log
