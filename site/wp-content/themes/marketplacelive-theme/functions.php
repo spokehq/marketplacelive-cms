@@ -26,3 +26,47 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+/**
+ * Add custom SpokeHQ login image and click functionality for theme
+ *
+ */
+function spokehq_loginlogo() {
+
+  echo "<style type=\"text/css\">
+    .login {
+    background: #D3D3D3;
+    }
+    .login h1 a {
+      background-image: url('" . get_template_directory_uri() . "/assets/images/spoke-theme.png') !important;
+      width: 320px;height: 97px;background-size: 300px 52px;background-position: center center;
+    }
+  </style>";
+
+}
+
+add_action('login_head', 'spokehq_loginlogo');
+
+function spokehq_loginURL() {
+  return 'http://www.spokehq.com';
+}
+
+add_filter('login_headerurl', 'spokehq_loginURL');
+
+function spokehq_loginURLtext() {
+  return 'Spoke™ | Web &amp; Emerging Media, Strategy, Development, Management and Online Branding';
+}
+
+add_filter('login_headertitle', 'spokehq_loginURLtext');
+
+function spokehq_loginfooter() { ?>
+
+  <p style="text-align: center; margin-top: 1em;">
+    If you have questions, <a style="color: #ea430c; text-decoration: none;
+  "href="http://www.spokehq.com/contact/">Speak to Spoke.
+    </a>
+  </p>
+
+<?php }
+
+add_action('login_footer','spokehq_loginfooter');
