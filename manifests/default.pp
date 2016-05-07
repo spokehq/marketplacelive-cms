@@ -7,12 +7,12 @@ $project_path = '/var/www'
 $public_path = '/var/www/site'
 
 # what to name the site?
-$dev_site_name = '' # like example.dev
+$dev_site_name = 'marketplacelive.dev' # like example.dev
 
 # mysql creds, whatever you want them to be
-$db_name    = ''
-$db_user    = ''
-$db_pass    = ''
+$db_name    = 'marketpl_wp'
+$db_user    = 'marketpl_wp'
+$db_pass    = 'mark121Plc!'
 
 
 group { 'puppet': ensure => present }
