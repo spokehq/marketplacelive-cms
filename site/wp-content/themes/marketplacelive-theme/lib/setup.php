@@ -52,25 +52,54 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
 /**
  * Register sidebars
+ * Leaving in the standard 'Primary' for the blog
+ * Adding four footer sidebars, the last being a full-width container.
  */
 function widgets_init() {
-  register_sidebar([
-    'name'          => __('Primary', 'sage'),
-    'id'            => 'sidebar-primary',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
-  ]);
+    register_sidebar([
+        'name'          => __('Primary', 'sage'),
+        'id'            => 'sidebar-primary',
+        'before_widget' => '<section class="widget %1$s %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>'
+    ]);
 
-  register_sidebar([
-    'name'          => __('Footer', 'sage'),
-    'id'            => 'sidebar-footer',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
-  ]);
+    register_sidebar(array(
+        'name'          => __('Footer Area 1', 'sage'),
+        'id'            => 'sidebar-footer-1',
+        'before_widget' => '<div class="col-xs-12 col-sm-6 clearfix"><section class="widget %1$s %2$s">',
+        'after_widget'  => '</section></div>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
+    ));
+
+    register_sidebar(array(
+        'name'          => __('Footer Area 2', 'sage'),
+        'id'            => 'sidebar-footer-2',
+        'before_widget' => '<div class="col-xs-12 col-sm-3 clearfix"><section class="widget %1$s %2$s">',
+        'after_widget'  => '</section></div>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
+    ));
+
+    register_sidebar(array(
+        'name'          => __('Footer Area 3', 'sage'),
+        'id'            => 'sidebar-footer-3',
+        'before_widget' => '<div class="col-xs-12 col-sm-3 clearfix"><section class="widget %1$s %2$s">',
+        'after_widget'  => '</section></div>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
+    ));
+
+    register_sidebar(array(
+        'name'          => __('Footer Area Full Bottom', 'sage'),
+        'id'            => 'sidebar-footer-full-bottom',
+        'before_widget' => '<div class="col-md-12"><section class="widget %1$s %2$s sidebar-footer-full-bottom">',
+        'after_widget'  => '</section></div>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
+    ));
 }
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 
@@ -83,6 +112,7 @@ function display_sidebar() {
   isset($display) || $display = !in_array(true, [
     // The sidebar will NOT be displayed if ANY of the following return true.
     // @link https://codex.wordpress.org/Conditional_Tags
+    // template-custom.php should be most pages per current layouts
     is_404(),
     is_front_page(),
     is_page_template('template-custom.php'),
@@ -92,9 +122,10 @@ function display_sidebar() {
 }
 
 /**
- * Theme assets
+ * Theme assets 
  */
 function assets() {
+  wp_enqueue_style( 'google_fonts', 'https://fonts.googleapis.com/css?family=Fira+Sans:300,700,400', false, null );
   wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
 
   if (is_single() && comments_open() && get_option('thread_comments')) {

@@ -39,7 +39,7 @@ function spokehq_loginlogo() {
     background: #D3D3D3;
     }
     .login h1 a {
-      background-image: url('" . get_template_directory_uri() . "/assets/images/spoke-theme.png') !important;
+      background-image: url('" . get_template_directory_uri() . "/dist/images/spoke-theme.png') !important;
       width: 320px;height: 97px;background-size: 300px 52px;background-position: center center;
     }
   </style>";
@@ -71,3 +71,16 @@ function spokehq_loginfooter() { ?>
 <?php }
 
 add_action('login_footer','spokehq_loginfooter');
+
+/**
+ * Add search functionality to Navigation Bar
+ *
+ */
+//function add_nav_menu_search($args) {
+//    //ensure it's the nav menu you want to add the search form to
+//    if($args['theme_location'] == 'primary_navigation') {
+//        $args['items_wrap'] = $args['items_wrap'].get_search_form();
+//    }
+//    return $args;
+//}
+//add_filter('wp_nav_menu_args', 'add_nav_menu_search', 20);
