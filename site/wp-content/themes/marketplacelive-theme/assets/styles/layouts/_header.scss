@@ -1,0 +1,14 @@
+.navbar {
+  min-height: 116px;
+  padding-top:30px;
+  & > .container {
+    width: 100% !important;
+  }
+  .navbar-header {
+    margin-left:160px;
+  }
+;
+  .collapse {
+    float: right;
+  }
+}

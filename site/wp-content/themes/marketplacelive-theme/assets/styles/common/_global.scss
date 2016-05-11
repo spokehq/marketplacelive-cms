@@ -3,3 +3,16 @@ body, h1, h2, h3, h4, p, span {
   font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
+
+.navbar-brand {
+  font-family: "museo-slab",serif;
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-family: 'Lato',sans-serif;
+  text-transform: uppercase;
+  font-weight:500;
+}
+.banner {
+  background: rgba(255,255,255, 0.11);
+}
