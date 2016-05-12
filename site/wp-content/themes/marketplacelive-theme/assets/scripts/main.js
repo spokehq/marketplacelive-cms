@@ -20,7 +20,13 @@
       init: function() {
         // JavaScript to be fired on all pages
 
-        
+          // Nav icon animation
+          $(document).ready(function(){
+              $('#nav-icon').click(function(){
+                  $(this).toggleClass('open');
+              });
+          });
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

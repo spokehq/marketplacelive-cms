@@ -1,0 +1,12 @@
+
+<svg id="rect" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.04 164.71">
+    <defs>
+        <style>
+            .cls-1 {
+             fill: rgba(202,131,133,0.8);
+            }
+        </style>
+    </defs>
+    <title>rect1</title>
+    <path class="cls-1" d="M101.89,163.71h-102V-1h102V163.71ZM90.69,10.52H11V152.19H90.69V10.52Z" transform="translate(0.16 1)"/>
+</svg>
