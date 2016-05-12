@@ -1,3 +1,59 @@
+
+
+.navbar-default {
+  .navbar-brand {
+    font-family: "museo-slab",serif;
+    color: white;
+    span {
+      color: #b3ccea;
+      &:hover {
+        color: #b3ccea;
+      }
+    }
+    &:hover {
+      color: white;
+    }
+  }
+
+  .navbar-nav {
+    &> li {
+      &.active {
+        &> a {
+          font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+          text-transform: uppercase;
+          font-weight: 300;
+          color: rgba(202,131,133,1);
+          background-color: transparent;
+          &:hover {
+            color: rgba(202,131,133,1);
+            background-color: transparent;
+          }
+        }
+      }
+
+      &> a {
+        font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: white;
+        padding: 13px 12px;
+        &:active {
+          color: rgb(202,131,133);
+          background-color: transparent;
+        }
+        &:hover {
+          color: rgba(202,131,133,1);
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+.banner {
+  background: rgba(255,255,255, 0.11);
+}
+
+
 .navbar {
   min-height: 116px;
   padding-top:30px;
@@ -5,10 +61,26 @@
     width: 100% !important;
   }
   .navbar-header {
-    margin-left:160px;
+
   }
-;
+
   .collapse {
     float: right;
   }
 }
+.top-content  {
+  background: url("../images/banner-main.jpg") 0 0 no-repeat;
+  height: 900px;
+  background-size: 100%, contain;
+
+}
+.home
+.top-content  {
+  width: 100%;
+  .page-header {
+    color: white;
+    border: 0;
+  }
+}
+
+
