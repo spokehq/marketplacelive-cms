@@ -1,0 +1,47 @@
+.content-info {
+  background: url("../images/footer-background.jpg") no-repeat scroll 100% / cover rgb(12,40,59);
+  padding: 30px 0 40px 0;
+  color: white;
+  h4 {
+    color: #92b5d3;
+  }
+  .midsection {
+    float: left;
+    padding: 30px 0;
+  }
+  .btn-standard {
+    float: right;
+  }
+  .hosting {
+    float: right;
+    text-align: right;
+    padding: 30px 0;
+
+    .digital-realty {
+      margin-left: 40px;
+    }
+  }
+  .menu {
+    list-style-type: none;
+    padding-left: initial;
+
+    .menu-item {
+      &> a {
+        font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: white;
+        padding: 13px 12px;
+        &:active {
+          color: rgb(202,131,133);
+          background-color: transparent;
+        }
+        &:hover {
+          color: rgba(202,131,133,1);
+          font-weight: 300;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

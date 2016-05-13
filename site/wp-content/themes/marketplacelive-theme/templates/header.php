@@ -43,8 +43,10 @@
 
 
                 </div>
-                <button class="btn btn-standard" type="button" data-toggle="modal" data-target="#regModal">REGISTER</button>
+                <div class="col-sm-12">
+                    <button class="btn btn-standard" type="button" data-toggle="modal" data-target="#regModal">REGISTER</button>
 
+                </div>
             </div>
         </div>
 

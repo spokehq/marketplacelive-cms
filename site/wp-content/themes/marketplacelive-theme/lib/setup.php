@@ -68,7 +68,7 @@ function widgets_init() {
     register_sidebar(array(
         'name'          => __('Footer Area 1', 'sage'),
         'id'            => 'sidebar-footer-1',
-        'before_widget' => '<div class="col-xs-12 col-sm-6 clearfix"><section class="widget %1$s %2$s">',
+        'before_widget' => '<div class="col-xs-12 clearfix"><section class="widget %1$s %2$s">',
         'after_widget'  => '</section></div>',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>',
@@ -77,7 +77,7 @@ function widgets_init() {
     register_sidebar(array(
         'name'          => __('Footer Area 2', 'sage'),
         'id'            => 'sidebar-footer-2',
-        'before_widget' => '<div class="col-xs-12 col-sm-3 clearfix"><section class="widget %1$s %2$s">',
+        'before_widget' => '<div class="col-xs-12 clearfix"><section class="widget %1$s %2$s">',
         'after_widget'  => '</section></div>',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>',
@@ -86,7 +86,7 @@ function widgets_init() {
     register_sidebar(array(
         'name'          => __('Footer Area 3', 'sage'),
         'id'            => 'sidebar-footer-3',
-        'before_widget' => '<div class="col-xs-12 col-sm-3 clearfix"><section class="widget %1$s %2$s">',
+        'before_widget' => '<div class="col-xs-12 clearfix"><section class="widget %1$s %2$s">',
         'after_widget'  => '</section></div>',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>',
