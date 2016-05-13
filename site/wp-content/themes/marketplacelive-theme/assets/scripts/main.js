@@ -26,6 +26,34 @@
                   $(this).toggleClass('open');
               });
           });
+          // Modal
+
+          $("#join-trigger").click(function(){
+              $('#modal-login').modal('hide');
+              $('#modal-join').modal('show');
+          });
+
+          // back to top script
+
+          $(document).ready(function () {
+              // show or hide the sticky footer button
+              $(window).scroll(function () {
+                  if ($(this).scrollTop() > 200) {
+                      $('.go-top').fadeIn(200);
+                  } else {
+                      $('.go-top').fadeOut(200);
+                  }
+              });
+
+              // Animate to scroll to top
+              $('.go-top').click(function (event) {
+                  event.preventDefault();
+
+                  $('html, body').animate({scrollTop: 0}, 300);
+              });
+
+          }); // go top
+
 
       },
       finalize: function() {
