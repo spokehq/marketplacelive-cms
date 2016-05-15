@@ -53,10 +53,11 @@
   .navbar-collapse {
     border: 0;
     box-shadow: none none;
-    float: right;
+    float: none;
     background-color: rgba(12,40,59,.8);
     position: relative;
     top: 35px;
+    margin: 0;
   }
 
   .navbar-toggle {
@@ -148,7 +149,7 @@
   }
 }
 .banner {
-  background: rgba(255,255,255, 0.11);
+  background: rgba(0,0,0,1);
 }
 
 
@@ -163,7 +164,7 @@
   }
 
   .collapse {
-    float: right;
+    //float: right; // float makes text push out of the way
   }
 }
 .banner-main {
@@ -187,6 +188,11 @@
       margin: 0;
       position: relative;
     }
+  }
+}
+.btn {
+  &:focus {
+    color: white;
   }
 }
 .btn-standard {
@@ -224,6 +230,7 @@
   }
 .modal-dialog {
   padding: 30px 0;
+  margin: 0;
 }
 .modal-content {
   box-shadow: none;
@@ -247,11 +254,13 @@
 }
 
 .rect1 {
-  width: 145px;
+  width: 47%;
   position: absolute;
-  top: 90px;
-  left: -92px;
+  top: -100px;
+  left: auto;
+  right: 110px;
   z-index: 0;
+  transform: rotate(90deg);
   transition: 0.25s;
   .cls-2 {
     fill: rgba(202,131,133,0.7);
@@ -259,11 +268,13 @@
 }
 @media (min-width: $screen-xs-min) { // min-width 480
   .rect1 {
-    width: 190px;
+    width: 280px;
     position: absolute;
-    top: 125px;
-    left: -129px;
+    top: -170px;
+    left: auto;
+    right: 110px;
     z-index: 0;
+    //transform: rotate(90deg);
   }
 
 }
@@ -274,6 +285,7 @@
     top: 126px;
     left: -133px;
     z-index: 0;
+    transform: rotate(0deg);
   }
   .navbar-default {
     .navbar-collapse {
@@ -285,6 +297,9 @@
       top: 0;
     }
   }
+  .banner {
+    background: rgba(255,255,255, 0.11);
+  }
 }
 @media (min-width: $screen-md-min) { // min-width 992
   .rect1 {
@@ -293,7 +308,8 @@
     top: 125px;
     left: -129px;
     z-index: 0;
-    }
+    transform: rotate(0deg);
+  }
   .btn-standard {
     // find way to center button
   }
@@ -306,5 +322,6 @@
     top: 126px;
     left: -133px;
     z-index: 0;
+    transform: rotate(0deg);
   }
 }
