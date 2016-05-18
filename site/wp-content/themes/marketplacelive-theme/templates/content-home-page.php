@@ -36,7 +36,7 @@
 
                     ?>
 
-                    <div class="main-content-row">
+                    <div class="main-content-row left-img">
                        <div class="right-text">
 
                            <div class="col-sm-4">
@@ -44,16 +44,18 @@
                                     class="image-left img-responsive" />
                            </div>
                            <div class="col-sm-8">
-                               <div class="heading">
-                                   <h2><?php echo $heading; ?></h2>
-                               </div>
+                               <div class="text-wrapper">
+                                   <div class="heading">
+                                       <h2><?php echo $heading; ?></h2>
+                                   </div>
 
-                               <div class="description">
-                                   <?php echo $desc; ?>
-                               </div>
+                                   <div class="description">
+                                       <?php echo $desc; ?>
+                                   </div>
 
-                               <div class="cta">
-                                   <a class="btn btn-standard clearfix" href="<?php echo $cta_link; ?>" ><?php echo $cta_button; ?></a>
+                                   <div class="cta">
+                                       <a class="btn btn-standard clearfix" href="<?php echo $cta_link; ?>" ><?php echo $cta_button; ?></a>
+                                   </div>
                                </div>
                            </div>
 
@@ -66,20 +68,22 @@
 
                     ?>
 
-                    <div class="main-content-row">
+                    <div class="main-content-row right-img">
                         <div class="left-text">
 
                             <div class="col-sm-8">
-                                <div class="heading">
-                                    <h2><?php echo $heading; ?></h2>
-                                </div>
+                                <div class="text-wrapper">
+                                    <div class="heading">
+                                        <h2><?php echo $heading; ?></h2>
+                                    </div>
 
-                                <div class="description">
-                                    <?php echo $desc; ?>
-                                </div>
+                                    <div class="description">
+                                        <?php echo $desc; ?>
+                                    </div>
 
-                                <div class="cta">
-                                    <a class="btn btn-standard clearfix" href="<?php echo $cta_link; ?>" ><?php echo $cta_button; ?></a>
+                                    <div class="cta">
+                                        <a class="btn btn-standard clearfix" href="<?php echo $cta_link; ?>" ><?php echo $cta_button; ?></a>
+                                    </div>
                                 </div>
 
                             </div>
@@ -104,10 +108,11 @@
 
                 ?>
 
-                    <div class="main-content-row">
+                    <div class="main-content-row all-img">
                         <div class="full-image">
+                            <div class="col-sm-1"></div>
 
-                            <div class="col-sm-12">
+                            <div class="col-sm-10">
                                 <div class="image-container">
 
                                     <a href="<?php echo $span_url; ?>" class="">
@@ -123,6 +128,7 @@
 
                                 </div>
                             </div>
+                            <div class="col-sm-1"></div>
 
                         </div>
                     </div>

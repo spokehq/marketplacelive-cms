@@ -2,15 +2,25 @@
 
 .navbar-default {
   border: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
   .navbar-brand {
     font-family: "museo-slab",serif;
     color: white;
-    span {
-      color: #b3ccea;
-      &:hover {
-        color: #b3ccea;
-      }
-    }
+    position: relative;
+    width:200px;
+    height: 70px;
+    top: -10px;
+    right: -9%;
+
+    //span {
+    //  color: #b3ccea;
+    //  &:hover {
+    //    color: #b3ccea;
+    //  }
+
     &:hover {
       color: white;
     }
@@ -54,9 +64,9 @@
     border: 0;
     box-shadow: none none;
     float: none;
-    background-color: rgba(12,40,59,.8);
+    background-color: rgba(12,40,59,.95);
     position: relative;
-    top: 35px;
+    top: 16px;
     margin: 0;
   }
 
@@ -150,6 +160,7 @@
 }
 .banner {
   background: rgba(0,0,0,1);
+  margin: 0;
 }
 
 
@@ -171,13 +182,15 @@
   position: absolute;
   top: 0;
 }
-.home
+.home {
+  .top-content {
+    background: url("../images/banner-main.jpg") no-repeat scroll 20% 100% / cover rgb(12,40,59);
+  }
+}
 .top-content  {
   width: 100%;
-  background: url("../images/banner-main.jpg") no-repeat scroll 20% 100% / cover rgb(12,40,59);
-
   position: relative;
-  padding-bottom: 30px;
+  padding: 126px 0 30px;
   z-index:10;
   .big-kahuna {
     position: relative;
@@ -221,11 +234,15 @@
 
 .close {
   cursor: pointer;
-    .ex {
-      font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
-      font-weight: 100;
-      font-size: 200px;
-      color: white;
+  opacity: 1;
+
+    &.ex {
+      padding: 0;
+      margin: 0;
+      line-height:1;
+      position: absolute;
+      right: 0;
+      width: 60px;
     }
   }
 .modal-dialog {
@@ -251,6 +268,16 @@
 }
 .modal-body {
   padding: 30px;
+}
+.modal-footer {
+  border: 0 none;
+  .button-small {
+    float: right;
+    color: #fff;
+    padding: 10px 20px;
+    margin-right: 15px;
+    text-align: center;
+  }
 }
 
 .rect1 {
@@ -294,7 +321,10 @@
       float: right;
       background-color: transparent;
       position: relative;
-      top: 0;
+      top: 4px;
+    }
+    .top-content {
+      padding: 116px 0 30px;
     }
   }
   .banner {

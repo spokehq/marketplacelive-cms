@@ -33,9 +33,11 @@
     .description {
       margin-bottom: 20px;
     }
-    .cta {
+    .text-wrapper {
+      padding: 0 30px;
 
     }
+
   }
 
   .btn-standard {
@@ -63,13 +65,12 @@
 
 
 }
-@media (min-width: $screen-xs-min) {
-  .main-content-row {
+@media (min-width: $screen-xs-min) { // min-width 480
 
-  }
+
 }
 
-@media (min-width: $screen-sm-min) {
+@media (min-width: $screen-sm-min) { // min-width 768
   .main-content-row {
     .image-left,
     .image-right {
@@ -77,13 +78,44 @@
     }
   }
 }
-@media (min-width: $screen-md-min) {
+@media (min-width: $screen-md-min) { // min-width 992
+  .page,
+  .post {
+    .navbar-default {
+      background: rgba(255,255,255,0.11);
+    }
+  }
   .main-content-row {
+    float: none;
 
+    .left-text {
+      .text-wrapper {
+        float: right;
+      }
+    }
+    .left-text,
+    .right-text {
+      .text-wrapper {
+        width: 750px;
+        padding: 0 100px;
+      }
+    }
+    &.left-img {
+      float: left;
+    }
+    &.right-img {
+      float: right;
+    }
+    &.all-img {
+      float: left;
+    }
   }
 }
-@media (min-width: $screen-lg-min) {
-  .main-content-row {
-    
+@media (min-width: $screen-lg-min) {  // min-width 1200
+  .left-text,
+  .right-text {
+    .text-wrapper {
+
+    }
   }
 }
