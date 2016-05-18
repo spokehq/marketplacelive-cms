@@ -4,6 +4,7 @@
 
 .main-content-row {
   margin: 50px 0;
+  float: left;
 
   .image-left,
   .image-right {
@@ -39,6 +40,25 @@
 
   .btn-standard {
     text-transform: uppercase;
+  }
+  .image_container {
+    img {
+      float: left;
+      display: block;
+    }
+
+  }
+  .span-overlay {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    &> p > strong {
+      font-weight: 300 !important;
+    }
   }
 
 

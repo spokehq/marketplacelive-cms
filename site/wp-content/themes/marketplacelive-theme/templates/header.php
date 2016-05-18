@@ -68,9 +68,16 @@
                 <div class="col-sm-8">
                     <div class="modal-body">
                         <div
-                            class="presents tk-fira-sans-2">Telx and Digital Realty Present</div><h2 class="tk-fira-sans-2"><b>Connect</b> with <br>the <b>foundation</b> of the <b>digital economy.</b></h2><h3 class="tk-fira-sans-2">The <b>22nd</b> of <b>September</b> at <b>Spring Studios.</b></h3> <script src="//app-abm.marketo.com/js/forms2/js/forms2.min.js"></script> <form
-                            id="mktoForm_1330"></form> </div>
+                            class="presents tk-fira-sans-2">Telx and Digital Realty Present
+                        </div>
+                        <h2 class="tk-fira-sans-2"><b>Connect</b> with <br>the <b>foundation</b> of the <b>digital economy.</b></h2>
+                        <h3 class="tk-fira-sans-2">The <b>22nd</b> of <b>September</b> at <b>Spring Studios.</b></h3> <script src="//app-abm.marketo.com/js/forms2/js/forms2.min.js"></script> <form
+                            id="mktoForm_1330"></form>
+                        </div>
                 </div>
+            </div>
+            <div class="modal-footer">
+
             </div>
             <div class="col-sm-2"></div>
         </div>
