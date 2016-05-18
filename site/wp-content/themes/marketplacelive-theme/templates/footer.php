@@ -12,6 +12,15 @@
     <div class="row">
         <div class="midsection">
             <div class="col-sm-6">
+<!--                <img class="alignleft" src="{$profile_image}">-->
+<!--                <a href="https://www.twitter.com/{$user_twitter_name}">@{$user_twitter_name}</a>-->
+<!--                <br />-->
+<!--                {$user_description}-->
+<!--                <ul class="pages">-->
+<!--                    {$tweets_start}-->
+<!--                    <li>{$tweet_text}<br />{$tweet_time}</li>-->
+<!--                    {$tweets_end}-->
+<!--                </ul>-->
                 <?php dynamic_sidebar('sidebar-footer-1'); ?>
             </div>
             <div class="col-sm-3">

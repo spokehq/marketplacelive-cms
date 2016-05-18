@@ -1,3 +1,69 @@
 .page, .post {
   background-color: #f2f2f2;
 }
+
+.main-content-row {
+  margin: 50px 0;
+
+  .image-left,
+  .image-right {
+    display: none;
+  }
+  .right-text {
+    h2 {
+      color: #52768f;
+      &> p > strong {
+        font-weight: 300 !important;
+      }
+    }
+
+  }
+  .left-text {
+    h2 {
+      color: #cb6469;
+      &> p > strong {
+        font-weight: 300 !important;
+      }
+    }
+
+  }
+  .right-text,
+  .left-text {
+    .description {
+      margin-bottom: 20px;
+    }
+    .cta {
+
+    }
+  }
+
+  .btn-standard {
+    text-transform: uppercase;
+  }
+
+
+}
+@media (min-width: $screen-xs-min) {
+  .main-content-row {
+
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .main-content-row {
+    .image-left,
+    .image-right {
+      display: block;
+    }
+  }
+}
+@media (min-width: $screen-md-min) {
+  .main-content-row {
+
+  }
+}
+@media (min-width: $screen-lg-min) {
+  .main-content-row {
+    
+  }
+}
