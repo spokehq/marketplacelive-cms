@@ -1,9 +1,4 @@
-<?php $main_row = new WP_Query(array(
-    'post_type' => 'custom_page'
-)); ?>
 
-<!-- queries of member post type -->
-<?php while ( $main_row->have_posts()) : $main_row->the_post(); ?>
 
     <?php if( have_rows('row_layout') ): ?>
 
@@ -20,22 +15,22 @@
                 $which_image = get_sub_field('image_spot');         // left or right?
                 $image_left = get_sub_field('image_on_left');
                 $image_right = get_sub_field('image_on_right');
-                $full_image = get_sub_field('add_image_and_link');      // add a full width image? Default is 'no'.
-                $span_image = get_sub_field('add_full_image');
-                $span_url = get_sub_field('add_url_link');
-                $span_overlay = get_sub_field('add_text_overlay');  // text placed over image span
+                $video_row = get_sub_field('add_video_row');      // add a full width image? Default is 'no'.
+                $video_heading = get_sub_field('add_video_title');
+                $oembed = get_sub_field('select_video');
+                $video_desc = get_sub_field('video_desc');  // text placed over image span
 
                 ?>
 
 
-            <div class="row">
+
 
                 <?php if ( $which_image === "Left" ) {
 
                         // image on left
 
                     ?>
-
+                <div class="row">
                     <div class="main-content-row left-img">
                        <div class="right-text">
 
@@ -61,16 +56,15 @@
 
                        </div>
                     </div>
-
+                </div>
                 <?php } elseif ( $which_image === "Right" ) {
 
                         // image on right
 
                     ?>
-
+                <div class="row">
                     <div class="main-content-row right-img">
                         <div class="left-text">
-
                             <div class="col-sm-8">
                                 <div class="text-wrapper">
                                     <div class="heading">
@@ -85,7 +79,6 @@
                                         <a class="btn btn-standard clearfix" href="<?php echo $cta_link; ?>" ><?php echo $cta_button; ?></a>
                                     </div>
                                 </div>
-
                             </div>
 
                             <!--  stack this image on top when in mobile view or remove image -->
@@ -95,47 +88,38 @@
 
                         </div>
                     </div>
-
+                </div>
 
                 <?php } else {
                     // do nothing
 
                  } ?>
 
-                <?php if ( $full_image === "Yes" ) {
 
-                    // display image
+                <?php if ( $video_row === "Yes" ) {
+
+                    // display oembed
 
                 ?>
+                <div class="container">
+                    <div class="row">
 
-                    <div class="main-content-row all-img">
-                        <div class="full-image">
                             <div class="col-sm-1"></div>
 
                             <div class="col-sm-10">
-                                <div class="image-container">
+                                <div class="embed-container">
 
-                                    <a href="<?php echo $span_url; ?>" class="">
-                                        <img src="<?php echo $span_image['url']; ?>" alt="<?php echo $span_image['alt']; ?>"
-                                        class="span-image center-block img-responsive" />
-                                    </a>
-
-                                    <h2 class="span-overlay">
-
-                                        <?php echo $span_overlay; ?>
-
-                                    </h2>
+                                    <?php echo $oembed; ?>
 
                                 </div>
                             </div>
                             <div class="col-sm-1"></div>
-
-                        </div>
+                        
                     </div>
+                </div>
 
 
-
-                <?php } elseif ( $full_image === "No" ) {
+                <?php } elseif ( $video_row === "No" ) {
 
                     // do nothing
 
@@ -145,12 +129,9 @@
 
                 } ?>
                 
-            </div>
+
 
             <?php endwhile; ?>
 
-
-
     <?php endif; ?>
 
-<?php endwhile; ?>
