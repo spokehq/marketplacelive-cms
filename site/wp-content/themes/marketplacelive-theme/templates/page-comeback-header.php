@@ -21,15 +21,7 @@
                         <span>closer</span> to the event.</h1>
 
                 </div>
-                <div class="col-sm-4">
-                    <ul id="social">
-                        <li><img src="<?= get_template_directory_uri(); ?>/dist/images/soc-fb.svg" target="_blank" alt=""></li>
-                        <li><img src="<?= get_template_directory_uri(); ?>/dist/images/soc-instagram.svg" target="_blank" alt=""></li>
-                        <li><img src="<?= get_template_directory_uri(); ?>/dist/images/soc-twitter.svg" target="_blank" alt=""></li>
-                        <li><img src="<?= get_template_directory_uri(); ?>/dist/images/soc-linkedin.svg" target="_blank" alt=""></li>
-                        <li><img src="<?= get_template_directory_uri(); ?>/dist/images/soc-fb.svg" target="_blank" alt=""></li>
-                    </ul>
-                </div>
+                
                 <div class="col-sm-4 col-sm-offset-4">
 <!--                    <button class="btn btn-standard" type="button" data-toggle="modal" data-target="#regModal">REGISTER</button>-->
                     <a href="https://marketplacelive2016.eventbrite.com/" class="btn btn-standard" type="button" target="_blank" >REGISTER</a>

@@ -5,6 +5,8 @@
   position: absolute;
   top: 0;
   width: 100%;
+  background-color: #071c2d;
+  margin: 0;
 
   .navbar-brand {
     font-family: "museo-slab",serif;
@@ -14,12 +16,6 @@
     height: 70px;
     top: -10px;
     right: -9%;
-
-    //span {
-    //  color: #b3ccea;
-    //  &:hover {
-    //    color: #b3ccea;
-    //  }
 
     &:hover {
       color: white;
@@ -62,7 +58,7 @@
   }
   .navbar-collapse {
     border: 0;
-    box-shadow: none none;
+    box-shadow: none;
     float: none;
     background-color: rgba(12,40,59,.95);
     position: relative;
@@ -104,10 +100,10 @@
     #nav-icon span {
       display: block;
       position: absolute;
-      height: 4px;
+      height: 2px;
       width: 100%;
       background: rgb(202,131,133);
-      border-radius: 0;
+      border-radius: 1px;
       opacity: 1;
       left: 0;
       -webkit-transform: rotate(0deg);
@@ -121,7 +117,7 @@
     }
 
     #nav-icon span:nth-child(1) {
-      top: 0px;
+      top: 0;
     }
 
     #nav-icon span:nth-child(2) {
@@ -158,11 +154,6 @@
     box-shadow: none;
   }
 }
-.banner {
-  background: rgba(0,0,0,1);
-  margin: 0;
-}
-
 
 .navbar {
   height: 116px;
@@ -193,8 +184,7 @@
   padding: 126px 0 30px;
   z-index:10;
   .big-kahuna {
-    position: relative;
-    top: 0;
+    padding-bottom: 14px;
     .page-header {
       color: white;
       border: 0;
@@ -202,34 +192,37 @@
       position: relative;
     }
   }
-}
-.btn {
-  &:focus {
-    color: white;
-  }
-}
-.btn-standard {
-  border-radius: 0;
-  border: 4px solid #f2696f;
-  background: transparent;
-  padding: 10px 40px;
-  position: relative;
-  z-index:20;
-  color: #f2696f;
-  font-size: 20px;
-  &:hover, &:visited {
-    background: transparent;
+  .btn-standard {
     border-radius: 0;
-    border: 4px solid #f2696f;
-    color: #f2696f;
-    &:active {
+    border: 2px solid #f2696f;
+    background: transparent;
+    padding: 10px 40px;
+    position: relative;
+    z-index:20;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    margin: 0 auto;
+    &:hover, &:visited {
       background: transparent;
       border-radius: 0;
-      border: 4px solid #f2696f;
+      border: 2px solid #f2696f;
       color: #f2696f;
+      &:active {
+        background: transparent;
+        border-radius: 0;
+        border: 2px solid #f2696f;
+        color: white;
+      }
+    }
+  }
+  .btn {
+    &:focus {
+      color: white;
     }
   }
 }
+
 
 
 .close {
@@ -283,7 +276,7 @@
 .rect1 {
   width: 47%;
   position: absolute;
-  top: -100px;
+  top: -164px;
   left: auto;
   right: 110px;
   z-index: 0;
@@ -294,15 +287,7 @@
   }
 }
 @media (min-width: $screen-xs-min) { // min-width 480
-  .rect1 {
-    width: 280px;
-    position: absolute;
-    top: -170px;
-    left: auto;
-    right: 110px;
-    z-index: 0;
-    //transform: rotate(90deg);
-  }
+
 
 }
 @media (min-width: $screen-sm-min) { // min-width 768
@@ -315,9 +300,10 @@
     transform: rotate(0deg);
   }
   .navbar-default {
+    background-color: rgba(255,255,255, 0.11);
     .navbar-collapse {
       border: 0;
-      box-shadow: none none;
+      box-shadow: none;
       float: right;
       background-color: transparent;
       position: relative;
@@ -327,31 +313,11 @@
       padding: 116px 0 30px;
     }
   }
-  .banner {
-    background: rgba(255,255,255, 0.11);
-  }
 }
 @media (min-width: $screen-md-min) { // min-width 992
-  .rect1 {
-    width: 190px;
-    position: absolute;
-    top: 125px;
-    left: -129px;
-    z-index: 0;
-    transform: rotate(0deg);
-  }
-  .btn-standard {
-    // find way to center button
-  }
+
 
 }
 @media (min-width: $screen-lg-min) {  // min-width 1200
-  .rect1 {
-    width: 200px;
-    position: absolute;
-    top: 126px;
-    left: -133px;
-    z-index: 0;
-    transform: rotate(0deg);
-  }
+
 }

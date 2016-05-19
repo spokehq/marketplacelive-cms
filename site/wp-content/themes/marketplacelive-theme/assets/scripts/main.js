@@ -20,6 +20,18 @@
       init: function() {
         // JavaScript to be fired on all pages
 
+          // Find Register in top nav and add target attribute
+          $(document).ready(function(){
+              $('#menu-primary-navigation li.menu-item-134 a').attr('target', '_blank').attr('title','Register for MarketplaceLIVE 2016! This link will open a new tab.');
+          });
+
+
+
+          // Find Register in top nav and add target attribute
+          $(document).ready(function(){
+              $('#menu-primary-navigation li.menu-item-134 a').attr('target', '_blank').attr('title','Register for MarketplaceLIVE 2016! This link will open a new tab.');
+          });
+
           // Nav icon animation
           $(document).ready(function(){
               $('#nav-icon').click(function(){

@@ -1,9 +1,75 @@
 .page, .post {
   background-color: #f2f2f2;
 }
+.social {
+  list-style-type: none;
+  padding-left: 0;
+  float: none;
+  margin-top: 60px;
+  text-align: center;
+  .item {
+    display: inline;
+    white-space:nowrap;
+  }
+  .icon {
+    width: 23px;
+    height: 20px;
+    margin-right: 9px;
+    padding: 2px;
+  }
+}
+.content-info {
+  .social {
+    margin: 0;
+    .item {
+      .icon {
+        margin-right: 0;
+        margin-left: 9px;
+      }
+    }
+    h4 {
+      color: white;
+    }
+  }
+  .btn-standard {
+    border-radius: 0;
+    border: 2px solid #dd7e82;
+    background: transparent;
+    padding: 8px 40px;
+    position: relative;
+    z-index:20;
+    color: #dd7e82;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    &:hover, &:visited {
+      background: transparent;
+      border-radius: 0;
+      border: 2px solid #dd7e82;
+      color: #dd7e82;
+      &:active {
+        background: transparent;
+        border-radius: 0;
+        border: 2px solid #dd7e82;
+        color: #dd7e82;
+      }
+    }
+  }
+  .adjustment {
+    padding: 40px 0;
 
+  }
+  .vignette {
+    background-image: linear-gradient(90deg, rgba(11, 44, 67, 0) 0%, rgba(11, 44, 67, 0.8) 80%);
+    padding: 40px 30px 40px 0;
+    a {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
 .main-content-row {
-  margin: 50px 0;
+  margin: 100px 0;
   float: left;
 
   .image-left,
@@ -13,42 +79,37 @@
   .right-text {
     h2 {
       color: #52768f;
-      &> p > strong {
-        font-weight: 300 !important;
+      line-height: 1.2;
+      &> strong,
+      &> b {
+        font-weight: 200 !important;
       }
     }
-
   }
-  .left-text {
     h2 {
       color: #cb6469;
       &> p > strong {
-        font-weight: 300 !important;
+        font-weight: 200 !important;
       }
     }
 
-  }
   .right-text,
   .left-text {
+    line-height: 1.6;
     .description {
-      margin-bottom: 20px;
+      margin: 60px 0 50px;
     }
     .text-wrapper {
       padding: 0 30px;
 
     }
-
   }
 
-  .btn-standard {
-    text-transform: uppercase;
-  }
   .image_container {
     img {
       float: left;
       display: block;
     }
-
   }
   .span-overlay {
     color: white;
@@ -62,19 +123,39 @@
       font-weight: 300 !important;
     }
   }
+  .btn-standard {
+    border-radius: 0;
+    border: 2px solid #dd7e82;
+    background: transparent;
+    padding: 8px 40px;
+    position: relative;
+    z-index:20;
+    color: #dd7e82;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    &:hover, &:visited {
+      background: transparent;
+      border-radius: 0;
+      border: 2px solid #dd7e82;
+      color: #dd7e82;
+      &:active {
+        background: transparent;
+        border-radius: 0;
+        border: 2px solid #dd7e82;
+        color: #dd7e82;
+      }
+    }
+  }
 }
 .vid-container {
-  margin-bottom: 100px;
+  margin: 100px 0 120px;
   background: url('../images/watch-recap-insights.jpg') no-repeat 50% 0 / cover;
-  margin-left: 30px;
   .fve-video-wrapper {
     margin: 0;
   }
 }
 .embed-container {
   position: relative;
-  //padding-bottom: 50px;
-  //height: 0;
   overflow: hidden;
   max-width: 100%;
   height: auto;
@@ -92,6 +173,9 @@
 
 @media (min-width: $screen-xs-min) { // min-width 480
 
+  .social {
+    float: right;
+  }
 
 }
 
