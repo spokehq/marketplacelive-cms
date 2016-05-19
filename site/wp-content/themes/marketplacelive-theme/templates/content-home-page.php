@@ -15,10 +15,9 @@
                 $which_image = get_sub_field('image_spot');         // left or right?
                 $image_left = get_sub_field('image_on_left');
                 $image_right = get_sub_field('image_on_right');
-                $video_row = get_sub_field('add_video_row');      // add a full width image? Default is 'no'.
-                $video_heading = get_sub_field('add_video_title');
+                $video_row = get_sub_field('add_video_row');      // add a video? Default is 'no'.
                 $oembed = get_sub_field('select_video');
-                $video_desc = get_sub_field('video_desc');  // text placed over image span
+
 
                 ?>
 
@@ -102,19 +101,28 @@
 
                 ?>
                 <div class="container">
-                    <div class="row">
+                    <div class="vid-container">
+                        <div class="row">
 
-                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2"></div>
 
-                            <div class="col-sm-10">
+                            <div class="col-sm-8">
                                 <div class="embed-container">
 
-                                    <?php echo $oembed; ?>
+                                    <?php
+                                    // convert shortcode from fluid oembed plugin
+
+                                    if (!empty($oembed)):
+                                        echo '<div class="video-container">';
+                                        echo do_shortcode('[fve]'. $oembed .'[/fve]');
+                                        echo '</div>';
+                                    endif; ?>
 
                                 </div>
                             </div>
-                            <div class="col-sm-1"></div>
-                        
+                            <div class="col-sm-2"></div>
+
+                        </div>
                     </div>
                 </div>
 
