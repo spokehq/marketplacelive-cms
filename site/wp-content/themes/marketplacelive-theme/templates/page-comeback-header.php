@@ -1,13 +1,12 @@
 <div class="top-content">
     <!--    <img src="--><?//= get_template_directory_uri(); ?><!--/assets/images/banner-main.jpg" alt="" class="banner-main img-responsive">-->
-    
 
     <div class="big-kahuna">
         <div class="container">
             <div class="col-sm-3"></div>
             <div class="col-sm-8">
                 <div>
-                    <img src="<?= get_template_directory_uri(); ?>/dist/images/rect1.svg" alt="" class="rect1">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/rect1.svg" alt="" class="rect1">
                 </div>
                 <div class="page-header">
 
@@ -16,11 +15,22 @@
 
                     <?php use Roots\Sage\Titles; ?>
 <!--                    <H1>--><?//= Titles\title(); ?><!--</H1>-->
-                    <h1>Thursday, September 22nd Spring Studios New York</h1>
 
+                    <h1>Please <span>come back soon.</span> <br>
+                        We'll update this page <br>as we get
+                        <span>closer</span> to the event.</h1>
 
                 </div>
-                <div class="col-sm-12">
+                <div class="col-sm-4">
+                    <ul id="social">
+                        <li><img src="<?= get_template_directory_uri(); ?>/dist/images/soc-fb.svg" target="_blank" alt=""></li>
+                        <li><img src="<?= get_template_directory_uri(); ?>/dist/images/soc-instagram.svg" target="_blank" alt=""></li>
+                        <li><img src="<?= get_template_directory_uri(); ?>/dist/images/soc-twitter.svg" target="_blank" alt=""></li>
+                        <li><img src="<?= get_template_directory_uri(); ?>/dist/images/soc-linkedin.svg" target="_blank" alt=""></li>
+                        <li><img src="<?= get_template_directory_uri(); ?>/dist/images/soc-fb.svg" target="_blank" alt=""></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-sm-offset-4">
 <!--                    <button class="btn btn-standard" type="button" data-toggle="modal" data-target="#regModal">REGISTER</button>-->
                     <a href="https://marketplacelive2016.eventbrite.com/" class="btn btn-standard" type="button" target="_blank" >REGISTER</a>
                 </div>
