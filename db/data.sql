@@ -151,7 +151,7 @@ INSERT INTO `si121_options` VALUES (99,'widget_pages','a:1:{s:12:\"_multiwidget\
 INSERT INTO `si121_options` VALUES (100,'widget_calendar','a:1:{s:12:\"_multiwidget\";i:1;}','yes');
 INSERT INTO `si121_options` VALUES (101,'widget_tag_cloud','a:1:{s:12:\"_multiwidget\";i:1;}','yes');
 INSERT INTO `si121_options` VALUES (102,'widget_nav_menu','a:2:{i:2;a:1:{s:8:\"nav_menu\";i:3;}s:12:\"_multiwidget\";i:1;}','yes');
-INSERT INTO `si121_options` VALUES (103,'cron','a:4:{i:1463618937;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1463627677;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1463627743;a:1:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}','yes');
+INSERT INTO `si121_options` VALUES (103,'cron','a:4:{i:1463627677;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1463627743;a:1:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1463705337;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}','yes');
 INSERT INTO `si121_options` VALUES (107,'_site_transient_update_core','O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:59:\"https://downloads.wordpress.org/release/wordpress-4.5.2.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:59:\"https://downloads.wordpress.org/release/wordpress-4.5.2.zip\";s:10:\"no_content\";s:70:\"https://downloads.wordpress.org/release/wordpress-4.5.2-no-content.zip\";s:11:\"new_bundled\";s:71:\"https://downloads.wordpress.org/release/wordpress-4.5.2-new-bundled.zip\";s:7:\"partial\";b:0;s:8:\"rollback\";b:0;}s:7:\"current\";s:5:\"4.5.2\";s:7:\"version\";s:5:\"4.5.2\";s:11:\"php_version\";s:5:\"5.2.4\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"4.4\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1463584571;s:15:\"version_checked\";s:5:\"4.5.2\";s:12:\"translations\";a:0:{}}','yes');
 INSERT INTO `si121_options` VALUES (112,'_site_transient_update_themes','O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1463584574;s:7:\"checked\";a:1:{s:21:\"marketplacelive-theme\";s:5:\"8.4.2\";}s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}}','yes');
 INSERT INTO `si121_options` VALUES (116,'can_compress_scripts','0','yes');
@@ -208,7 +208,7 @@ LOCK TABLES `si121_postmeta` WRITE;
 /*!40000 ALTER TABLE `si121_postmeta` DISABLE KEYS */;
 INSERT INTO `si121_postmeta` VALUES (1,2,'_wp_page_template','default');
 INSERT INTO `si121_postmeta` VALUES (19,9,'_edit_last','1');
-INSERT INTO `si121_postmeta` VALUES (20,9,'_edit_lock','1463013896:1');
+INSERT INTO `si121_postmeta` VALUES (20,9,'_edit_lock','1463606317:1');
 INSERT INTO `si121_postmeta` VALUES (21,9,'_wp_page_template','default');
 INSERT INTO `si121_postmeta` VALUES (22,12,'_edit_last','1');
 INSERT INTO `si121_postmeta` VALUES (23,12,'_wp_page_template','default');
@@ -224,7 +224,7 @@ INSERT INTO `si121_postmeta` VALUES (32,18,'_wp_page_template','default');
 INSERT INTO `si121_postmeta` VALUES (33,18,'_edit_lock','1462978996:1');
 INSERT INTO `si121_postmeta` VALUES (34,20,'_edit_last','1');
 INSERT INTO `si121_postmeta` VALUES (35,20,'_wp_page_template','default');
-INSERT INTO `si121_postmeta` VALUES (36,20,'_edit_lock','1462979011:1');
+INSERT INTO `si121_postmeta` VALUES (36,20,'_edit_lock','1463601025:1');
 INSERT INTO `si121_postmeta` VALUES (37,22,'_edit_last','1');
 INSERT INTO `si121_postmeta` VALUES (38,22,'_wp_page_template','default');
 INSERT INTO `si121_postmeta` VALUES (39,22,'_edit_lock','1462979025:1');
@@ -415,7 +415,7 @@ INSERT INTO `si121_postmeta` VALUES (253,119,'_row_layout_2_image_left','field_5
 INSERT INTO `si121_postmeta` VALUES (254,119,'row_layout','4');
 INSERT INTO `si121_postmeta` VALUES (255,119,'_row_layout','field_573bbe96c94f0');
 INSERT INTO `si121_postmeta` VALUES (256,119,'_','field_573bccd26b6d5');
-INSERT INTO `si121_postmeta` VALUES (257,119,'_edit_lock','1463599532:1');
+INSERT INTO `si121_postmeta` VALUES (257,119,'_edit_lock','1463606220:1');
 INSERT INTO `si121_postmeta` VALUES (258,119,'row_layout_1_image_on_left','');
 INSERT INTO `si121_postmeta` VALUES (259,119,'_row_layout_1_image_on_left','field_573bc366c94fe');
 INSERT INTO `si121_postmeta` VALUES (260,119,'row_layout_1_image_on_right','130');
@@ -472,6 +472,12 @@ INSERT INTO `si121_postmeta` VALUES (310,134,'_menu_item_target','');
 INSERT INTO `si121_postmeta` VALUES (311,134,'_menu_item_classes','a:1:{i:0;s:6:\"active\";}');
 INSERT INTO `si121_postmeta` VALUES (312,134,'_menu_item_xfn','');
 INSERT INTO `si121_postmeta` VALUES (313,134,'_menu_item_url','https://marketplacelive2016.eventbrite.com/');
+INSERT INTO `si121_postmeta` VALUES (315,20,'_wp_trash_meta_status','publish');
+INSERT INTO `si121_postmeta` VALUES (316,20,'_wp_trash_meta_time','1463601177');
+INSERT INTO `si121_postmeta` VALUES (317,20,'_wp_desired_post_slug','register');
+INSERT INTO `si121_postmeta` VALUES (318,136,'_edit_last','1');
+INSERT INTO `si121_postmeta` VALUES (319,136,'_edit_lock','1463606140:1');
+INSERT INTO `si121_postmeta` VALUES (320,136,'_wp_page_template','default');
 /*!40000 ALTER TABLE `si121_postmeta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -483,7 +489,7 @@ LOCK TABLES `si121_posts` WRITE;
 /*!40000 ALTER TABLE `si121_posts` DISABLE KEYS */;
 INSERT INTO `si121_posts` VALUES (1,1,'2016-05-07 03:14:37','2016-05-07 03:14:37','Welcome to WordPress. This is your first post. Edit or delete it, then start writing!','Hello world!','','publish','open','open','','hello-world','','','2016-05-07 03:14:37','2016-05-07 03:14:37','',0,'http://marketplacelive.dev/?p=1',0,'post','',1);
 INSERT INTO `si121_posts` VALUES (2,1,'2016-05-07 03:14:37','2016-05-07 03:14:37','This is an example page. It\'s different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:\n\n<blockquote>Hi there! I\'m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin\' caught in the rain.)</blockquote>\n\n...or something like this:\n\n<blockquote>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</blockquote>\n\nAs a new WordPress user, you should go to <a href=\"http://marketplacelive.dev/wp-admin/\">your dashboard</a> to delete this page and create new pages for your content. Have fun!','Sample Page','','trash','closed','open','','sample-page__trashed','','','2016-05-11 15:06:44','2016-05-11 15:06:44','',0,'http://marketplacelive.dev/?page_id=2',0,'page','',0);
-INSERT INTO `si121_posts` VALUES (9,1,'2016-05-11 15:03:58','2016-05-11 15:03:58','','Thursday, September 22nd Spring Studios  New York','','publish','closed','closed','','front-page','','','2016-05-12 00:44:56','2016-05-12 00:44:56','',0,'http://marketplacelive.dev/?page_id=9',0,'page','',0);
+INSERT INTO `si121_posts` VALUES (9,1,'2016-05-11 15:03:58','2016-05-11 15:03:58','','Home','','publish','closed','closed','','front-page','','','2016-05-18 19:52:14','2016-05-18 19:52:14','',0,'http://marketplacelive.dev/?page_id=9',0,'page','',0);
 INSERT INTO `si121_posts` VALUES (10,1,'2016-05-11 15:03:58','2016-05-11 15:03:58','','front page','','inherit','closed','closed','','9-revision-v1','','','2016-05-11 15:03:58','2016-05-11 15:03:58','',9,'http://marketplacelive.dev/2016/05/11/9-revision-v1/',0,'revision','',0);
 INSERT INTO `si121_posts` VALUES (11,1,'2016-05-11 15:04:07','2016-05-11 15:04:07','','home','','inherit','closed','closed','','9-revision-v1','','','2016-05-11 15:04:07','2016-05-11 15:04:07','',9,'http://marketplacelive.dev/2016/05/11/9-revision-v1/',0,'revision','',0);
 INSERT INTO `si121_posts` VALUES (12,1,'2016-05-11 15:04:47','2016-05-11 15:04:47','','About','','publish','closed','closed','','about','','','2016-05-11 15:04:47','2016-05-11 15:04:47','',0,'http://marketplacelive.dev/?page_id=12',0,'page','',0);
@@ -494,7 +500,7 @@ INSERT INTO `si121_posts` VALUES (16,1,'2016-05-11 15:05:23','2016-05-11 15:05:2
 INSERT INTO `si121_posts` VALUES (17,1,'2016-05-11 15:05:23','2016-05-11 15:05:23','','Connect','','inherit','closed','closed','','16-revision-v1','','','2016-05-11 15:05:23','2016-05-11 15:05:23','',16,'http://marketplacelive.dev/2016/05/11/16-revision-v1/',0,'revision','',0);
 INSERT INTO `si121_posts` VALUES (18,1,'2016-05-11 15:05:36','2016-05-11 15:05:36','','Stories','','publish','closed','closed','','stories','','','2016-05-11 15:05:36','2016-05-11 15:05:36','',0,'http://marketplacelive.dev/?page_id=18',0,'page','',0);
 INSERT INTO `si121_posts` VALUES (19,1,'2016-05-11 15:05:36','2016-05-11 15:05:36','','Stories','','inherit','closed','closed','','18-revision-v1','','','2016-05-11 15:05:36','2016-05-11 15:05:36','',18,'http://marketplacelive.dev/2016/05/11/18-revision-v1/',0,'revision','',0);
-INSERT INTO `si121_posts` VALUES (20,1,'2016-05-11 15:05:48','2016-05-11 15:05:48','','Register','','publish','closed','closed','','register','','','2016-05-11 15:05:48','2016-05-11 15:05:48','',0,'http://marketplacelive.dev/?page_id=20',0,'page','',0);
+INSERT INTO `si121_posts` VALUES (20,1,'2016-05-11 15:05:48','2016-05-11 15:05:48','','Register','','trash','closed','closed','','register__trashed','','','2016-05-18 19:52:57','2016-05-18 19:52:57','',0,'http://marketplacelive.dev/?page_id=20',0,'page','',0);
 INSERT INTO `si121_posts` VALUES (21,1,'2016-05-11 15:05:48','2016-05-11 15:05:48','','Register','','inherit','closed','closed','','20-revision-v1','','','2016-05-11 15:05:48','2016-05-11 15:05:48','',20,'http://marketplacelive.dev/2016/05/11/20-revision-v1/',0,'revision','',0);
 INSERT INTO `si121_posts` VALUES (22,1,'2016-05-11 15:06:04','2016-05-11 15:06:04','','Venue','','publish','closed','closed','','venue','','','2016-05-11 15:06:04','2016-05-11 15:06:04','',0,'http://marketplacelive.dev/?page_id=22',0,'page','',0);
 INSERT INTO `si121_posts` VALUES (23,1,'2016-05-11 15:06:04','2016-05-11 15:06:04','','Venue','','inherit','closed','closed','','22-revision-v1','','','2016-05-11 15:06:04','2016-05-11 15:06:04','',22,'http://marketplacelive.dev/2016/05/11/22-revision-v1/',0,'revision','',0);
@@ -508,7 +514,6 @@ INSERT INTO `si121_posts` VALUES (31,1,'2016-05-11 15:46:08','2016-05-11 15:46:0
 INSERT INTO `si121_posts` VALUES (32,1,'2016-05-11 15:46:08','2016-05-11 15:46:08',' ','','','publish','closed','closed','','32','','','2016-05-18 19:33:13','2016-05-18 19:33:13','',0,'http://marketplacelive.dev/?p=32',6,'nav_menu_item','',0);
 INSERT INTO `si121_posts` VALUES (33,1,'2016-05-11 15:46:08','2016-05-11 15:46:08',' ','','','publish','closed','closed','','33','','','2016-05-18 19:33:13','2016-05-18 19:33:13','',0,'http://marketplacelive.dev/?p=33',3,'nav_menu_item','',0);
 INSERT INTO `si121_posts` VALUES (34,1,'2016-05-11 15:46:08','2016-05-11 15:46:08',' ','','','publish','closed','closed','','34','','','2016-05-18 19:33:13','2016-05-18 19:33:13','',0,'http://marketplacelive.dev/?p=34',1,'nav_menu_item','',0);
-INSERT INTO `si121_posts` VALUES (35,1,'2016-05-11 15:48:39','0000-00-00 00:00:00','','Auto Draft','','auto-draft','closed','closed','','','','','2016-05-11 15:48:39','0000-00-00 00:00:00','',0,'http://marketplacelive.dev/?page_id=35',0,'page','',0);
 INSERT INTO `si121_posts` VALUES (36,1,'2016-05-12 00:44:56','2016-05-12 00:44:56','','Thursday, September 22nd Spring Studios  New York','','inherit','closed','closed','','9-revision-v1','','','2016-05-12 00:44:56','2016-05-12 00:44:56','',9,'http://marketplacelive.dev/2016/05/12/9-revision-v1/',0,'revision','',0);
 INSERT INTO `si121_posts` VALUES (37,1,'2016-05-13 18:27:05','2016-05-13 18:27:05',' ','','','publish','closed','closed','','37','','','2016-05-13 18:27:05','2016-05-13 18:27:05','',0,'http://marketplacelive.dev/?p=37',3,'nav_menu_item','',0);
 INSERT INTO `si121_posts` VALUES (38,1,'2016-05-13 18:27:05','2016-05-13 18:27:05',' ','','','publish','closed','closed','','38','','','2016-05-13 18:27:05','2016-05-13 18:27:05','',0,'http://marketplacelive.dev/?p=38',4,'nav_menu_item','',0);
@@ -601,6 +606,9 @@ INSERT INTO `si121_posts` VALUES (131,1,'2016-05-18 02:59:21','2016-05-18 02:59:
 INSERT INTO `si121_posts` VALUES (132,1,'2016-05-18 02:59:22','2016-05-18 02:59:22','','why-attend-stage1','','inherit','open','closed','','why-attend-stage1','','','2016-05-18 03:15:39','2016-05-18 03:15:39','',0,'http://marketplacelive.dev/wp-content/uploads/2016/05/why-attend-stage1.jpg',0,'attachment','image/jpeg',0);
 INSERT INTO `si121_posts` VALUES (133,1,'2016-05-18 04:19:11','2016-05-18 04:19:11','','Come Back Soon','','publish','closed','closed','','come-back-soon','','','2016-05-18 04:19:11','2016-05-18 04:19:11','',0,'http://marketplacelive.dev/?post_type=custom_page&#038;p=133',0,'custom_page','',0);
 INSERT INTO `si121_posts` VALUES (134,1,'2016-05-18 19:33:13','2016-05-18 19:33:13','','Register','','publish','closed','closed','','register','','','2016-05-18 19:33:13','2016-05-18 19:33:13','',0,'http://marketplacelive.dev/?p=134',7,'nav_menu_item','',0);
+INSERT INTO `si121_posts` VALUES (135,1,'2016-05-18 19:52:14','2016-05-18 19:52:14','','Home','','inherit','closed','closed','','9-revision-v1','','','2016-05-18 19:52:14','2016-05-18 19:52:14','',9,'http://marketplacelive.dev/2016/05/18/9-revision-v1/',0,'revision','',0);
+INSERT INTO `si121_posts` VALUES (136,1,'2016-05-18 20:12:17','2016-05-18 20:12:17','','Come Back Soon','','publish','closed','closed','','come-back-soon','','','2016-05-18 20:41:10','2016-05-18 20:41:10','',0,'http://marketplacelive.dev/?page_id=136',0,'page','',0);
+INSERT INTO `si121_posts` VALUES (137,1,'2016-05-18 20:12:17','2016-05-18 20:12:17','','Come Back Soon','','inherit','closed','closed','','136-revision-v1','','','2016-05-18 20:12:17','2016-05-18 20:12:17','',136,'http://marketplacelive.dev/2016/05/18/136-revision-v1/',0,'revision','',0);
 /*!40000 ALTER TABLE `si121_posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -688,7 +696,7 @@ INSERT INTO `si121_usermeta` VALUES (21,1,'acf_user_settings','a:0:{}');
 INSERT INTO `si121_usermeta` VALUES (22,1,'si121_user-settings','editor=tinymce&libraryContent=browse');
 INSERT INTO `si121_usermeta` VALUES (23,1,'si121_user-settings-time','1463532386');
 INSERT INTO `si121_usermeta` VALUES (24,1,'closedpostboxes_custom_page','a:1:{i:0;s:23:\"acf-group_573b464b1eeb2\";}');
-INSERT INTO `si121_usermeta` VALUES (25,1,'metaboxhidden_custom_page','a:1:{i:0;s:7:\"slugdiv\";}');
+INSERT INTO `si121_usermeta` VALUES (25,1,'metaboxhidden_custom_page','a:2:{i:0;s:13:\"pageparentdiv\";i:1;s:7:\"slugdiv\";}');
 /*!40000 ALTER TABLE `si121_usermeta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -711,4 +719,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-18 15:41:10
+-- Dump completed on 2016-05-18 20:56:19
