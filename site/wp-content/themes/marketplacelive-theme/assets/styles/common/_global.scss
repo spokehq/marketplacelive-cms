@@ -1,5 +1,14 @@
 
-
+a {
+  color: rgb(146, 181, 211);
+  &:hover,
+  &:visited,
+  &:active,
+  &:link {
+    text-decoration: none;
+    color: rgb(146, 181, 211);
+  }
+}
 p, .description {
   font-family: 'Museo Sans', Helvetica, Arial, sans-serif;
   font-weight: 200;
@@ -16,6 +25,16 @@ h1, h2, h3, h4 {
     }
   }
 }
+.twitget {
+  list-style-type: none;
+  list-style-image: url(../images/twitter.png);
+  padding-left: 20px;
+  &> li {
+    font-family: 'Museo Sans', Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+  }
+}
 h4 {
   font-weight: 700;
   font-size: 14px;
@@ -23,13 +42,7 @@ h4 {
   position: relative;
   letter-spacing: 0.1em;
 }
-//h1 {
-//  font-weight: 100;
-//  font-size: 50px;
-//}
-//h2 {
-//  font-weight: 100;
-//}
+
 
 @media (min-width: $screen-xs-min) {
   h1 {
