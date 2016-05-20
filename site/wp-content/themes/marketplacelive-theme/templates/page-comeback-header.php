@@ -1,34 +1,34 @@
 <div class="top-content">
-    <!--    <img src="--><?//= get_template_directory_uri(); ?><!--/assets/images/banner-main.jpg" alt="" class="banner-main img-responsive">-->
 
     <div class="big-kahuna">
         <div class="container">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-8">
-                <div>
-                    <img src="<?= get_template_directory_uri(); ?>/assets/images/rect1.svg" alt="" class="rect1">
-                </div>
-                <div class="page-header">
-
-
-                    <h4>A COMMUNITY BUILDING FOR DIGITAL SUCCESS</h4>
-
-                    <?php use Roots\Sage\Titles; ?>
-<!--                    <H1>--><?//= Titles\title(); ?><!--</H1>-->
-
-                    <h1>Please <span>come back soon.</span> <br>
-                        We'll update this page <br>as we get
-                        <span>closer</span> to the event.</h1>
-
-                </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-8">
+                    <div>
+                        <img src="<?= get_template_directory_uri(); ?>/dist/images/rect1.svg" alt="" class="rect1">
+                    </div>
                 
-                <div class="col-sm-4 col-sm-offset-4">
-<!--                    <button class="btn btn-standard" type="button" data-toggle="modal" data-target="#regModal">REGISTER</button>-->
-                    <a href="https://marketplacelive2016.eventbrite.com/" class="btn btn-standard" type="button" target="_blank" >REGISTER</a>
+
+                    <div class="col-md-12">
+                        <!--                    <button class="btn btn-standard" type="button" data-toggle="modal" data-target="#regModal">REGISTER</button>-->
+                        <a href="https://marketplacelive2016.eventbrite.com/" class="btn btn-standard" type="button" target="_blank" >REGISTER</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-md-offset-8 col-xs-12">
+                    <ul class="social">
+                        <li class="item"><a href="https://vimeo.com/telx" target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-vimeo.svg" target="_blank" alt=""></a></li>
+                        <li class="item"><a href="" target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-instagram.svg" target="_blank" alt=""></a></li>
+                        <li class="item"><a href="https://twitter.com/TelxMPLIVE" target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-twitter.svg" target="_blank" alt=""></a></li>
+                        <li class="item"><a href="http://www.linkedin.com/company/telx" target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-linkedin.svg" target="_blank" alt=""></a></li>
+                        <li class="item"><a href="https://www.facebook.com/MarketplaceLive/" target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-fb.svg" target="_blank" alt=""></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-
     </div>
 
 
@@ -43,7 +43,7 @@
             <!--            </div>-->
             <div class="container">
                 <!--                <div class="col-sm-2"></div>-->
-                <div class="col-sm-12">
+                <div class="col-md-12">
                     <div class="modal-body">
                         <button type="button" class="close ex" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true" ></span>
@@ -71,13 +71,13 @@
             </div>
             <!--            <div class="modal-footer">-->
             <!--                -->
-            <!--                <div class="col-sm-offset-8">-->
+            <!--                <div class="col-md-offset-8">-->
             <!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
             <!--                        <span aria-hidden="true" class="button-small">Close</span></button>-->
             <!--                </div>-->
             <!---->
             <!--            </div>-->
-            <!--            <div class="col-sm-2"></div>-->
+            <!--            <div class="col-md-2"></div>-->
         </div>
 
     </div>

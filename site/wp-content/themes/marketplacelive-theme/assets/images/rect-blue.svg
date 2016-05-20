@@ -1,0 +1,12 @@
+
+<svg id="rect" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.04 124.51">
+<defs>
+    <style>
+        .cls-1 {
+        fill: rgba(94, 147, 185, 0.80);
+        }
+    </style>
+</defs>
+<title>box</title>
+<path class="cls-1" d="M102,124.51H0V0H102V124.51ZM90.85,8.71H11.2V115.8H90.85V8.71Z"/>
+</svg>

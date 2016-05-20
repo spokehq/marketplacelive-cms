@@ -24,6 +24,10 @@ h1, h2, h3, h4 {
       font-weight: 200;
     }
   }
+  &> strong,
+  &> b {
+    font-weight: 200;
+  }
 }
 .twitget {
   list-style-type: none;
@@ -33,6 +37,14 @@ h1, h2, h3, h4 {
     font-family: 'Museo Sans', Helvetica, Arial, sans-serif;
     font-weight: 100;
     font-size: 14px;
+  }
+}
+h1 {
+  line-height: 1;
+}
+.come-back-soon {
+  h1 {
+    font-size: 50px;
   }
 }
 h3 {
@@ -55,30 +67,28 @@ h4 {
 @media (min-width: $screen-xs-min) {
   h1 {
     //font-weight: 100;
-    font-size: 80px;
+    //font-size: 80px;
     line-height: 1;
   }
 }
 
 @media (min-width: $screen-sm-min) {
   h1 {
-    //font-weight: 100;
-    font-size: 80px;
-    line-height: 1;
+    font-size: 100px;
   }
 }
 
 @media (min-width: $screen-md-min) {
   h1 {
     //font-weight: 100;
-    font-size: 80px;
+    //font-size: 80px;
     line-height: 1;
   }
 }
 @media (min-width: $screen-lg-min) {
   h1 {
     //font-weight: 100;
-    font-size: 80px;
+    //font-size: 80px;
     line-height: 1;
   }
 }

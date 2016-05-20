@@ -115,6 +115,7 @@ function display_sidebar() {
     // template-custom.php should be most pages per current layouts
     is_404(),
     is_front_page(),
+    is_page(),
     is_page_template('template-custom.php'),
   ]);
 

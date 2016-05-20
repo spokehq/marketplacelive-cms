@@ -1,4 +1,6 @@
-
+.sidebar-primary {
+  width: 100%;
+}
 
 .navbar-default {
   border: 0;
@@ -33,6 +35,7 @@
           font-weight: 300;
           color: rgb(212, 97, 103);
           background-color: transparent;
+          transition: 0.5s ease;
           &:hover {
             color: rgb(212, 97, 103);
             background-color: transparent;
@@ -46,6 +49,7 @@
         font-weight: 300;
         color: white;
         padding: 13px 12px;
+        transition: 0.5s ease;
         &:active {
           color: rgb(212, 97, 103);
           background-color: transparent;
@@ -177,7 +181,41 @@
 .home {
   .top-content {
     background: url("../images/banner-main1.jpg") no-repeat scroll 20% 100% / cover rgb(12,40,59);
+    .big-kahuna {
+      margin-top: 100px;
+    }
   }
+  .social {
+    margin-top: 200px;
+  }
+}
+.come-back-soon {
+  .top-content {
+    background: url("../images/banner-come-back-soon.jpg") no-repeat scroll 20% 100% / cover rgb(12,40,59);
+    //height: 1100px;
+
+    .big-kahuna {
+      margin-top: 90px;
+    }
+    .social-wrapper {
+      float: left;
+      margin-top: 200px;
+      width: 100%;
+
+      .social {
+        margin: 30px 0;
+        float: none;
+        text-align: center;
+      }
+      .btn-standard {
+        float: none;
+      }
+    }
+  }
+  .container {
+    padding-left: 30px
+  }
+
 }
 .top-content  {
   width: 100%;
@@ -204,6 +242,7 @@
     font-size: 20px;
     letter-spacing: 0.1em;
     margin: 0 auto;
+    transition: 0.5s ease;
     &:hover, &:visited {
       background: transparent;
       border-radius: 0;
@@ -223,6 +262,7 @@
     }
   }
 }
+
 
 
 
@@ -277,16 +317,20 @@
 .rect1 {
   width: 300px;
   position: absolute;
-  top: -220px;
+  top: -253px;
   left: auto;
   right: 110px;
   z-index: 0;
   transform: rotate(90deg);
   transition: 0.25s;
-  .cls-2 {
-    fill: rgba(202,131,133,0.7);
-  }
 }
+.rect-blue {
+  width: 274px;
+  position: absolute;
+  top: -65px;
+  left: -150px;
+}
+
 @media (min-width: $screen-xs-min) { // min-width 480
   .rect1 {
 
@@ -315,6 +359,12 @@
     left: -133px;
     z-index: 0;
     transform: rotate(0deg);
+  }
+  .come-back-soon {
+    .social {
+      margin: 10px 0;
+      float: left;
+    }
   }
 }
 @media (min-width: $screen-md-min) { // min-width 992

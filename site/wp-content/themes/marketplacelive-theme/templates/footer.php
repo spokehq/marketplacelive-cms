@@ -11,7 +11,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-5">
 
                     <div class="social-wrapper">
                         <ul class="social">
@@ -52,17 +52,17 @@
                     <?php dynamic_sidebar('sidebar-footer-2'); ?>
                 </div>
 
-                <div class="col-sm-3">
+                <div class="col-sm-5">
                     <a href="https://marketplacelive2016.eventbrite.com/" class="btn btn-standard" type="button" target="_blank" >REGISTER</a>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-sm-offset-6">
+            <div class="col-sm-offset-4 col-sm-8">
                 <div class="hosting clearfix"><span class="proudly-hosted">PROUDLY&nbsp;HOSTED&nbsp;BY</span>
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/footer-telx-logo.png"
-                         alt="Digital Realty | TELX" class="digital-realty">
+                    <a href="https://www.digitalrealty.com/" target="_blank" title="www.digitalrealty.com"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/footer-telx-logo.png"
+                         alt="Digital Realty | TELX" class="digital-realty"></a>
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@
         <div class="row">
           <?php dynamic_sidebar('sidebar-footer-full-bottom'); ?>
           <div class="col-sm-12">
-            <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
+            <p>&copy; <?php echo date('Y'); ?> <a href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></p>
           </div>
         </div>
     </div>
