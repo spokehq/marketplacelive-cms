@@ -5,6 +5,7 @@
   position: absolute;
   top: 0;
   width: 100%;
+  min-width: 320px; // set min width for navbar
   background-color: #071c2d;
   margin: 0;
 
@@ -30,10 +31,10 @@
           font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
           text-transform: uppercase;
           font-weight: 300;
-          color: rgba(202,131,133,1);
+          color: rgb(212, 97, 103);
           background-color: transparent;
           &:hover {
-            color: rgba(202,131,133,1);
+            color: rgb(212, 97, 103);
             background-color: transparent;
           }
         }
@@ -46,11 +47,11 @@
         color: white;
         padding: 13px 12px;
         &:active {
-          color: rgb(202,131,133);
+          color: rgb(212, 97, 103);
           background-color: transparent;
         }
         &:hover {
-          color: rgba(202,131,133,1);
+          color: rgb(212, 97, 103);
           font-weight: 300;
         }
       }
@@ -102,7 +103,7 @@
       position: absolute;
       height: 2px;
       width: 100%;
-      background: rgb(202,131,133);
+      background: rgb(212, 97, 103);
       border-radius: 1px;
       opacity: 1;
       left: 0;
@@ -175,7 +176,7 @@
 }
 .home {
   .top-content {
-    background: url("../images/banner-main.jpg") no-repeat scroll 20% 100% / cover rgb(12,40,59);
+    background: url("../images/banner-main1.jpg") no-repeat scroll 20% 100% / cover rgb(12,40,59);
   }
 }
 .top-content  {
@@ -274,9 +275,9 @@
 }
 
 .rect1 {
-  width: 47%;
+  width: 300px;
   position: absolute;
-  top: -164px;
+  top: -220px;
   left: auto;
   right: 110px;
   z-index: 0;
@@ -287,18 +288,12 @@
   }
 }
 @media (min-width: $screen-xs-min) { // min-width 480
+  .rect1 {
 
+  }
 
 }
 @media (min-width: $screen-sm-min) { // min-width 768
-  .rect1 {
-    width: 200px;
-    position: absolute;
-    top: 126px;
-    left: -133px;
-    z-index: 0;
-    transform: rotate(0deg);
-  }
   .navbar-default {
     background-color: rgba(255,255,255, 0.11);
     .navbar-collapse {
@@ -313,8 +308,17 @@
       padding: 116px 0 30px;
     }
   }
+  .rect1 {
+    width: 200px;
+    position: absolute;
+    top: 126px;
+    left: -133px;
+    z-index: 0;
+    transform: rotate(0deg);
+  }
 }
 @media (min-width: $screen-md-min) { // min-width 992
+
 
 
 }

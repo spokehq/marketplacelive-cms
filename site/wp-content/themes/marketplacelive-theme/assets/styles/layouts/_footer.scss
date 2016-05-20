@@ -1,21 +1,39 @@
 .content-info {
   background: url("../images/footer-background.jpg") no-repeat scroll 100% / cover rgb(12,40,59);
-  padding: 30px 0 40px 0;
+  padding: 0 0 40px 0;
   color: white;
-  h4 {
-    color: #92b5d3;
+
+  .bird {
+    position: absolute;
+    opacity: 0.2;
+    z-index: 0;
+    width: 222px;
+    margin-top: -28px;
+    .tbird {
+
+    }
   }
-  .midsection {
+  .simple_tweet_widget-2 {
+    margin-bottom: 40px;
+  }
+  .mid-section {
+    position: relative;
+    z-index:10;
     float: left;
-    padding: 30px 0;
   }
-  .btn-standard {
-    float: right;
+  .proudly-hosted {
+    font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 0.1em;
+    color: white;
   }
   .hosting {
-    float: right;
-    text-align: right;
+    text-align: center;
     padding: 30px 0;
+    float: none;
 
     .digital-realty {
       margin-left: 40px;
@@ -30,7 +48,7 @@
         font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
         text-transform: uppercase;
         font-weight: 300;
-        color: white;
+        color: #89aac7;
         padding: 13px 12px;
         &:active {
           color: rgb(202,131,133);
@@ -44,4 +62,101 @@
       }
     }
   }
+  .customizer {
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .btn-standard {
+    border-radius: 0;
+    border: 2px solid #dd7e82;
+    background: transparent;
+    padding: 8px 30px;
+    position: relative;
+    z-index:20;
+    color: #dd7e82;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    &:hover, &:visited {
+      background: transparent;
+      border-radius: 0;
+      border: 2px solid #dd7e82;
+      color: #dd7e82;
+      &:active {
+        background: transparent;
+        border-radius: 0;
+        border: 2px solid #dd7e82;
+        color: #dd7e82;
+      }
+    }
+  }
+  .adjustment {
+    padding: 57px 0;
+
+  }
+  .vignette {
+    background-image: linear-gradient(90deg,
+            rgba(8, 33, 50,0.4)0%,
+            rgba(11,44,67,0) 50%,
+            rgba(11,44,67,.8) 80%);
+    padding: 76px 30px 0 0;
+    height: 146px;
+    position: absolute;
+    right: 2px;
+    width: 100%;
+  }
+  .social-wrapper {
+    padding: 0 0 50px;
+    .social {
+      float: none;
+      margin-top: 10;
+      text-align: left;
+      position: relative;
+      .item {
+        a {
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          .icon {
+            margin-right: 0;
+            margin-left: 9px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-xs-min) { // min-width 480
+
+}
+@media (min-width: $screen-sm-min) { // min-width 768
+
+}
+@media (min-width: $screen-md-min) { // min-width 992
+  .content-info {
+    .social-wrapper {
+      padding: 76px 0 0 0;
+      .social {
+        position: relative;
+        margin: 0;
+        text-align: left;
+      }
+    }
+    .hosting {
+      float: right;
+      text-align: right;
+    }
+  }
+  .vignette {
+
+    position: absolute;
+    right: 2px;
+    width: 600px;
+
+  }
+}
+@media (min-width: $screen-lg-min) {  // min-width 1200
+
 }
