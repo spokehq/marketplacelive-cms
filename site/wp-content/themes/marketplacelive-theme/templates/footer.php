@@ -67,11 +67,11 @@
             </div>
         </div>
 
-        <div class="row">
-          <?php dynamic_sidebar('sidebar-footer-full-bottom'); ?>
-          <div class="col-sm-12">
-            <p>&copy; <?php echo date('Y'); ?> <a href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></p>
-          </div>
-        </div>
+<!--        <div class="row">-->
+<!--          --><?php //dynamic_sidebar('sidebar-footer-full-bottom'); ?>
+<!--          <div class="col-sm-12">-->
+<!--            <p>&copy; --><?php //echo date('Y'); ?><!-- <a href="--><?//= esc_url(home_url('/')); ?><!--">--><?php //bloginfo('name'); ?><!--</a></p>-->
+<!--          </div>-->
+<!--        </div>-->
     </div>
 </footer>
