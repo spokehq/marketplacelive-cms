@@ -185,9 +185,10 @@
     .big-kahuna {
       margin-top: 100px;
     }
-  }
-  .social {
-    margin-top: 200px;
+    .social {
+      margin-top: 200px;
+      margin-left: 0;
+    }
   }
 }
 .come-back-soon {
@@ -262,6 +263,23 @@
       color: white;
     }
   }
+  .social {
+    list-style-type: none;
+    padding-left: 0;
+    float: none;
+    margin-top: 60px;
+    text-align: center;
+    .item {
+      display: inline;
+      white-space:nowrap;
+    }
+    .icon {
+      width: 23px;
+      height: 23px;
+      margin-right: 9px;
+      padding: 2px;
+    }
+  }
 }
 
 
@@ -333,8 +351,10 @@
 }
 
 @media (min-width: $screen-xs-min) { // min-width 480
-  .rect1 {
-
+  .top-content {
+    .social {
+      float: right;
+    }
   }
 
 }

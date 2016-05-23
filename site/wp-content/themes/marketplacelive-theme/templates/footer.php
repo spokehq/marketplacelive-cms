@@ -1,9 +1,9 @@
 <footer class="content-info" role="contentinfo">
 
     <div class="vignette"></div>
-    
+
     <div class="container">
-        <div class="customizer">
+        <div class="">
             <div class="row">
                 <div class="col-md-7">
                     <div class="adjustment">
@@ -37,23 +37,26 @@
             </div>
         </div>
 
-    
+
 
         <div class="row">
             <div class="bird">
                 <img class="tbird" src="<?= get_template_directory_uri(); ?>/dist/images/soc-twitter.svg" alt="">
             </div>
             <div class="mid-section">
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <?php dynamic_sidebar('sidebar-footer-1'); ?>
                 </div>
 
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <?php dynamic_sidebar('sidebar-footer-2'); ?>
                 </div>
 
-                <div class="col-sm-5">
-                    <a href="https://marketplacelive2016.eventbrite.com/" class="btn btn-standard" type="button" target="_blank" >REGISTER</a>
+                <div class="col-sm-3 col-sm-offset-1">
+                    <div class="button-wrapper">
+                        <a href="https://marketplacelive2016.eventbrite.com/"
+                           class="btn btn-standard" type="button" target="_blank" >REGISTER</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,16 +65,16 @@
             <div class="col-sm-offset-4 col-sm-8">
                 <div class="hosting clearfix"><span class="proudly-hosted">PROUDLY&nbsp;HOSTED&nbsp;BY</span>
                     <a href="https://www.digitalrealty.com/" target="_blank" title="www.digitalrealty.com"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/footer-telx-logo.png"
-                         alt="Digital Realty | TELX" class="digital-realty"></a>
+                                                                                                                alt="Digital Realty | TELX" class="digital-realty"></a>
                 </div>
             </div>
         </div>
 
-<!--        <div class="row">-->
-<!--          --><?php //dynamic_sidebar('sidebar-footer-full-bottom'); ?>
-<!--          <div class="col-sm-12">-->
-<!--            <p>&copy; --><?php //echo date('Y'); ?><!-- <a href="--><?//= esc_url(home_url('/')); ?><!--">--><?php //bloginfo('name'); ?><!--</a></p>-->
-<!--          </div>-->
-<!--        </div>-->
+        <!--        <div class="row">-->
+        <!--          --><?php //dynamic_sidebar('sidebar-footer-full-bottom'); ?>
+        <!--          <div class="col-sm-12">-->
+        <!--            <p>&copy; --><?php //echo date('Y'); ?><!-- <a href="--><?//= esc_url(home_url('/')); ?><!--">--><?php //bloginfo('name'); ?><!--</a></p>-->
+        <!--          </div>-->
+        <!--        </div>-->
     </div>
 </footer>

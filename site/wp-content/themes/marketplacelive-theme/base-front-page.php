@@ -20,7 +20,7 @@ use Roots\Sage\Wrapper;
     ?>
 <!--    REMOVED container class & add back in at template level -->
 
-    <div class="wrap" role="document">
+    <div class="wrap container" role="document">
       <div class="content row">
         <main class="main">
           <?php include Wrapper\template_path(); ?>

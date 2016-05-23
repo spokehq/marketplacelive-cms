@@ -37,7 +37,7 @@
                                <img src="<?php echo $image_left['url']; ?>" alt="<?php echo $image_left['alt']; ?>"
                                     class="image-left img-responsive" />
                            </div>
-                           <div class="col-sm-8">
+                           <div class="col-sm-6">
                                <div class="text-wrapper">
                                    <div class="heading">
                                        <h2><?php echo $heading; ?></h2>
@@ -64,7 +64,7 @@
                 <div class="row">
                     <div class="main-content-row right-img">
                         <div class="left-text">
-                            <div class="col-sm-8">
+                            <div class="col-sm-6">
                                 <div class="text-wrapper">
                                     <div class="heading">
                                         <h2><?php echo $heading; ?></h2>
@@ -120,7 +120,7 @@
 
                                 </div>
                             </div>
-                            <div class="col-sm-2"></div>
+
 
                         </div>
                     </div>
