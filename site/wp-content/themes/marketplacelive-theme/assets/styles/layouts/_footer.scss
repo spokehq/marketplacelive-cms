@@ -1,7 +1,9 @@
 .content-info {
-  background: url("../images/footer-background.jpg") no-repeat scroll 100% / cover rgb(12,40,59);
+  background: url("../images/footer-background1.jpg") no-repeat scroll 50% / cover rgb(12,40,59);
   padding: 0 0 40px 0;
   color: white;
+  position: relative; // hack to fix odd gap
+  bottom: -2px;
 
   .bird {
     position: absolute;
@@ -78,7 +80,7 @@
     padding: 8px 30px;
     position: relative;
     z-index:20;
-    color: #dd7e82;
+    color: white;
     font-size: 20px;
     letter-spacing: 0.1em;
     float: none;
@@ -97,7 +99,8 @@
     }
   }
   .adjustment {
-    padding: 57px 0;
+    padding: 30px 0;
+    margin-top: 14px;
 
   }
   .vignette {
@@ -117,7 +120,7 @@
       list-style-type: none;
       padding-left: 0;
       float: none;
-      margin-top: 60px;
+      margin-top: 40px;
       text-align: center;
       .item {
         display: inline;
@@ -136,6 +139,9 @@
       }
     }
   }
+  .button-wrapper {
+    padding: 0 15px;
+  }
 }
 @media (min-width: $screen-xs-min) { // min-width 480
 
@@ -145,12 +151,15 @@
 }
 @media (min-width: $screen-md-min) { // min-width 992
   .content-info {
+    .mid-section {
+      margin-top: 50px;
+    }
     .social-wrapper {
-      padding: 76px 0 0 0;
+      padding: 31px 0 0 0;
       float: right;
       .social {
         position: relative;
-        margin: 0;
+        margin: 60 0 0;
         text-align: left;
         float: right;
         .icon {
@@ -161,14 +170,18 @@
     .hosting {
       float: right;
       text-align: right;
-      padding: o 15px;
+      padding: 0 15px;
     }
     .button-wrapper {
-      padding: 0 15px;
+      padding: 0;
+      float: right;
       .btn-standard {
         float: right;
       }
     }
+  }
+  .adjustment {
+    padding: 57px 0;
   }
   .vignette {
 

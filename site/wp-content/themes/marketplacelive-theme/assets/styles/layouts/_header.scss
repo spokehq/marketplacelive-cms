@@ -29,7 +29,7 @@
   .navbar-nav {
     margin: 0;
     &> li {
-      &.active {
+      &.live {
         &> a {
           font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
           text-transform: uppercase;
@@ -42,6 +42,18 @@
             background-color: transparent;
           }
         }
+      }
+      &.active {
+        &> a {
+          color: white;
+          background-color: transparent;
+          transition: 0.5s ease;
+          &:hover {
+            color: rgb(212, 97, 103);
+            background-color: transparent;
+          }
+        }
+
       }
 
       &> a {
@@ -181,7 +193,7 @@
 }
 .home {
   .top-content {
-    background: url("../images/banner-main1.jpg") no-repeat scroll 20% 100% / cover rgb(12,40,59);
+    background: url("../images/banner-main1.jpg") no-repeat scroll 20% 99% / cover rgb(12,40,59);;
     .big-kahuna {
       margin-top: 100px;
     }
@@ -193,7 +205,7 @@
 }
 .come-back-soon {
   .top-content {
-    background: url("../images/banner-come-back-soon.jpg") no-repeat scroll 20% 100% / cover rgb(12,40,59);
+    background: url("../images/banner-come-back-soon.jpg") no-repeat scroll 20% 99% / cover rgb(12,40,59);
     //height: 1100px;
 
     .big-kahuna {
@@ -222,7 +234,7 @@
 .top-content  {
   width: 100%;
   position: relative;
-  padding: 126px 0 30px;
+  padding: 126px 15px 30px;
   z-index:10;
   .big-kahuna {
     padding-bottom: 14px;
@@ -346,7 +358,7 @@
 .rect-blue {
   width: 274px;
   position: absolute;
-  top: -65px;
+  top: -28px;
   left: -150px;
 }
 

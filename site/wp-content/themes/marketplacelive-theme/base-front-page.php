@@ -18,13 +18,13 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
-<!--    REMOVED container class & add back in at template level -->
+<!-- REMOVED <main> element & add back in at template level to bypass page header template -->
 
-    <div class="wrap container" role="document">
+    <div class="wrap container-fluid" role="document">
       <div class="content row">
-        <main class="main">
+<!--        <main class="">-->
           <?php include Wrapper\template_path(); ?>
-        </main><!-- /.main -->
+          <!-- </main> /.main -->
         <?php if (Setup\display_sidebar()) : ?>
           <aside class="sidebar">
             <?php include Wrapper\sidebar_path(); ?>

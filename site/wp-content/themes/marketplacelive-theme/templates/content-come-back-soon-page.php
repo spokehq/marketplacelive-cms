@@ -1,7 +1,7 @@
 
+<!-- .main removed from base template  -->
 
-
-
+<main class="main">
 
 
                 <div class="container">
@@ -16,6 +16,6 @@
                 </div>
 
 
-
+</main>
 
 

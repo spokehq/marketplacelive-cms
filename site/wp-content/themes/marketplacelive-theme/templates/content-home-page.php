@@ -1,4 +1,6 @@
+<!-- .main removed from base template  -->
 
+<main class="main">
 
     <?php if( have_rows('row_layout') ): ?>
 
@@ -37,7 +39,7 @@
                                <img src="<?php echo $image_left['url']; ?>" alt="<?php echo $image_left['alt']; ?>"
                                     class="image-left img-responsive" />
                            </div>
-                           <div class="col-sm-6">
+                           <div class="col-sm-4 col-sm-offset-1">
                                <div class="text-wrapper">
                                    <div class="heading">
                                        <h2><?php echo $heading; ?></h2>
@@ -64,7 +66,7 @@
                 <div class="row">
                     <div class="main-content-row right-img">
                         <div class="left-text">
-                            <div class="col-sm-6">
+                            <div class="col-sm-4 col-sm-offset-3">
                                 <div class="text-wrapper">
                                     <div class="heading">
                                         <h2><?php echo $heading; ?></h2>
@@ -81,7 +83,7 @@
                             </div>
 
                             <!--  stack this image on top when in mobile view or remove image -->
-                            <div class="col-sm-4">
+                            <div class="col-sm-4 col-sm-offset-1">
                                 <img src="<?php echo $image_right['url']; ?>" alt="<?php echo $image_right['alt']; ?>" class="image-right img-responsive" />
                             </div>
 
@@ -143,3 +145,4 @@
 
     <?php endif; ?>
 
+</main>
