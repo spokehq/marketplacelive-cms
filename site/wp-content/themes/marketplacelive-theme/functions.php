@@ -72,6 +72,9 @@ function spokehq_loginfooter() { ?>
 
 add_action('login_footer','spokehq_loginfooter');
 
+
+
+
 /**
  * Add search functionality to Navigation Bar
  *

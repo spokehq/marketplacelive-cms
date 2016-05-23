@@ -26,18 +26,49 @@
           });
 
 
-
-          // Find Register in top nav and add target attribute
-          $(document).ready(function(){
-              $('#menu-primary-navigation li.menu-item-134 a').attr('target', '_blank').attr('title','Register for MarketplaceLIVE 2016! This link will open a new tab.');
-          });
-
           // Nav icon animation
           $(document).ready(function(){
               $('#nav-icon').click(function(){
                   $(this).toggleClass('open');
               });
           });
+
+          // Parallax effect at hover
+
+          $(".parallax").mousemove(
+              function(e){
+
+                  var offset = $(this).offset();
+                  var xPos = e.pageX - offset.left;
+                  var yPos = e.pageY - offset.top;
+
+                  var mouseXPercent = Math.round(xPos / $(this).width() * 100);
+                  var mouseYPercent = Math.round(yPos / $(this).height() * 100);
+
+                  $(this).children('img').each(
+                      function(){
+                          var diffX = $('.parallax').width() - $(this).width();
+                          var diffY = $('.parallax').height() - $(this).height();
+
+                          var myX = diffX * (mouseXPercent / 1500);
+
+                          var myY = diffY * (mouseYPercent / 1080);
+
+
+                          var cssObj = {
+                              'left': myX + 'px',
+                              'top': myY + 'px'
+                          };
+
+                          $(this).animate({left: myX, top: myY},{duration: 50, queue: false, easing: 'linear'});
+
+                      }
+                  );
+
+              }
+          );
+
+
           // Modal
 
           $("#join-trigger").click(function(){
@@ -46,6 +77,7 @@
           });
 
           // back to top script
+          // TODO: check if we still need this script
 
           $(document).ready(function () {
               // show or hide the sticky footer button

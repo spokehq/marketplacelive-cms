@@ -20,7 +20,7 @@
 
                     </div>
                     <div class="col-md-12">
-                        <!--                    <button class="btn btn-standard" type="button" data-toggle="modal" data-target="#regModal">REGISTER</button>-->
+
                         <a href="https://marketplacelive2016.eventbrite.com/" class="btn btn-standard" type="button" target="_blank" >REGISTER</a>
                     </div>
                 </div>

@@ -10,23 +10,23 @@ a {
   }
 }
 body, p, .description {
-  font-family: 'Museo Sans', Helvetica, Arial, sans-serif;
-  font-weight: 200;
+  font-family: "museo-slab", sans-serif;
+  font-weight: 500;
 }
 h1, h2, h3, h4 {
-  font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+  font-family: "fira-sans", sans-serif;
   font-weight: 100;
   &> p {
-    font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+    font-family: "fira-sans", sans-serif;
     font-weight: 100;
     &> strong,
     &> b {
-      font-weight: 200;
+      font-weight: 500;
     }
   }
   &> strong,
   &> b {
-    font-weight: 200;
+    font-weight: 500;
   }
 }
 .twitget {
@@ -34,7 +34,7 @@ h1, h2, h3, h4 {
   list-style-image: url(../images/twitter.png);
   padding-left: 20px;
   &> li {
-    font-family: 'Museo Sans', Helvetica, Arial, sans-serif;
+    font-family: "museo-slab",  sans-serif;
     font-weight: 100;
     font-size: 14px;
   }
@@ -66,30 +66,19 @@ h4 {
 }
 
 @media (min-width: $screen-xs-min) {
-  h1 {
-    //font-weight: 100;
-    //font-size: 80px;
-    line-height: 1;
-  }
+
 }
 
 @media (min-width: $screen-sm-min) {
   h1 {
     font-size: 100px;
+    line-height: 1;
   }
 }
 
 @media (min-width: $screen-md-min) {
-  h1 {
-    //font-weight: 100;
-    //font-size: 80px;
-    line-height: 1;
-  }
+
 }
 @media (min-width: $screen-lg-min) {
-  h1 {
-    //font-weight: 100;
-    //font-size: 80px;
-    line-height: 1;
-  }
+
 }

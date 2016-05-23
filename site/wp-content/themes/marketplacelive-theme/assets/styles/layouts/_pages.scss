@@ -4,7 +4,9 @@
 .wrap {
   min-width: 320px; // set min width for site
 }
-
+.btn, .btn-standard {
+  font-weight: 100 !important;
+}
 .message-wrapper {
   margin: 100px 0;
 }
@@ -14,7 +16,7 @@ blockquote {
   float: left;
   margin-bottom:0;
   p {
-    font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+    font-family: "fira-sans", sans-serif;
     width: 100%;
     border-left: 0;
     color: rgb(37, 74, 109);
@@ -39,14 +41,14 @@ blockquote {
       line-height: 1.2;
       &> strong,
       &> b {
-        font-weight: 200 !important;
+        font-weight: 500;
       }
     }
   }
     h2 {
       color: #cb6469;
       &> p > strong {
-        font-weight: 200 !important;
+        font-weight: 500;
       }
     }
 
@@ -82,7 +84,7 @@ blockquote {
     transform: translate(-50%, -50%);
     text-align: center;
     &> p > strong {
-      font-weight: 300 !important;
+      font-weight: 500;
     }
   }
   .btn-standard {
@@ -186,7 +188,7 @@ blockquote {
     float: right;
     margin-bottom: 10px;
     p {
-      font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+      font-family: "fira-sans", sans-serif;
       width: 300px;
       float: right;
       border-left: 0;

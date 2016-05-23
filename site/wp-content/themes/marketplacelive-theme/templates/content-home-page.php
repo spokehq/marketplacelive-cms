@@ -37,7 +37,7 @@
 
                            <div class="col-sm-4">
                                <img src="<?php echo $image_left['url']; ?>" alt="<?php echo $image_left['alt']; ?>"
-                                    class="image-left img-responsive" />
+                                    class="image-left parallax img-responsive" />
                            </div>
                            <div class="col-sm-4 col-sm-offset-1">
                                <div class="text-wrapper">
