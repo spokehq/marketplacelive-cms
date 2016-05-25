@@ -15,7 +15,7 @@
 
                         <?php use Roots\Sage\Titles; ?>
                         <!--                    <H1>--><?//= Titles\title(); ?><!--</H1>-->
-                        <h1>Thursday, September 22nd Spring&nbsp;Studios New&nbsp;York</h1>
+                        <h1>Sorry, but the page you were trying to view does not exist.</h1>
 
 
                     </div>

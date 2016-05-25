@@ -68,7 +68,7 @@ function widgets_init() {
     register_sidebar(array(
         'name'          => __('Footer Area 1', 'sage'),
         'id'            => 'sidebar-footer-1',
-        'before_widget' => '<div class="col-xs-12 clearfix"><section class="widget %1$s %2$s">',
+        'before_widget' => '<div class="clearfix"><section class="widget %1$s %2$s">',
         'after_widget'  => '</section></div>',
         'before_title'  => '<h4>',
         'after_title'   => '</h4>',
@@ -77,20 +77,12 @@ function widgets_init() {
     register_sidebar(array(
         'name'          => __('Footer Area 2', 'sage'),
         'id'            => 'sidebar-footer-2',
-        'before_widget' => '<div class="col-xs-12 clearfix"><section class="widget %1$s %2$s">',
+        'before_widget' => '<div class="clearfix"><section class="widget %1$s %2$s">',
         'after_widget'  => '</section></div>',
         'before_title'  => '<h4>',
         'after_title'   => '</h4>',
     ));
 
-    register_sidebar(array(
-        'name'          => __('Footer Area 3', 'sage'),
-        'id'            => 'sidebar-footer-3',
-        'before_widget' => '<div class="col-xs-12 clearfix"><section class="widget %1$s %2$s">',
-        'after_widget'  => '</section></div>',
-        'before_title'  => '<h4>',
-        'after_title'   => '</h4>',
-    ));
 
     register_sidebar(array(
         'name'          => __('Footer Area Full Bottom', 'sage'),

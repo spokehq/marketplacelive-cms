@@ -29,31 +29,31 @@
             </div>
 
             <div class="row">
-                <div class="social-wrapper">
-                    <div class="col-sm-4  col-xs-12">
-                        <ul class="social">
-                            <li class="item"><a href="https://vimeo.com/telx"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-vimeo.svg"
-                                                                     target="_blank" alt=""></a></li>
-                            <li class="item"><a href="https://plus.google.com/+TelxGroup"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/googleplus.svg"
-                                                                     target="_blank" alt=""></a></li>
-                            <li class="item"><a href="https://twitter.com/TelxMPLIVE"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-twitter.svg"
-                                                                     target="_blank" alt=""></a></li>
-                            <li class="item"><a href="http://www.linkedin.com/company/telx"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-linkedin.svg"
-                                                                     target="_blank" alt=""></a></li>
-                            <li class="item"><a href="https://www.facebook.com/MarketplaceLive/"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-fb.svg"
-                                                                     target="_blank" alt=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4 col-md-offset-4">
-                        <a href="https://marketplacelive2016.eventbrite.com/"
-                           class="btn btn-standard" type="button" target="_blank" >REGISTER</a>
-                    </div>
-                </div>
+<!--                <div class="social-wrapper">-->
+<!--                    <div class="col-sm-4  col-xs-12">-->
+<!--                        <ul class="social">-->
+<!--                            <li class="item"><a href="https://vimeo.com/telx"-->
+<!--                                                target="_blank"><img class="icon" src="--><?//= get_template_directory_uri(); ?><!--/dist/images/soc-vimeo.svg"-->
+<!--                                                                     target="_blank" alt=""></a></li>-->
+<!--                            <li class="item"><a href="https://plus.google.com/+TelxGroup"-->
+<!--                                                target="_blank"><img class="icon" src="--><?//= get_template_directory_uri(); ?><!--/dist/images/googleplus.svg"-->
+<!--                                                                     target="_blank" alt=""></a></li>-->
+<!--                            <li class="item"><a href="https://twitter.com/TelxMPLIVE"-->
+<!--                                                target="_blank"><img class="icon" src="--><?//= get_template_directory_uri(); ?><!--/dist/images/soc-twitter.svg"-->
+<!--                                                                     target="_blank" alt=""></a></li>-->
+<!--                            <li class="item"><a href="http://www.linkedin.com/company/telx"-->
+<!--                                                target="_blank"><img class="icon" src="--><?//= get_template_directory_uri(); ?><!--/dist/images/soc-linkedin.svg"-->
+<!--                                                                     target="_blank" alt=""></a></li>-->
+<!--                            <li class="item"><a href="https://www.facebook.com/MarketplaceLive/"-->
+<!--                                                target="_blank"><img class="icon" src="--><?//= get_template_directory_uri(); ?><!--/dist/images/soc-fb.svg"-->
+<!--                                                                     target="_blank" alt=""></a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                    <div class="col-sm-4 col-md-offset-4">-->
+<!--                        <a href="https://marketplacelive2016.eventbrite.com/"-->
+<!--                           class="btn btn-standard" type="button" target="_blank" >REGISTER</a>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </div>
     </div>

@@ -1,32 +1,39 @@
 
 a {
-  color: rgb(146, 181, 211);
+  color: $polo-blue;
   &:hover,
   &:visited,
   &:active,
   &:link {
     text-decoration: none;
-    color: rgb(146, 181, 211);
+    color: $polo-blue;
   }
 }
+body {
+  color: $tundoro;
+}
 body, p, .description {
-  font-family: "museo-slab", sans-serif;
-  font-weight: 500;
+  font-family: $museo-stack;
+  font-weight: 100;
+  font-style: normal;
 }
 h1, h2, h3, h4 {
-  font-family: "fira-sans", sans-serif;
+  font-family: $fira-stack;
+  font-style: normal;
   font-weight: 100;
   &> p {
-    font-family: "fira-sans", sans-serif;
-    font-weight: 100;
+    font-family: $fira-stack;
+    font-weight: 300;
+    font-style: normal;
     &> strong,
     &> b {
-      font-weight: 500;
+      font-weight: 400;
     }
   }
   &> strong,
   &> b {
-    font-weight: 500;
+    font-weight: 400;
+    font-style: normal;
   }
 }
 .twitget {
@@ -34,8 +41,9 @@ h1, h2, h3, h4 {
   list-style-image: url(../images/twitter.png);
   padding-left: 20px;
   &> li {
-    font-family: "museo-slab",  sans-serif;
+    font-family: $museo-stack;
     font-weight: 100;
+    font-style: normal;
     font-size: 14px;
   }
 }
@@ -45,11 +53,13 @@ h1 {
 .come-back-soon {
   h1 {
     font-size: 50px;
+    font-style: normal;
   }
 }
 h3 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 18px; // supposed to be 20px
+  font-style: normal;
   text-transform: uppercase;
   position: relative;
   letter-spacing: 0.1em;
@@ -57,12 +67,13 @@ h3 {
   line-height: 1.4;
 }
 h4 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
+  font-style: normal;
   text-transform: uppercase;
   position: relative;
   letter-spacing: 0.1em;
-  color: #92b5d3;
+  color: $polo-blue;
 }
 
 @media (min-width: $screen-xs-min) {
@@ -71,7 +82,8 @@ h4 {
 
 @media (min-width: $screen-sm-min) {
   h1 {
-    font-size: 100px;
+    font-size: 85px;
+    font-style: normal;
     line-height: 1;
   }
 }
