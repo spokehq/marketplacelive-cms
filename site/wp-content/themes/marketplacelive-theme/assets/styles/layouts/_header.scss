@@ -219,10 +219,45 @@
     }
   }
 }
+
 .come-back-soon {
+   .top-content {
+     background: url("../images/banner-come-back-soon.jpg") no-repeat scroll 20% 99% / cover $black-pearl;
+   }
+
+ }
+.venue {
   .top-content {
-    background: url("../images/banner-come-back-soon.jpg") no-repeat scroll 20% 99% / cover $black-pearl;
-    //height: 1100px;
+    background: url("../images/venue-banner.jpg") no-repeat scroll 60% 99% / cover $black-pearl;
+  }
+}
+.why-attend {
+  .top-content {
+    background: url("../images/venue-banner.jpg") no-repeat scroll 60% 99% / cover $black-pearl;
+  }
+}
+.exhibitors {
+  .top-content {
+    background: url("../images/exhibitons-banner.jpg") no-repeat scroll 20% 99% / cover $black-pearl;
+  }
+}
+.sponsors {
+  .top-content {
+    background: url("../images/sponsors-banner.jpg") no-repeat scroll 20% 99% / cover $black-pearl;
+  }
+}
+.connect {
+  .top-content {
+    background: url("../images/banner-connect.jpg") no-repeat scroll 20% 99% / cover $black-pearl;
+  }
+}
+.come-back-soon,
+.venue,
+.why-attend,
+.exhibitors,
+.sponsors,
+.connect {
+  .top-content {
 
     .big-kahuna {
       margin-top: 90px;
@@ -242,7 +277,6 @@
       }
     }
   }
-
 }
 .top-content  {
   width: 100%;
