@@ -114,7 +114,11 @@ blockquote {
       }
     }
   }
+  .social-wrapper {
+    display: none;
+  }
 }
+
 .vid-container {
   margin: 100px 0 120px;
   background: url('../images/watch-recap-insights.jpg') no-repeat 50% 0 / cover;
@@ -144,11 +148,39 @@ blockquote {
 
 @media (min-width: $screen-sm-min) { // min-width 768
   .main-content-row {
+    float: left;
+    width: 100%;
+
     .image-left,
     .image-right {
       display: block;
     }
+    .social-wrapper {
+      float: left;
+      margin-top: 100px;
+      width: 100%;
+      display: block;
+
+      .social {
+        list-style-type: none;
+        padding-left: 0;
+        float: left;
+        margin-top: 60px;
+        text-align: center;
+        .item {
+          display: inline;
+          white-space:nowrap;
+        }
+        .icon {
+          width: 23px;
+          height: 23px;
+          margin-right: 9px;
+          padding: 2px;
+        }
+      }
+    }
   }
+
 }
 @media (min-width: $screen-md-min) { // min-width 992
   .page,
@@ -161,17 +193,15 @@ blockquote {
     float: none;
 
     .left-text {
+      width: 100%;
       .text-wrapper {
         float: right;
       }
     }
-    .left-text,
     .right-text {
-      .text-wrapper {
-        //width: 750px;
-        //padding: 0 100px;
-      }
+      width: 100%;
     }
+
     &.left-img {
       float: left;
     }
