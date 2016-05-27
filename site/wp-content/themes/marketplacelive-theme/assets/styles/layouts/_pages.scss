@@ -176,6 +176,34 @@ blockquote {
     }
   }
 }
+
+// modal social icons
+.modal-social-wrapper {
+  float: left;
+  margin: 0;
+  width: 100%;
+  display: block;
+
+  .social {
+    list-style-type: none;
+    padding-left: 0;
+    float: left;
+    margin:0;
+    text-align: center;
+    .item {
+      display: inline;
+      white-space:nowrap;
+    }
+    .icon {
+      width: 23px;
+      height: 23px;
+      margin-right: 9px;
+      padding: 2px;
+    }
+  }
+}
+
+
 .connect {
   .main-content-row {
     margin: 24px 0;

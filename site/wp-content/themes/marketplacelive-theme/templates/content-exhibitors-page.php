@@ -167,5 +167,11 @@
 
     <?php endif; ?>
 
+    
+    
 
-</main>
+
+</div> <!--/main needed for the theme -->
+
+
+<!-- source modal  -->
