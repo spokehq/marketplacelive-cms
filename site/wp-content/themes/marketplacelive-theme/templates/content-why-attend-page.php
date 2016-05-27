@@ -118,7 +118,7 @@
                 <div class="row">
                     <div class="main-content-row right-img custom-margin-<?php echo $count++; ?>">
                         <div class="left-text">
-                            <div class="col-sm-5 col-sm-offset-3">
+                            <div class="col-sm-4 col-sm-offset-3">
                                 <div class="text-wrapper">
                                     <div class="heading">
                                         <h2><?php echo $heading; ?></h2>
@@ -150,13 +150,15 @@
 
                             <!--  stack this image on top when in mobile view or remove image -->
 
-                                    <div class="col-sm-4 col-sm-offset-1">
-                                        <img src="<?php echo $image_right['url']; ?>"
-                                             alt="<?php echo $image_right['alt']; ?>"
-                                             class="image-right img-responsive" />
-                                    </div>
+
 
                                 </div>
+
+                            </div>
+                            <div class="col-sm-4 col-sm-offset-1">
+                                <img src="<?php echo $image_right['url']; ?>"
+                                     alt="<?php echo $image_right['alt']; ?>"
+                                     class="image-right img-responsive" />
                             </div>
                         </div>
                     </div>

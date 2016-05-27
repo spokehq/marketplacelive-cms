@@ -3,8 +3,8 @@
     <div class="big-kahuna">
         <div class="container">
             <div class="row">
-                <div class="col-md-5"></div>
-                <div class="col-md-5">
+
+                <div class="col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10 ">
                     <div>
                         <img src="<?= get_template_directory_uri(); ?>/dist/images/rect-blue.svg" alt="" class="rect-blue">
                     </div>
@@ -15,7 +15,7 @@
 
                         <?php use Roots\Sage\Titles; ?>
                         <!--                    <H1>--><?//= Titles\title(); ?><!--</H1>-->
-                        <h1>Snappy, attention catching</h1>
+                        <h1><strong>Connect</strong> with the<br> <strong>foundation</strong> of the <br><strong>digital economy.</strong></h1>
 
 
                     </div>

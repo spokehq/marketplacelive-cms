@@ -90,7 +90,7 @@
         <div class="main-content-row custom-margin-<?php echo $count++; ?>">
             <div class="row">
                 <div class="social-wrapper">
-                    <div class="col-sm-offset-2 col-sm-8 col-xs-12">
+                    <div class="col-sm-offset-2 col-sm-8">
                         <ul class="social">
                             <li class="item"><a href="https://vimeo.com/telx"
                                                 target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/bsoc-vimeo.svg"
@@ -106,13 +106,63 @@
                                                                      target="_blank" alt=""></a></li>
                             <li class="item"><a href="https://www.facebook.com/MarketplaceLive/"
                                                 target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/bsoc-fb.svg"
-                                                                     target="_blank" alt=""></a></li> 
+                                                                     target="_blank" alt=""></a></li>
                         </ul>
                     </div>
 
                 </div>
             </div>
         </div>
+
+
+            <div class="row">
+                
+
+                    <div class="col-sm-offset-2 col-sm-8">
+
+
+
+                            <?php
+
+
+                                $firstHeading = get_field('connect_first_heading');
+                                $firstSection = get_field('first_section');
+                                $secondHeading = get_field('connect_second_heading');
+                                $secondSection = get_field('second_section');
+
+
+
+                                ?>
+
+                                <h2 class="heading">
+                                    <?php echo $firstHeading; ?>
+                                    </h2>
+
+                                <div class="description">
+                                    <?php echo $firstSection; ?>
+                                </div>
+                    </div>
+               
+            </div>
+        <div class="col-sm-12"><p></p><p></p><p></p></div>
+            <div class="row">
+                
+
+                    <div class="col-sm-offset-2 col-sm-8">
+                                <h2 class="heading">
+                                    <?php echo $secondHeading; ?>
+                                </h2>
+
+                                <div class="description">
+                                    <?php echo $secondSection; ?>
+                                </div>
+
+
+
+
+            </div>
+       
+<div class="col-sm-12"><p></p><p></p><p></p></div>
 
     </main>
 

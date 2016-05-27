@@ -85,25 +85,25 @@
                                     <div class="description">
                                         <?php echo $desc; ?>
                                     </div>
-
-                                    <?php if ( $toggle_cta === "Yes" ) {
-
-                                        // show CTA button
-
-
-                                        ?>
+          <!-- TODO: fix hardcoded target -->
+<!--                                    --><?php //if ( $toggle_cta === "Yes" ) {
+//
+//                                        // show CTA button
+//
+//
+//                                        ?>
 
                                         <div class="cta">
                                             <a class="btn btn-standard clearfix"
-                                               target="<?php echo $link_target; ?>"
+                                               target="_blank"
                                                href="<?php echo $cta_link; ?>" ><?php echo $cta_button; ?></a>
                                         </div>
 
-                                    <?php } else {
-
-                                        // we do not display the CTA
-
-                                    } ?>
+<!--                                    --><?php //} else {
+//
+//                                        // we do not display the CTA
+//
+//                                    } ?>
                                 </div>
                             </div>
 
@@ -128,24 +128,24 @@
                                         <?php echo $desc; ?>
                                     </div>
 
-                                    <?php if ( $toggle_cta === "Yes" ) {
-
-                                        // show CTA button
-
-
-                                        ?>
-
+<!--                                    --><?php //if ( $toggle_cta === "Yes" ) {
+//
+//                                        // show CTA button
+//
+//
+//                                        ?>
+<!-- TODO: fix hardcoded target -->
                                         <div class="cta">
                                             <a class="btn btn-standard clearfix"
-                                               target="<?php echo $link_target; ?>"
+                                               target="_blank"
                                                href="<?php echo $cta_link; ?>" ><?php echo $cta_button; ?></a>
                                         </div>
 
-                                    <?php } else {
-
-                                        // we do not display the CTA
-
-                                    } ?>
+<!--                                    --><?php //} else {
+//
+//                                        // we do not display the CTA
+//
+//                                    } ?>
                                 </div>
                             </div>
 

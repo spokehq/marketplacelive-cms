@@ -119,6 +119,31 @@ blockquote {
       }
     }
   }
+  .connect {
+    h2 {
+      color: $astronaut;
+    }
+    .main-content-row {
+      float: left;
+      margin: 25px 0;
+      h2 {
+        color: $astronaut;
+      }
+      &.custom-margin-3, &.custom-margin-4 {
+        .col-sm-8 {
+          padding: 0;
+        }
+      }
+    }
+    .custom-margin-3,
+    .custom-margin-4 {
+      float: left;
+      margin: 25px 0 25px;
+    }
+    h2 {
+      color: $astronaut;
+    }
+  }
   .text-wrapper {
     // TEST
     padding: 0 15px;
@@ -208,9 +233,12 @@ blockquote {
   .main-content-row {
     margin: 24px 0;
   }
+  .description {
+    margin-bottom: 30px;
+  }
   .main-content-row {
     .social-wrapper {
-      margin: 0 0 100px;
+      margin: 0 0 50px;
     }
   }
 }

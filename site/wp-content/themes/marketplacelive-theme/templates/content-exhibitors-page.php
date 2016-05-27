@@ -167,11 +167,214 @@
 
     <?php endif; ?>
 
-    
-    
 
 
-</div> <!--/main needed for the theme -->
+
+    <!-- Exhibitors -->
+
+            <div class="row">
+
+                <!-- Exhibitors -->
+                <?php
+                if(is_page('exhibitors')) {
+                    $args = array(
+                        'vendor_type'	   =>  'exhibitor',
+                        'orderby'          => 'title',
+                        'order'            => 'ASC',
+                        'post_type'        => 'sponsor',
+                        'post_status'      => 'publish',
+                        'posts_per_page'   => -1
+                    );
+
+                    $myposts = get_posts( $args );
+                    // set up grid here
+                    echo ' <div class="row">';
+
+                    foreach ($myposts as $post) : setup_postdata( $post );
+                        // this is what opens your modal - edit as needed
+                        // reformat company title
+                        $company = get_the_title();
+                        $company = str_replace(' ', '-', $company);
+                        $logo = wp_get_attachment_image(get_field('company_logo'),'thumbnail');?>
+
+                        <!-- Button Trigger -->
+                        <div class="col-sm-3"><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#<?php echo $company;?>"><?php echo $logo; ?></button></div>
+
+                        <!-- Modal -->
+                        <?php
+                        $url = get_field('company_url');
+                        $prettyUrl = get_field('company_url_name');
+                        $snippet = get_field('company_snippet');
+                        $twitter = get_field('company_twitter_url');
+                        $linkedIn = get_field('company_linkedin_url');
+                        $facebook = get_field('company_facebook_url');
+                        $email = get_field('company_email'); ?>
 
 
-<!-- source modal  -->
+                        <div class="modal fade" id="<?php $company;?>" role="dialog" arial-labelledby="<?php echo $company;?>-label" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h3><?php the_title();?></h3>
+                                    <?php if($url) {
+                                        echo '<span class="company-url clearfix">';
+                                        if($prettyUrl) {
+                                            echo $prettyUrl;
+                                        } else {
+                                            echo $url;
+                                        }
+                                        echo '</a>';
+                                    }
+
+                                    if ($snippet) {
+                                        echo '<div class="snippet clearfix">'.$snippet.'</div>';
+                                    }
+                                    if ($twitter || $linkedIn || $facebook) { ?>
+                                    <div class="modal-social clearfix">
+                                        <div class="modal-social-wrapper">
+                                            <ul class="social">
+                                                <?php if($twitter) { ?>
+                                                    <li class="item"><a href="<?php echo $twitter;?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/dist/images/rsoc-twitter.svg" alt="" class="rsoc icon"></</li>
+                                                <?php }
+                                                if ($linkedIn) { ?>
+                                                    <li class="item"><a href="<?php echo $linkedIn;?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/dist/images/rsoc-linkedin.svg" alt="" class="rsoc icon"></a></li>
+                                                <?php }
+                                                if($facebook) {?>
+                                                    <li class="item"><a href="<?php echo $facebook;?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/dist/images/rsoc-faceook.svg" alt="" class="rsoc icon"></a></li>
+                                                <?php } ?>
+                                            </ul>
+                                        </div>
+                                        <?php }
+                                        if ($email) { ?>
+                                            <div class="modal-email-wrapper">
+                                                <a href="mailto:<?php echo $email;?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/dist/images/rsoc-email.svg" alt="" class="rsoc"></a>
+                                            </div>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                            </div><!-- end .modal-dialog -->
+                        </div><!-- end modal -->
+                    <?php endforeach;
+                    // close grid here
+                    echo '</div><!-- end .row -->';
+                    wp_reset_postdata();
+                }
+
+                if(is_page('sponsors')) {
+                    $argsAll = array(
+                        'vendor_type'	   =>  'sponsor',
+                        'post_type'        => 'sponsor',
+                        'post_status'      => 'publish',
+                        'orderby'          => 'title',
+                        'order'            => 'ASC',
+                        'posts_per_page'   => -1
+                    );
+
+                    $sponsors = get_posts($argsAll);
+                    // set up grid here
+                    echo ' <div class="row">';
+
+                    foreach ($argsAll as $post) : setup_postdata( $post );
+                        // this is what opens your modal - edit as needed
+                        // reformat company title
+                        $company = get_the_title();
+                        $company = str_replace(' ', '-', $company);
+                        $logo = wp_get_attachment_image(get_field('company_logo'),'thumbnail');?>
+
+                        <!-- Button Trigger -->
+                        <div class="col-sm-3"><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#<?php echo $company;?>"><?php echo $logo; ?></button></div>
+
+                        <!-- Modal -->
+                        <?php
+                        $url = get_field('company_url');
+                        $prettyUrl = get_field('company_url_name');
+                        $snippet = get_field('company_snippet');
+                        $twitter = get_field('company_twitter_url');
+                        $linkedIn = get_field('company_linkedin_url');
+                        $facebook = get_field('company_facebook_url');
+                        $email = get_field('company_email'); ?>
+
+
+                        <div class="modal fade" id="<?php $company;?>" role="dialog" arial-labelledby="<?php echo $company;?>-label" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h3><?php the_title();?></h3>
+                                    <?php if($url) {
+                                        echo '<span class="company-url clearfix">';
+                                        if($prettyUrl) {
+                                            echo $prettyUrl;
+                                        } else {
+                                            echo $url;
+                                        }
+                                        echo '</a>';
+                                    }
+
+                                    if ($snippet) {
+                                        echo '<div class="snippet clearfix">'.$snippet.'</div>';
+                                    }
+                                    if ($twitter || $linkedIn || $facebook) { ?>
+                                    <div class="modal-social clearfix">
+                                        <div class="modal-social-wrapper">
+                                            <ul class="social">
+                                                <?php if($twitter) { ?>
+                                                    <li class="item"><a href="<?php echo $twitter;?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/dist/images/rsoc-twitter.svg" alt="" class="rsoc icon"></</li>
+                                                <?php }
+                                                if ($linkedIn) { ?>
+                                                    <li class="item"><a href="<?php echo $linkedIn;?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/dist/images/rsoc-linkedin.svg" alt="" class="rsoc icon"></a></li>
+                                                <?php }
+                                                if($facebook) {?>
+                                                    <li class="item"><a href="<?php echo $facebook;?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/dist/images/rsoc-faceook.svg" alt="" class="rsoc icon"></a></li>
+                                                <?php } ?>
+                                            </ul>
+                                        </div>
+                                        <?php }
+                                        if ($email) { ?>
+                                            <div class="modal-email-wrapper">
+                                                <a href="mailto:<?php echo $email;?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/dist/images/rsoc-email.svg" alt="" class="rsoc"></a>
+                                            </div>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                            </div><!-- end .modal-dialog -->
+                        </div><!-- end modal -->
+                    <?php endforeach;
+                    // close grid here
+                    echo '</div><!-- end .row -->';
+                    wp_reset_postdata();
+
+
+                }
+
+                ?>
+                </div>
+
+</main>
+
+
+<!-- source modal test -->
+<div class="modal fade" id="basicModal1" tabindex="-1" role="dialog" aria-labelledby="basicModal1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <h3>Modal Body</h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

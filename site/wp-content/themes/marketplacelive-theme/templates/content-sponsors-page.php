@@ -92,11 +92,11 @@
 
                                     ?>
 
-                                    <div class="cta">
-                                        <a class="btn btn-standard clearfix"
-                                           target="<?php echo $link_target; ?>"
-                                           href="<?php echo $cta_link; ?>" ><?php echo $cta_button; ?></a>
-                                    </div>
+<!--                                    <div class="cta">-->
+<!--                                        <a class="btn btn-standard clearfix"-->
+<!--                                           target="--><?php //echo $link_target; ?><!--"-->
+<!--                                           href="--><?php //echo $cta_link; ?><!--" >--><?php //echo $cta_button; ?><!--</a>-->
+<!--                                    </div>-->
 
                                 <?php } else {
 
@@ -134,11 +134,11 @@
 
                                     ?>
 
-                                    <div class="cta">
-                                        <a class="btn btn-standard clearfix"
-                                           target="<?php echo $link_target; ?>"
-                                           href="<?php echo $cta_link; ?>" ><?php echo $cta_button; ?></a>
-                                    </div>
+<!--                                    <div class="cta">-->
+<!--                                        <a class="btn btn-standard clearfix"-->
+<!--                                           target="--><?php //echo $link_target; ?><!--"-->
+<!--                                           href="--><?php //echo $cta_link; ?><!--" >--><?php //echo $cta_button; ?><!--</a>-->
+<!--                                    </div>-->
 
                                 <?php } else {
 
