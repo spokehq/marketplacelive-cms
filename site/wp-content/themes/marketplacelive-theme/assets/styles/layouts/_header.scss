@@ -269,11 +269,12 @@
 
       .social {
         margin: 30px 0;
-        float: none;
+        float: left;
         text-align: center;
       }
       .btn-standard {
-        float: none;
+        float: left;
+        margin-top: 15px;
       }
     }
   }
@@ -325,7 +326,7 @@
   .social {
     list-style-type: none;
     padding-left: 0;
-    float: none;
+    float: left;
     margin-top: 60px;
     text-align: center;
     .item {
@@ -343,19 +344,18 @@
 
 .rect1 {
   width: 300px;
-  position: absolute;
-  top: -253px;
-  left: auto;
-  right: 110px;
-  z-index: 0;
+  position: relative;
+  top: -130px;
+  left: 40%;
   transform: rotate(90deg);
   transition: 0.25s;
+  @include centerer;
 }
 .rect-blue {
   width: 274px;
-  position: absolute;
-  top: -28px;
-  left: -150px;
+  top: 50%;
+  left: -13%;
+  @include centerer;
 }
 
 @media (min-width: $screen-xs-min) { // min-width 480
@@ -383,16 +383,38 @@
   }
   .rect1 {
     width: 200px;
-    position: absolute;
-    top: 45px;
-    left: -133px;
-    z-index: 0;
-    transform: rotate(0deg);
+    top: 60%;
+    left: -5%;
+    @include centerer;
   }
-  .come-back-soon {
-    .social {
-      margin: 10px 0;
-      float: left;
+  .come-back-soon,
+  .venue,
+  .why-attend,
+  .exhibitors,
+  .sponsors,
+  .connect {
+    .top-content {
+
+      .big-kahuna {
+      }
+      .social-wrapper {
+
+        .social {
+          margin: 10px 0;
+        }
+        .btn-standard {
+          float: right;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .venue {
+    .top-content {
+      h2 {
+        font-size: 60px;
+        font-style: italic;
+      }
     }
   }
 }

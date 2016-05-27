@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #254A6D;
+      }
+    </style>
+  </defs>
+  <title>soc-fb</title>
+  <path class="cls-1" d="M32,30.38a2,2,0,0,1-2,2H2a2,2,0,0,1-2-2v-28a2,2,0,0,1,2-2H30a2,2,0,0,1,2,2v28Zm-10,2v-12h4l1-5H22v-2a2.65,2.65,0,0,1,3-3h2v-5H23c-3.67,0-6,2.88-6,7v3H13v5h4v12h5Z" transform="translate(0 -0.38)"/>
+</svg>

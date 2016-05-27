@@ -3,15 +3,26 @@
 <main class="main">
 
 
-    <div class="container">
+
         <div class="row">
             <div class="main-content-row">
-                <?php the_field('venue_introduction'); ?>
+                <div class="col-sm-offset-2 col-sm-8">
+                    <div class="text-wrapper introduction">
+                        <?php the_field('venue_introduction'); ?>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <?php if( have_rows('venue_row_layout') ): ?>
+
+    <?php if( have_rows('venue_row_layout') ):
+
+            // assignments
+
+            $link_target = "_blank";                                   // pre-assign link target value
+            $count = "1";                                              // row margin overrides
+
+        ?>
 
 
         <?php while( have_rows('venue_row_layout') ): the_row();
@@ -28,9 +39,26 @@
             $image_left = get_sub_field('venue_image_on_left');
             $image_right = get_sub_field('venue_image_on_right');
 
+            // Determine if link will open a new tab
 
+                    if ( $toggle_cta === "Yes") {
 
-            ?>
+                        if ( $cta_tab === "Yes" ) {
+
+                            $link_target = "_blank";
+
+                        } else {
+
+                            $link_target = "_parent";
+
+                        }
+                    } else {
+
+                        // no cta link
+
+                    }
+
+                    ?>
 
 
 
@@ -41,7 +69,7 @@
 
                 ?>
                 <div class="row">
-                    <div class="main-content-row left-img">
+                    <div class="main-content-row left-img custom-margin-<?php echo $count++; ?>">
                         <div class="right-text">
 
                             <div class="col-sm-4">
@@ -58,9 +86,24 @@
                                         <?php echo $desc; ?>
                                     </div>
 
-                                    <div class="cta">
-                                        <a class="btn btn-standard clearfix" href="<?php echo $cta_link; ?>" ><?php echo $cta_button; ?></a>
-                                    </div>
+                                    <?php if ( $toggle_cta === "Yes" ) {
+
+                                        // show CTA button
+
+
+                                        ?>
+
+                                        <div class="cta">
+                                            <a class="btn btn-standard clearfix"
+                                               target="<?php echo $link_target; ?>"
+                                               href="<?php echo $cta_link; ?>" ><?php echo $cta_button; ?></a>
+                                        </div>
+
+                                    <?php } else {
+
+                                        // we do not display the CTA
+
+                                    } ?>
                                 </div>
                             </div>
 
@@ -73,9 +116,9 @@
 
                 ?>
                 <div class="row">
-                    <div class="main-content-row right-img">
+                    <div class="main-content-row right-img custom-margin-<?php echo $count++; ?>">
                         <div class="left-text">
-                            <div class="col-sm-4 col-sm-offset-3">
+                            <div class="col-sm-5 col-sm-offset-2">
                                 <div class="text-wrapper">
                                     <div class="heading">
                                         <h2><?php echo $heading; ?></h2>
@@ -85,9 +128,24 @@
                                         <?php echo $desc; ?>
                                     </div>
 
-                                    <div class="cta">
-                                        <a class="btn btn-standard clearfix" href="<?php echo $cta_link; ?>" ><?php echo $cta_button; ?></a>
-                                    </div>
+                                    <?php if ( $toggle_cta === "Yes" ) {
+
+                                        // show CTA button
+
+
+                                        ?>
+
+                                        <div class="cta">
+                                            <a class="btn btn-standard clearfix"
+                                               target="<?php echo $link_target; ?>"
+                                               href="<?php echo $cta_link; ?>" ><?php echo $cta_button; ?></a>
+                                        </div>
+
+                                    <?php } else {
+
+                                        // we do not display the CTA
+
+                                    } ?>
                                 </div>
                             </div>
 

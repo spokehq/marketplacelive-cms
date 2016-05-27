@@ -20,9 +20,20 @@ $elephant : rgb(12,40,59);        // #0C283B background to header images
 $black-pearl : #071c2d;           // #071c2d navbar bkg on mobile
 $veil : rgba(255,255,255,0.11);   // Navbar background ( desktop )
 $tundoro : #454545;
+$gray : #8d8d8d;                  // Member digits
 $brand-primary : $froly;
+
 
 // Font Families
 
 $museo-stack :  "museo-sans", sans-serif;
 $fira-stack :  "fira-sans", sans-serif;
+
+
+
+// Mixins
+
+@mixin centerer {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}

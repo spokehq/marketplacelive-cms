@@ -3,8 +3,7 @@
     <div class="big-kahuna">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-8">
+                <div class="col-md-offset-3 col-md-8 col-xs-offset-1 col-xs-10">
                     <div>
                         <img src="<?= get_template_directory_uri(); ?>/dist/images/rect1.svg" alt="" class="rect1">
                     </div>

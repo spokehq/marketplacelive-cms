@@ -1,20 +1,32 @@
 
 <!-- .main removed from base template  -->
 
-<main class="main">
-    <div class="container">
-        <div class="main-content-row">
+    <main class="main">
 
-            <div class="row">
-                <div class="col-sm-offset-1 col-sm-10">
+
+        <?php // assignments
+
+        $count = "1";
+
+        ?>
+
+        <div class="row">
+   
+            <div class="col-sm-offset-2 col-sm-8">
+                <div class="connect-title">
                     <?php the_field('connect_page_heading'); ?>
                 </div>
             </div>
-            <div class="row">
+
+        </div>
 
 
 
-                <div class="col-sm-offset-1 col-sm-10">
+
+        <div class="row">
+            <div class="main-content-row custom-margin-<?php echo $count++; ?>">
+
+                <div class="col-sm-offset-2 col-sm-8">
                     <?php if( have_rows('add_connection') ): ?>
 
 
@@ -34,21 +46,33 @@
 
 
                             <div class="member-wrapper">
-                                <div class="col-sm-6 ">
+                                <div class="col-md-6 ">
                                    <div class="role">
-                                       <?php echo $t_role ?>
+                                       <?php if ($t_role): ?>
+                                           <?php echo $t_role ?>
+                                       <?php endif; ?>
                                    </div>
                                    <div class="member">
-                                       <?php echo $t_member ?>
+                                       <?php if ($t_member): ?>
+                                           <?php echo $t_member ?>
+                                       <?php endif; ?>
                                    </div>
                                    <div class="title">
-                                       <?php echo $t_title ?>
+                                       <?php if ($t_title): ?>
+                                           <?php echo $t_title ?>
+                                       <?php endif; ?>
                                    </div>
-                                   <div class="phone">
-                                       <?php echo $t_phone ?>
+                                   <div class="digits">
+                                       <?php if ($t_phone): ?>
+                                           <a href="tel:<?php echo
+                                           preg_replace("/[.,+,-,' ']/", "", $t_phone); ?>"><?php echo $t_phone ?></a>
+                                       <?php endif; ?>
                                    </div>
-                                   <div class="email">
-                                       <?php echo $t_email ?>
+                                   <div class="digits">
+                                       <?php if ($t_email): ?>
+                                           <a href="mailto:<?php echo
+                                           antispambot( $t_email ) ?>" ><?php echo antispambot( $t_email ) ?></a>
+                                       <?php endif; ?>
                                    </div>
                                </div>
                             </div>
@@ -62,33 +86,34 @@
             </div>
         </div>
 
-        <div class="main-content-row">
+
+        <div class="main-content-row custom-margin-<?php echo $count++; ?>">
             <div class="row">
                 <div class="social-wrapper">
                     <div class="col-sm-offset-2 col-sm-8 col-xs-12">
                         <ul class="social">
                             <li class="item"><a href="https://vimeo.com/telx"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-vimeo.svg"
+                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/bsoc-vimeo.svg"
                                                                      target="_blank" alt=""></a></li>
                             <li class="item"><a href="https://plus.google.com/+TelxGroup"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/googleplus.svg"
+                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/bsoc-googleplus.svg"
                                                                      target="_blank" alt=""></a></li>
                             <li class="item"><a href="https://twitter.com/TelxMPLIVE"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-twitter.svg"
+                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/bsoc-twitter.svg"
                                                                      target="_blank" alt=""></a></li>
                             <li class="item"><a href="http://www.linkedin.com/company/telx"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-linkedin.svg"
+                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/bsoc-linkedin.svg"
                                                                      target="_blank" alt=""></a></li>
                             <li class="item"><a href="https://www.facebook.com/MarketplaceLive/"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-fb.svg"
-                                                                     target="_blank" alt=""></a></li>
+                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/bsoc-fb.svg"
+                                                                     target="_blank" alt=""></a></li> 
                         </ul>
                     </div>
 
                 </div>
             </div>
         </div>
-    </div>
-</main>
+
+    </main>
 
 
