@@ -2,6 +2,15 @@
 
 <main class="main">
 
+    <?php
+
+    // assignments
+
+    $link_target = "_blank";                                   // pre-assign link target value
+    $count = "1";                                              // row margin overrides
+
+    ?>
+
     <?php if( have_rows('row_layout') ): ?>
 
 
@@ -21,7 +30,7 @@
                 $oembed = get_sub_field('select_video');
 
 
-                ?>
+            ?>
 
 
 
@@ -32,14 +41,14 @@
 
                     ?>
                 <div class="row">
-                    <div class="main-content-row left-img">
+                    <div class="main-content-row left-img custom<?php echo $count++; ?>">
                        <div class="right-text">
 
                            <div class="col-sm-4">
                                <img src="<?php echo $image_left['url']; ?>" alt="<?php echo $image_left['alt']; ?>"
                                     class="image-left parallax img-responsive" />
                            </div>
-                           <div class="col-sm-4 col-sm-offset-1">
+                           <div class="col-sm-5 col-sm-offset-1">
                                <div class="text-wrapper">
                                    <div class="heading">
                                        <h2><?php echo $heading; ?></h2>
@@ -64,9 +73,9 @@
 
                     ?>
                 <div class="row">
-                    <div class="main-content-row right-img">
+                    <div class="main-content-row right-img custom<?php echo $count++; ?>">
                         <div class="left-text">
-                            <div class="col-sm-4 col-sm-offset-3">
+                            <div class="col-sm-5 col-sm-offset-2">
                                 <div class="text-wrapper">
                                     <div class="heading">
                                         <h2><?php echo $heading; ?></h2>
@@ -103,7 +112,7 @@
 
                 ?>
                 <div class="container">
-                    <div class="vid-container">
+                    <div class="vid-container custom<?php echo $count++; ?>">
                         <div class="row">
 
                             <div class="col-sm-2"></div>
@@ -122,8 +131,6 @@
 
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>

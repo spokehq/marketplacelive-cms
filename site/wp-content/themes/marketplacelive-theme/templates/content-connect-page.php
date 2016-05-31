@@ -3,18 +3,22 @@
 
     <main class="main">
 
+        <?php
 
-        <?php // assignments
+        // assignments
 
-        $count = "1";
+        $link_target = "_blank";                                   // pre-assign link target value
+        $count = "1";                                              // row margin overrides
 
         ?>
 
         <div class="row">
    
-            <div class="col-sm-offset-2 col-sm-8">
-                <div class="connect-title">
-                    <?php the_field('connect_page_heading'); ?>
+            <div class="main-content-row custom<?php echo $count++; ?>">
+                <div class="col-sm-offset-2 col-sm-8">
+                    <div class="connect-title">
+                        <?php the_field('connect_page_heading'); ?>
+                    </div>
                 </div>
             </div>
 
@@ -24,7 +28,7 @@
 
 
         <div class="row">
-            <div class="main-content-row custom-margin-<?php echo $count++; ?>">
+            <div class="main-content-row custom<?php echo $count++; ?>">
 
                 <div class="col-sm-offset-2 col-sm-8">
                     <?php if( have_rows('add_connection') ): ?>
@@ -87,7 +91,7 @@
         </div>
 
 
-        <div class="main-content-row custom-margin-<?php echo $count++; ?>">
+        <div class="main-content-row custom<?php echo $count++; ?>">
             <div class="row">
                 <div class="social-wrapper">
                     <div class="col-sm-offset-2 col-sm-8">
@@ -115,7 +119,7 @@
         </div>
 
 
-        <div class="secondary-content-row">
+        <div class="secondary-content-row custom<?php echo $count++; ?>">
             <div class="row">
 
                 <div class="col-sm-offset-2 col-sm-8">
@@ -131,7 +135,7 @@
             </div>
         </div>
 
-        <div class="secondary-content-row">
+        <div class="secondary-content-row custom<?php echo $count++; ?>">
             <div class="row">
 
                 <div class="col-sm-offset-2 col-sm-8">

@@ -66,7 +66,7 @@
 
                 ?>
                 <div class="row">
-                    <div class="main-content-row left-img custom-margin-<?php echo $count++; ?>">
+                    <div class="main-content-row left-img custom<?php echo $count++; ?>">
                         <div class="right-text">
 
                             <div class="col-sm-4">
@@ -116,7 +116,7 @@
 
                 ?>
                 <div class="row">
-                    <div class="main-content-row right-img custom-margin-<?php echo $count++; ?>">
+                    <div class="main-content-row right-img custom<?php echo $count++; ?>">
                         <div class="left-text">
                             <div class="col-sm-4 col-sm-offset-3">
                                 <div class="text-wrapper">

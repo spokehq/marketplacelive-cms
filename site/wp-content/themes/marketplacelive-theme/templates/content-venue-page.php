@@ -2,10 +2,18 @@
 
 <main class="main">
 
+    <?php if( have_rows('venue_row_layout') ):
+
+        // assignments
+
+        $link_target = "_blank";                                   // pre-assign link target value
+        $count = "1";                                              // row margin overrides
+
+        ?>
 
 
         <div class="row">
-            <div class="main-content-row">
+            <div class="main-content-row custom<?php echo $count++; ?>">
                 <div class="col-sm-offset-2 col-sm-8">
                     <div class="text-wrapper introduction">
                         <?php the_field('venue_introduction'); ?>
@@ -14,15 +22,6 @@
             </div>
         </div>
 
-
-    <?php if( have_rows('venue_row_layout') ):
-
-            // assignments
-
-            $link_target = "_blank";                                   // pre-assign link target value
-            $count = "1";                                              // row margin overrides
-
-        ?>
 
 
         <?php while( have_rows('venue_row_layout') ): the_row();
@@ -69,7 +68,7 @@
 
                 ?>
                 <div class="row">
-                    <div class="main-content-row left-img custom-margin-<?php echo $count++; ?>">
+                    <div class="main-content-row left-img custom<?php echo $count++; ?>">
                         <div class="right-text">
 
                             <div class="col-sm-4">
@@ -116,7 +115,7 @@
 
                 ?>
                 <div class="row">
-                    <div class="main-content-row right-img custom-margin-<?php echo $count++; ?>">
+                    <div class="main-content-row right-img custom<?php echo $count++; ?>">
                         <div class="left-text">
                             <div class="col-sm-5 col-sm-offset-2">
                                 <div class="text-wrapper">
