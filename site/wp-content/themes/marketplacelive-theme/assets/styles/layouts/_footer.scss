@@ -5,6 +5,17 @@
   position: relative; // hack to fix odd gap
   bottom: -2px;
 
+  .twitget {
+    list-style-type: none;
+    list-style-image: url(../images/twitter.png);
+    padding-left: 20px;
+    &> li {
+      font-family: $museo-stack;
+      font-weight: 100;
+      font-style: normal;
+      font-size: 14px;
+    }
+  }
   .bird {
     position: absolute;
     opacity: 0.2;

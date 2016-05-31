@@ -30,7 +30,7 @@ blockquote {
 }
 
 .main-content-row {
-  margin: 100px 0;
+  margin: 40px 0;
   float: left;
 
   .introduction {
@@ -145,15 +145,17 @@ blockquote {
     }
   }
   .text-wrapper {
-    // TEST
     padding: 0 15px;
     a {
       color: $froly;
     }
   }
+
   .social-wrapper {
     display: none;
   }
+
+  // connect page
 
   .member-wrapper {
     &> div {
@@ -200,6 +202,10 @@ blockquote {
       }
     }
   }
+}
+// connect page
+.secondary-content-row {
+  margin-bottom: 40px;
 }
 
 // modal social icons

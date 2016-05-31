@@ -3,25 +3,28 @@
     <div class="big-kahuna">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-offset-3 col-md-8 col-xs-offset-1 col-xs-10">
+                <div class="col-md-offset-3 col-md-9 col-xs-offset-1 col-xs-10">
                     <div>
-                        <img src="<?= get_template_directory_uri(); ?>/dist/images/rect1.svg" alt="" class="rect1">
+                        <img src="<?= get_template_directory_uri(); ?>/dist/images/rect1.svg" alt="" class="rect-red">
                     </div>
+
                     <div class="page-header">
-
-
-                        <h4>A COMMUNITY BUILDING FOR DIGITAL SUCCESS</h4>
-
                         <?php use Roots\Sage\Titles; ?>
-                        <!--                    <H1>--><?//= Titles\title(); ?><!--</H1>-->
-                        <h1>Thursday, September 22nd Spring&nbsp;Studios New&nbsp;York</h1>
+                        <div class="title"><?= Titles\title(); ?></div>
+                        <h1><strong><?php the_field('hero_title'); ?></strong><br>
 
-
+                            <?php the_field('hero_text'); ?></h1>
                     </div>
-                    <div class="col-md-12">
-
-                        <a href="https://marketplacelive2016.eventbrite.com/" class="btn btn-standard" type="button" target="_blank" >REGISTER</a>
-                    </div>
+                    
+                    
+                   <div class="main-cta">
+                       <div class="col-md-12">
+                           <a href="https://marketplacelive2016.eventbrite.com/"
+                              class="btn btn-standard"
+                              type="button"
+                              target="_blank" >REGISTER</a>
+                       </div>
+                   </div>
                 </div>
             </div>
 

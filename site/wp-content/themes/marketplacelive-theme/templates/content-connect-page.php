@@ -115,54 +115,37 @@
         </div>
 
 
+        <div class="secondary-content-row">
             <div class="row">
-                
 
-                    <div class="col-sm-offset-2 col-sm-8">
+                <div class="col-sm-offset-2 col-sm-8">
+                    <h2 class="heading">
+                        <?php echo get_field('connect_first_heading'); ?>
+                    </h2>
 
-
-
-                            <?php
-
-
-                                $firstHeading = get_field('connect_first_heading');
-                                $firstSection = get_field('first_section');
-                                $secondHeading = get_field('connect_second_heading');
-                                $secondSection = get_field('second_section');
-
-
-
-                                ?>
-
-                                <h2 class="heading">
-                                    <?php echo $firstHeading; ?>
-                                    </h2>
-
-                                <div class="description">
-                                    <?php echo $firstSection; ?>
-                                </div>
+                    <div class="description">
+                        <?php echo get_field('first_section'); ?>
                     </div>
-               
+                </div>
+
             </div>
-        <div class="col-sm-12"><p></p><p></p><p></p></div>
+        </div>
+
+        <div class="secondary-content-row">
             <div class="row">
-                
 
-                    <div class="col-sm-offset-2 col-sm-8">
-                                <h2 class="heading">
-                                    <?php echo $secondHeading; ?>
-                                </h2>
+                <div class="col-sm-offset-2 col-sm-8">
+                    <h2 class="heading">
+                        <?php echo get_field('connect_second_heading'); ?>
+                    </h2>
 
-                                <div class="description">
-                                    <?php echo $secondSection; ?>
-                                </div>
-
-
-
+                    <div class="description">
+                        <?php echo get_field('second_section'); ?>
+                    </div>
+                </div>
 
             </div>
-       
-<div class="col-sm-12"><p></p><p></p><p></p></div>
+        </div>
 
     </main>
 

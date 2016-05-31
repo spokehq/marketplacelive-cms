@@ -239,18 +239,7 @@
   position: absolute;
   top: 0;
 }
-.error404 {
-  .top-content {
-    background: url("../images/banner-main1.jpg") no-repeat scroll 20% 99% / cover $black-pearl;
-    .big-kahuna {
-      margin-top: 100px;
-    }
-    .social {
-      margin-top: 200px;
-      margin-left: 0;
-    }
-  }
-}
+
 .home {
   .top-content {
     background: url("../images/banner-main1.jpg") no-repeat scroll 20% 99% / cover $black-pearl;
@@ -261,9 +250,17 @@
       margin-top: 200px;
       margin-left: 0;
     }
+    .main-cta {
+      position: relative;
+      top: 54px;
+      .col-md-12 {
+        padding-left: 0;
+      }
+    }
   }
 }
 
+.error404,
 .come-back-soon {
    .top-content {
      background: url("../images/banner-come-back-soon.jpg") no-repeat scroll 20% 99% / cover $black-pearl;
@@ -300,7 +297,8 @@
 .why-attend,
 .exhibitors,
 .sponsors,
-.connect {
+.connect,
+.error404 {
   .top-content {
 
     .big-kahuna {
@@ -395,24 +393,54 @@
   transition: 0.25s;
   @include centerer;
 }
+.rect-red {
+  width: 274px;
+  top: 50%;
+  left: -7%;
+  @include centerer;
+}
+.home {
+  .rect-red {
+    width: 290px;
+    top: 79%;
+    left: -8%;
+    @include centerer;
+  }
+}
+.why-attend {
+  .rect-blue {
+    width: 274px;
+    top: 50%;
+    left: -5%;
+    @include centerer;
+  }
+}
+.error404 {
+  .rect-red {
+    width: 290px;
+    top: 50%;
+    left: -5%;
+    @include centerer;
+  }
+}
 .rect-blue {
   width: 274px;
   top: 50%;
-  left: -13%;
+  left: -10%;
   @include centerer;
 }
 @media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu>li>a {
-    color: white;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu>.active>a, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover {
-    color: $froly;
-    background-color: transparent;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
-    color: $froly;
-    background-color: transparent;
-  }
+//  .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+//    color: white;
+//  }
+//  .navbar-default .navbar-nav .open .dropdown-menu>.active>a, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover {
+//    color: $froly;
+//    background-color: transparent;
+//  }
+//  .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+//    color: $froly;
+//    background-color: transparent;
+//  }
 }
 @media (min-width: $screen-xs-min) { // min-width 480
   .top-content {
@@ -442,19 +470,19 @@
   .rect1 {
     width: 200px;
     top: 60%;
-    left: -5%;
+    left: 0%;
     @include centerer;
   }
+
   .come-back-soon,
   .venue,
   .why-attend,
   .exhibitors,
   .sponsors,
-  .connect {
+  .connect,
+  .error404 {
     .top-content {
 
-      .big-kahuna {
-      }
       .social-wrapper {
 
         .social {
@@ -469,16 +497,20 @@
   }
   .venue {
     .top-content {
-      h2 {
+      h1 {
+        &> p {
+          font-weight: 400;
+        }
+      }
+      h3 {
         font-size: 60px;
         font-style: italic;
       }
+
     }
   }
 }
 @media (min-width: $screen-md-min) { // min-width 992
-
-
 
 }
 @media (min-width: $screen-lg-min) {  // min-width 1200

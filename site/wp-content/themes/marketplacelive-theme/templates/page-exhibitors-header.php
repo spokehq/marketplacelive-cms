@@ -8,22 +8,16 @@
                     <div>
                         <img src="<?= get_template_directory_uri(); ?>/dist/images/rect1.svg" alt="" class="rect-blue">
                     </div>
+
                     <div class="page-header">
-
                         <?php use Roots\Sage\Titles; ?>
-                        <!--                    <H1>--><?//= Titles\title(); ?><!--</H1>-->
-                        <h3>EXHIBITORS</h3>
+                        <div class="title"><?= Titles\title(); ?></div>
+                        <h1><strong><?php the_field('hero_title'); ?></strong><br>
 
-
-                        <h1><strong>Exhibiting</strong><br>
-                            Made<br>Easy</h1>
-
-
+                            <?php the_field('hero_text'); ?></h1>
                     </div>
-                    <div class="col-md-12">
-                        <!--                    <button class="btn btn-standard" type="button" data-toggle="modal" data-target="#regModal">REGISTER</button>-->
 
-                    </div>
+                    
                 </div>
             </div>
 
