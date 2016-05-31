@@ -83,6 +83,15 @@ function widgets_init() {
         'after_title'   => '</h4>',
     ));
 
+    register_sidebar(array(
+        'name'          => __('Footer Area 3', 'sage'),
+        'id'            => 'sidebar-footer-3',
+        'before_widget' => '<div class="clearfix"><section class="widget mpl %1$s %2$s">',
+        'after_widget'  => '</section></div>',
+        'before_title'  => '<h4>',
+        'after_title'   => '</h4>',
+    ));
+
 
     register_sidebar(array(
         'name'          => __('Footer Area Full Bottom', 'sage'),

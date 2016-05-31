@@ -41,6 +41,9 @@
     letter-spacing: 0.1em;
     color: white;
   }
+  .mpl {
+    margin-top: 50px;
+  }
   .hosting {
     text-align: center;
     padding: 30px 0;
@@ -110,7 +113,10 @@
   }
   .adjustment {
     padding: 30px 0;
-    margin-top: 14px;
+    margin-top: 33px;
+    .title {
+      font-size: 16px;
+    }
 
   }
   .vignette {
@@ -180,11 +186,20 @@
         }
       }
     }
+    .mpl {
+      margin-top: 0;
+      p {
+        font-style: italic;
+      }
+    }
     .hosting {
       float: right;
       text-align: right;
       padding: 0 15px;
+      position: relative;
+      bottom:-90px;
     }
+
     .button-wrapper {
       padding: 0;
       float: right;

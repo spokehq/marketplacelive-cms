@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-md-7">
                     <div class="adjustment">
-                        <h3>A COMMUNITY BUILDING FOR DIGITAL SUCCESS</h3>
+                        <div class="title">A COMMUNITY BUILDING FOR DIGITAL SUCCESS</div>
                     </div>
                 </div>
 
@@ -44,14 +44,18 @@
                 <img class="tbird" src="<?= get_template_directory_uri(); ?>/dist/images/soc-twitter.svg" alt="">
             </div>
             <div class="mid-section">
-                <div class="col-sm-6">
+                <div class="col-sm-5">
+
+                    <!--  Twitter Feed  -->
                     <?php dynamic_sidebar('sidebar-footer-1'); ?>
                 </div>
 
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-sm-offset-1">
+                    <!--  Footer Menu  -->
                     <?php dynamic_sidebar('sidebar-footer-2'); ?>
                 </div>
 
+                <!--  Register Link  -->
                 <div class="col-sm-3 col-sm-offset-1">
                     <div class="button-wrapper">
                         <a href="https://marketplacelive2016.eventbrite.com/"
@@ -62,7 +66,14 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-offset-4 col-sm-8">
+            <div class="col-sm-5">
+
+            <!--  MARKETPLACELIVE info  -->
+                <?php dynamic_sidebar('sidebar-footer-3'); ?>
+            </div>
+
+            <!--  Hosting Message  -->
+            <div class="col-sm-offset-1 col-sm-6">
                 <div class="hosting clearfix"><span class="proudly-hosted">PROUDLY&nbsp;HOSTED&nbsp;BY</span>
                     <a href="https://www.digitalrealty.com/" target="_blank" title="www.digitalrealty.com"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/footer-telx-logo.png"
                                                                                                                 alt="Digital Realty | TELX" class="digital-realty"></a>

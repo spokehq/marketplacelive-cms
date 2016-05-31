@@ -11,9 +11,12 @@
                     <div class="page-header">
                         <?php use Roots\Sage\Titles; ?>
                         <div class="title"><?= Titles\title(); ?></div>
-                        <h1><strong><?php the_field('hero_title'); ?></strong><br>
 
-                            <?php the_field('hero_text'); ?></h1>
+                        <h1><strong><?php// the_field('hero_title'); ?></strong>
+
+                            Sorry, but the page you were trying to view does not exist.
+
+                            <?php// the_field('hero_text'); ?></h1>
                     </div>
 
 
