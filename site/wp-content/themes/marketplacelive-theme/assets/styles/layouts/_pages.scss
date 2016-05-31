@@ -310,28 +310,33 @@ blockquote {
   }
   .custom1 {
     float: left;
-    margin: 175px 0 0;
+    //margin: 175px 0 0;
     .text-wrapper {
-      margin: -84px 0  0;
+      //margin: -84px 0  0;
     }
   }
   .custom2 {
-    margin: 150px 0 200px;
+    //margin: 150px 0 200px;
   }
   .custom3 {
-    .ext-wrapper {
-      margin-top: -57px;
+    .text-wrapper {
+      //margin-top: -57px;
     }
   }
 }
 
 // why attend
 .why-attend {
+  .custom2 {
+    .text-wrapper {
+      //margin-top: 100px;
+    }
+  }
   .custom3 {
     //adjusts row down away from previous row to match layout
-    margin-top: 100px;
+    //margin-top: 100px;
     .text-wrapper {
-      margin-top: -20px;
+      //margin-top: -20px;
     }
   }
 }
@@ -340,15 +345,15 @@ blockquote {
 .venue {
   .custom1 {
     .text-wrapper {
-      margin: 80px 0 60px;
+      //margin: 80px 0 60px;
     }
   }
   .custom2 {
     .description {
-      margin-top: 0;
+      //margin-top: 0;
     }
     .left-text {
-      margin-bottom: 150px;
+      //margin-bottom: 150px;
     }
   }
 }
@@ -367,11 +372,11 @@ blockquote {
     }
   }
   .custom2 {
-    margin-top: 100px 0 -55px;
+    //margin-top: 100px 0 -55px;
   }
   .custom3 {
     .text-wrapper {
-      margin-top: 135px;
+      //margin-top: 135px;
     }
   }
 }
@@ -385,27 +390,27 @@ blockquote {
   }
   .custom1 {
     float: left;
-    margin: 100px 0 30px;
+   // margin: 100px 0 30px;
   }
   .custom2 {
     .text-wrapper {
-      margin-top: -20px;
+     // margin-top: -20px;
     }
     .right-text {
       .description {
-        margin-top: 30px;
+        //margin-top: 30px;
       }
     }
   }
   .custom3 {
-    margin: -30px 0 100px;
+    //margin: -30px 0 100px;
   }
 }
 
 // connect
 .connect {
   .custom5 {
-    margin-bottom: 100px;
+    //margin-bottom: 100px;
   }
 }
 
@@ -496,6 +501,99 @@ blockquote {
       margin: 0 -100px 0 50px;
     }
   }
+  // Row Spacing Accomodations
+
+  // main
+  .home {
+    .custom1 {
+      float: left;
+      margin: 175px 0 0;
+      .text-wrapper {
+        margin: -84px 0  0;
+      }
+    }
+    .custom2 {
+      margin: 150px 0 200px;
+    }
+    .custom3 {
+      .text-wrapper {
+        margin-top: -57px;
+      }
+    }
+  }
+
+  // why attend
+  .why-attend {
+    .custom2 {
+      .text-wrapper {
+        margin-top: 100px;
+      }
+    }
+    .custom3 {
+      //adjusts row down away from previous row to match layout
+      margin-top: 100px;
+      .text-wrapper {
+        margin-top: -20px;
+      }
+    }
+  }
+
+  // venue
+  .venue {
+    .custom1 {
+      .text-wrapper {
+        margin: 80px 0 60px;
+      }
+    }
+    .custom2 {
+      .description {
+        margin-top: 0;
+      }
+      .left-text {
+        margin-bottom: 150px;
+      }
+    }
+  }
+  // exhibitors
+  .exhibitors {
+    .custom2 {
+      margin-top: 100px 0 -55px;
+    }
+    .custom3 {
+      .text-wrapper {
+        margin-top: 135px;
+      }
+    }
+  }
+  // sponsors
+  .sponsors {
+    .custom1 {
+      float: left;
+      margin: 100px 0 30px;
+    }
+    .custom2 {
+      .text-wrapper {
+        margin-top: -20px;
+      }
+      .right-text {
+        .description {
+          margin-top: 30px;
+        }
+      }
+    }
+    .custom3 {
+      margin: -30px 0 100px;
+    }
+  }
+
+  // connect
+  .connect {
+    .custom5 {
+      margin-bottom: 100px;
+    }
+  }
+
+
 }
 @media (min-width: $screen-lg-min) {  // min-width 1200
 
