@@ -31,7 +31,7 @@ blockquote {
 
 .main-content-row {
   margin: 40px 0;
-  float: left;
+  //float: left;
 
   .introduction {
     font-size: 30px;
@@ -122,24 +122,31 @@ blockquote {
       }
     }
   }
+  // connect page
+
   .connect {
     h2 {
       color: $astronaut;
     }
+
     .main-content-row {
       float: left;
-      margin: 25px 0;
+      margin: 0;
+      .row {
+        clear: both;
+        width: 100%;
+      }
       h2 {
         color: $astronaut;
       }
-      &.custom-margin-3, &.custom-margin-4 {
+      &.custom3, &.custom4 {
         .col-sm-8 {
           padding: 0;
         }
       }
     }
-    .custom-margin-3,
-    .custom-margin-4 {
+    .custom3,
+    .custom4 {
       float: left;
       margin: 25px 0 25px;
     }
@@ -155,10 +162,16 @@ blockquote {
   }
 
   .social-wrapper {
-    display: none;
+    margin: 0;
+    a {
+      color: $astronaut;
+    }
+    .social {
+      margin-top: 10px;
+      float: left;
+    }
   }
 
-  // connect page
 
   .member-wrapper {
     &> div {
@@ -205,8 +218,8 @@ blockquote {
       }
     }
   }
+
 }
-// connect page
 .secondary-content-row {
   margin-bottom: 40px;
 }
@@ -227,32 +240,16 @@ blockquote {
     .item {
       display: inline;
       white-space:nowrap;
-    }
-    .icon {
-      width: 23px;
-      height: 23px;
-      margin-right: 9px;
-      padding: 2px;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
 
-
-.connect {
-  .main-content-row {
-    margin: 24px 0;
-  }
-  .description {
-    margin-bottom: 30px;
-  }
-  .main-content-row {
-    .social-wrapper {
-      margin: 0 0 50px;
-    }
-  }
-}
 .connect-title {
-  margin: 80px 0 10px;
+  margin: 0 0 10px;
    &> p {
     font-size: 30px;
     color: $astronaut;
@@ -292,7 +289,7 @@ blockquote {
 }
 
 
-// Row Spacing Accomodations
+// Row Spacing Accommodations
 
 // main
 .home {
@@ -410,7 +407,7 @@ blockquote {
 // connect
 .connect {
   .custom5 {
-    //margin-bottom: 100px;
+    margin-bottom: 100px;
   }
 }
 
@@ -451,6 +448,9 @@ blockquote {
         }
       }
     }
+  }
+  .connect-title {
+    margin: 80px 0 10px;
   }
 
 }
@@ -501,7 +501,7 @@ blockquote {
       margin: 0 -100px 0 50px;
     }
   }
-  // Row Spacing Accomodations
+  // Row Spacing Accommodations
 
   // main
   .home {
@@ -590,6 +590,11 @@ blockquote {
   .connect {
     .custom5 {
       margin-bottom: 100px;
+    }
+    .main-content-row {
+      .social-wrapper {
+        margin: 0;
+      }
     }
   }
 

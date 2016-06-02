@@ -17,19 +17,6 @@
 
                             <?php the_field('hero_text'); ?></h1>
                     </div>
-
-<!--                    <div class="page-header">-->
-<!---->
-<!--                        -->
-<!--                                        -->
-<!--                        <h3>CONNECT</h3>-->
-<!---->
-<!---->
-<!--                        <h1><strong>Get&nbsp;in&nbsp;touch.</strong><br>-->
-<!--                            We're really<br>friendly.</h1>-->
-<!---->
-<!---->
-<!--                    </div>-->
                     
                 </div>
             </div>
@@ -40,20 +27,15 @@
                     <div class="col-sm-offset-2 col-sm-4  col-xs-12">
                         <ul class="social">
                             <li class="item"><a href="https://vimeo.com/telx"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-vimeo.svg"
-                                                                     target="_blank" alt=""></a></li>
+                                                target="_blank"><i class="fa fa-vimeo"></i></a></li>
                             <li class="item"><a href="https://plus.google.com/+TelxGroup"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/googleplus.svg"
-                                                                     target="_blank" alt=""></a></li>
+                                                target="_blank"><i class="fa fa-google-plus"></i></a></li>
                             <li class="item"><a href="https://twitter.com/TelxMPLIVE"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-twitter.svg"
-                                                                     target="_blank" alt=""></a></li>
+                                                target="_blank"><i class="fa fa-twitter"></i></a></li>
                             <li class="item"><a href="http://www.linkedin.com/company/telx"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-linkedin.svg"
-                                                                     target="_blank" alt=""></a></li>
+                                                target="_blank"><i class="fa fa-linkedin"></i></a></li>
                             <li class="item"><a href="https://www.facebook.com/MarketplaceLive/"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-fb.svg"
-                                                                     target="_blank" alt=""></a></li>
+                                                target="_blank"><i class="fa fa-facebook-official"></i></a></li>
                         </ul>
                     </div>
                     <div class="col-sm-4 ">

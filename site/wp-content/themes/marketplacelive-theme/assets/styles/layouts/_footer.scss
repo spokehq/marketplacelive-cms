@@ -26,11 +26,6 @@
   .simple_tweet_widget-2 {
     margin-bottom: 40px;
   }
-  .mid-section {
-    position: relative;
-    z-index:10;
-    float: left;
-  }
   .proudly-hosted {
     font-family: $fira-stack;
     font-weight: 300;
@@ -52,6 +47,7 @@
 
     .digital-realty {
       margin-left: 40px;
+      margin-right: 0;
     }
   }
   .menu {
@@ -141,17 +137,19 @@
       .item {
         display: inline;
         white-space:nowrap;
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
         a {
           position: relative;
           top: 50%;
           transform: translateY(-50%);
         }
       }
-      .icon {
-        width: 23px;
-        height: 23px;
-        margin-right: 9px;
-        padding: 2px;
+      .fa {
+        font-family: "FontAwesome";
+        font-size: 24px;
       }
     }
   }
@@ -170,6 +168,9 @@
       text-align: right;
       padding: 0 15px;
       margin-top: 90px;
+      .digital-realty {
+        margin-right: -30px;
+      }
     }
   }
 }
@@ -177,9 +178,6 @@
   .content-info {
     .bird {
       margin-top: 24px;
-    }
-    .mid-section {
-      margin-top: 50px;
     }
     .social-wrapper {
       padding: 31px 0 0 0;
@@ -206,6 +204,11 @@
       float: right;
       .btn-standard {
         float: right;
+      }
+    }
+    .hosting {
+      .digital-realty {
+        margin-right: -15px;
       }
     }
   }

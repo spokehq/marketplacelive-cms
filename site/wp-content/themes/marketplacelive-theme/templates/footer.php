@@ -16,20 +16,15 @@
                     <div class="social-wrapper">
                         <ul class="social">
                             <li class="item"><a href="https://vimeo.com/telx"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-vimeo.svg"
-                                                                     target="_blank" alt=""></a></li>
+                                                target="_blank"><i class="fa fa-vimeo"></i></a></li>
                             <li class="item"><a href="https://plus.google.com/+TelxGroup"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/googleplus.svg"
-                                                                     target="_blank" alt=""></a></li>
+                                                target="_blank"><i class="fa fa-google-plus"></i></a></li>
                             <li class="item"><a href="https://twitter.com/TelxMPLIVE"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-twitter.svg"
-                                                                     target="_blank" alt=""></a></li>
+                                                target="_blank"><i class="fa fa-twitter"></i></a></li>
                             <li class="item"><a href="http://www.linkedin.com/company/telx"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-linkedin.svg"
-                                                                     target="_blank" alt=""></a></li>
+                                                target="_blank"><i class="fa fa-linkedin"></i></a></li>
                             <li class="item"><a href="https://www.facebook.com/MarketplaceLive/"
-                                                target="_blank"><img class="icon" src="<?= get_template_directory_uri(); ?>/dist/images/soc-fb.svg"
-                                                                     target="_blank" alt=""></a></li>
+                                                target="_blank"><i class="fa fa-facebook-official"></i></a></li>
                         </ul>
                     </div>
 
@@ -43,37 +38,35 @@
             <div class="bird">
                 <img class="tbird" src="<?= get_template_directory_uri(); ?>/dist/images/soc-twitter.svg" alt="">
             </div>
-            <div class="mid-section">
-                <div class="col-sm-5">
+            <div class="col-sm-4">
 
-                    <!--  Twitter Feed  -->
-                    <?php dynamic_sidebar('sidebar-footer-1'); ?>
-                </div>
+                <!--  Twitter Feed  -->
+                <?php dynamic_sidebar('sidebar-footer-1'); ?>
+            </div>
 
-                <div class="col-sm-2 col-sm-offset-1">
-                    <!--  Footer Menu  -->
-                    <?php dynamic_sidebar('sidebar-footer-2'); ?>
-                </div>
+            <div class="col-sm-2 col-sm-offset-1">
+                <!--  Footer Menu  -->
+                <?php dynamic_sidebar('sidebar-footer-2'); ?>
+            </div>
 
-                <!--  Register Link  -->
-                <div class="col-sm-3 col-sm-offset-1">
-                    <div class="button-wrapper">
-                        <a href="https://marketplacelive2016.eventbrite.com/"
-                           class="btn btn-standard" type="button" target="_blank" >REGISTER</a>
-                    </div>
+            <!--  Register Link  -->
+            <div class="col-sm-3 col-sm-offset-2">
+                <div class="button-wrapper">
+                    <a href="https://marketplacelive2016.eventbrite.com/"
+                       class="btn btn-standard" type="button" target="_blank" >REGISTER</a>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-sm-5">
+            <div class="col-sm-4">
 
             <!--  MARKETPLACELIVE info  -->
                 <?php dynamic_sidebar('sidebar-footer-3'); ?>
             </div>
 
             <!--  Hosting Message  -->
-            <div class="col-sm-offset-1 col-sm-6">
+            <div class="col-sm-offset-2 col-sm-6">
                 <div class="hosting clearfix"><span class="proudly-hosted">PROUDLY&nbsp;HOSTED&nbsp;BY</span>
                     <a href="https://www.digitalrealty.com/" target="_blank" title="www.digitalrealty.com"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/footer-telx-logo.png"
                                                                                                                 alt="Digital Realty | TELX" class="digital-realty"></a>

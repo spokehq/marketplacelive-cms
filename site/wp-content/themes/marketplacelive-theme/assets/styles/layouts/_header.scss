@@ -55,6 +55,10 @@
   background-color: #071c2d;
   margin: 0;
 
+  &> .container {
+    padding: 0;
+  }
+
   .navbar-brand {
     font-family: $museo-stack;
     font-weight: 300;
@@ -128,7 +132,7 @@
     float: none;
     background-color: $black-pearl;
     position: relative;
-    top: 16px;
+    top: 10px;
     margin: 0;
   }
 
@@ -362,22 +366,25 @@
       color: white;
     }
   }
-  .social {
-    list-style-type: none;
-    padding-left: 0;
-    float: left;
-    margin-top: 60px;
-    text-align: center;
-    .item {
-      display: inline;
-      white-space:nowrap;
+
+}
+.social {
+  list-style-type: none;
+  padding-left: 0;
+  float: left;
+  margin-top: 60px;
+  text-align: center;
+  .item {
+    display: inline;
+    white-space:nowrap;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
     }
-    .icon {
-      width: 23px;
-      height: 23px;
-      margin-right: 9px;
-      padding: 2px;
-    }
+  }
+  .fa {
+    font-family: "FontAwesome";
+    font-size: 24px;
   }
 }
 
@@ -440,10 +447,8 @@
 //  }
 }
 @media (min-width: $screen-xs-min) { // min-width 480
-  .top-content {
-    .social {
-      float: right;
-    }
+  .social {
+    float: right;
   }
 
 }
