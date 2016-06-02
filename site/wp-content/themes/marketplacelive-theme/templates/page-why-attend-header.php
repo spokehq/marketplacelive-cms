@@ -33,10 +33,10 @@
                             <li class="item"><a href="http://www.linkedin.com/company/telx"
                                                 target="_blank"><i class="fa fa-linkedin"></i></a></li>
                             <li class="item"><a href="https://www.facebook.com/MarketplaceLive/"
-                                                target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                target="_blank"><i class="fa fa-facebook-official"></i></a></li>
                         </ul>
                     </div>
-                    <div class="col-sm-4 col-md-offset-4">
+                    <div class="col-sm-4 col-sm-offset-2 col-md-offset-4">
                         <a href="https://marketplacelive2016.eventbrite.com/"
                            class="btn btn-standard" type="button" target="_blank" >REGISTER</a>
                     </div>

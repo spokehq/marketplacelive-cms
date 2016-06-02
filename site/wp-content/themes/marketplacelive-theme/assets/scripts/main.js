@@ -69,12 +69,12 @@
           );
 
 
-          // Modal
-
-          $("#join-trigger").click(function(){
-              $('#modal-login').modal('hide');
-              $('#modal-join').modal('show');
-          });
+          // // Modal
+          //
+          // $("#join-trigger").click(function(){
+          //     $('#modal-login').modal('hide');
+          //     $('#modal-join').modal('show');
+          // });
 
           // back to top script
           // TODO: check if we still need this script

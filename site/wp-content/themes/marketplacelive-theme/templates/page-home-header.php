@@ -1,7 +1,7 @@
 <div class="top-content">
 
     <div class="big-kahuna">
-        <div class="container-fluid">
+        <div class="">
             <div class="row">
                 <div class="col-md-offset-3 col-md-9 col-xs-offset-1 col-xs-10">
                     <div>

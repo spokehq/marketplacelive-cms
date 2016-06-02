@@ -21,7 +21,7 @@
 
             <div class="row">
                 <div class="social-wrapper">
-                    <div class="col-sm-offset-1 col-sm-4  col-xs-12">
+                    <div class="col-sm-4  col-xs-12">
                         <ul class="social">
                             <li class="item"><a href="https://vimeo.com/telx"
                                                 target="_blank"><i class="fa fa-vimeo"></i></a></li>
@@ -35,7 +35,7 @@
                                                 target="_blank"><i class="fa fa-facebook-official"></i></a></li>
                         </ul>
                     </div>
-                    <div class="col-sm-offset-2 col-sm-4">
+                    <div class="col-sm-4 col-sm-offset-2 col-md-offset-4">
                         <a href="https://marketplacelive2016.eventbrite.com/"
                            class="btn btn-standard" type="button" target="_blank" >REGISTER</a>
                     </div>
