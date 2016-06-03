@@ -25,7 +25,6 @@
               $('#menu-primary-navigation li.menu-item-134 a').attr('target', '_blank').attr('title','Register for MarketplaceLIVE 2016! This link will open a new tab.');
           });
 
-
           // Nav icon animation
           $(document).ready(function(){
               $('#nav-icon').click(function(){
@@ -67,14 +66,6 @@
 
               }
           );
-
-
-          // // Modal
-          //
-          // $("#join-trigger").click(function(){
-          //     $('#modal-login').modal('hide');
-          //     $('#modal-join').modal('show');
-          // });
 
           // back to top script
           // TODO: check if we still need this script
