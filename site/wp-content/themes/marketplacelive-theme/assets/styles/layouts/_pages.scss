@@ -35,8 +35,13 @@ blockquote {
 
   .introduction {
     font-size: 30px;
-    color: $froly;
     line-height: 1.2;
+    &.smaltblue {
+      color: $smalt-blue;
+    }
+    &.froly {
+      color: $froly;
+    }
   }
 
 
@@ -47,7 +52,6 @@ blockquote {
   }
   .right-text {
     h2 {
-      color: $froly;
       line-height: 1.2;
       font-weight: 100;
       &> strong,
@@ -59,7 +63,6 @@ blockquote {
   }
   .left-text {
     h2 {
-      color: $smalt-blue;
       &> p {
         font-weight: 100;
         &> strong {
@@ -125,9 +128,6 @@ blockquote {
   // connect page
 
   .connect {
-    h2 {
-      color: $astronaut;
-    }
 
     .main-content-row {
       float: left;
@@ -135,9 +135,6 @@ blockquote {
       .row {
         clear: both;
         width: 100%;
-      }
-      h2 {
-        color: $astronaut;
       }
       &.custom3, &.custom4 {
         .col-sm-8 {
@@ -149,9 +146,6 @@ blockquote {
     .custom4 {
       float: left;
       margin: 25px 0 25px;
-    }
-    h2 {
-      color: $astronaut;
     }
   }
   .text-wrapper {
@@ -229,14 +223,24 @@ blockquote {
 // centers image in column in grid
 .grid-layout {
   margin-bottom: 200px;
-  .show-modal {
-    border: 0;
-    background: white;
+  .modal {
+    top: 25%;
+    outline: none;
   }
+  button {
+    border: 0;
+    background: transparent;
+    outline: none;
+  }
+}
+// a lighter backdrop from default
+.modal-backdrop {
+  background-color: rgba(#cbcbcb, 0.5);
 }
 
 .modal-dialog {
   background-color: white;
+  box-shadow:  0 0 2px #cbcbcb;
 
   .modal-header {
     background-color: white;
@@ -352,18 +356,6 @@ blockquote {
 
 // main
 .home {
-  .main-content-row {
-    .left-text {
-      h2 {
-        color: $froly;
-      }
-    }
-    .right-text {
-      h2 {
-        color: $smalt-blue;
-      }
-    }
-  }
   .custom1 {
     float: left;
     //margin: 175px 0 0;
@@ -415,18 +407,7 @@ blockquote {
 }
 // exhibitors
 .exhibitors {
-  .main-content-row {
-    .left-text {
-      h2 {
-        color: $froly;
-      }
-    }
-    .right-text {
-      h2 {
-        color: $smalt-blue;
-      }
-    }
-  }
+
   .custom2 {
     //margin-top: 100px 0 -55px;
   }
@@ -438,12 +419,7 @@ blockquote {
 }
 // sponsors
 .sponsors {
-  .left-text,
-  .right-text {
-    h2 {
-      color: $froly;
-    }
-  }
+
   .custom1 {
     float: left;
    // margin: 100px 0 30px;

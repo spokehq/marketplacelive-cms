@@ -19,6 +19,7 @@
                 // vars
 
                 $heading = get_sub_field('row_heading');
+                $heading_color = get_sub_field('heading_color');
                 $desc = get_sub_field('row_description');
                 $toggle_cta = get_sub_field('add_cta');             // display button?
                 $cta_button = get_sub_field('cta_name');
@@ -28,7 +29,6 @@
                 $image_right = get_sub_field('image_on_right');
                 $video_row = get_sub_field('add_video_row');      // add a video? Default is 'no'.
                 $oembed = get_sub_field('select_video');
-
 
             ?>
 
@@ -51,7 +51,7 @@
                            <div class="col-sm-5 col-sm-offset-1">
                                <div class="text-wrapper">
                                    <div class="heading">
-                                       <h2><?php echo $heading; ?></h2>
+                                       <h2 class="<?php echo $heading_color ?>"><?php echo $heading; ?></h2>
                                    </div>
 
                                    <div class="description">
@@ -78,7 +78,7 @@
                             <div class="col-sm-5 col-sm-offset-2">
                                 <div class="text-wrapper">
                                     <div class="heading">
-                                        <h2><?php echo $heading; ?></h2>
+                                        <h2 class="<?php echo $heading_color ?>"><?php echo $heading; ?></h2>
                                     </div>
 
                                     <div class="description">

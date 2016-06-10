@@ -118,7 +118,7 @@
             <div class="row">
 
                 <div class="col-sm-offset-2 col-sm-8">
-                    <h2 class="heading">
+                    <h2 class="heading <?php get_field('$heading_color') ?>">
                         <?php echo get_field('connect_first_heading'); ?>
                     </h2>
 
@@ -134,7 +134,7 @@
             <div class="row">
 
                 <div class="col-sm-offset-2 col-sm-8">
-                    <h2 class="heading">
+                    <h2 class="heading <?php get_field('$heading_color') ?>">
                         <?php echo get_field('connect_second_heading'); ?>
                     </h2>
 

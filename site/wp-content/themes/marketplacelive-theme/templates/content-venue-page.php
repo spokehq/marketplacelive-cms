@@ -9,13 +9,15 @@
         $link_target = "_blank";                                   // pre-assign link target value
         $count = "1";                                              // row margin overrides
 
+
+
         ?>
 
 
         <div class="row">
             <div class="main-content-row custom<?php echo $count++; ?>">
                 <div class="col-sm-offset-2 col-sm-8">
-                    <div class="text-wrapper introduction">
+                    <div class="text-wrapper introduction <?php echo get_field('introduction_color'); ?>">
                         <?php the_field('venue_introduction'); ?>
                     </div>
                 </div>
@@ -29,6 +31,7 @@
             // vars
 
             $heading = get_sub_field('venue_heading');
+            $heading_color = get_sub_field('heading_color');
             $desc = get_sub_field('venue_description');
             $toggle_cta = get_sub_field('add_venue_cta');             // display button?
             $cta_button = get_sub_field('venue_cta');
@@ -78,7 +81,7 @@
                             <div class="col-sm-4 col-sm-offset-1">
                                 <div class="text-wrapper">
                                     <div class="heading">
-                                        <h2><?php echo $heading; ?></h2>
+                                        <h2 class="<?php echo $heading_color ?>"><?php echo $heading; ?></h2>
                                     </div>
 
                                     <div class="description">
@@ -120,7 +123,7 @@
                             <div class="col-sm-5 col-sm-offset-2">
                                 <div class="text-wrapper">
                                     <div class="heading">
-                                        <h2><?php echo $heading; ?></h2>
+                                        <h2 class="<?php echo $heading_color ?>"><?php echo $heading; ?></h2>
                                     </div>
 
                                     <div class="description">
