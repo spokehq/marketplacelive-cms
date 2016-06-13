@@ -198,7 +198,10 @@
                 // reformat company title
                 $company = get_the_title();
                 $company = str_replace(' ', '-', $company);
-                $logo = wp_get_attachment_image(get_field('company_logo'),'thumbnail');?>
+                $logo = wp_get_attachment_image(get_field('company_logo'),'thumbnail');
+
+
+                ?>
 
                 <!-- Button Trigger  -->
                 <div class="col-sm-6 col-md-3">
@@ -216,7 +219,7 @@
                 $email = get_field('company_email'); ?>
 
 
-                <div class="modal fade" id="<?php echo $company;?>" role="dialog" arial-labelledby="<?php echo $company;?>-label" aria-hidden="true">
+                <div class="modal fade" id="<?php echo $company;?>" role="dialog" aria-labelledby="<?php echo $company;?>-label" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-header">
                             <button class="close" data-dismiss="modal" aria-label="Close">
@@ -263,6 +266,7 @@
                         </div>
                     </div><!-- end .modal-dialog  -->
                 </div><!-- end modal  -->
+
             <?php endforeach;
             // close grid here
             echo '</div><!-- end .main-content-row -->';
@@ -292,7 +296,7 @@
                 $logo = wp_get_attachment_image(get_field('company_logo'),'thumbnail');?>
 
                 <!-- Button Trigger  -->
-                <div class="col-sm-3">
+                <div class="col-sm-6 col-md-3">
                     <button class="show-modal center-block" type="button"  data-toggle="modal" data-target="#<?php echo $company;?>"><?php echo $logo; ?></button>
                 </div>
 
@@ -354,7 +358,11 @@
                         </div>
                     </div><!-- end .modal-dialog  -->
                 </div><!-- end modal  -->
-            <?php endforeach;
+
+
+            <?php
+                var_dump( $argsAll );
+            endforeach;
             // close grid here
             echo '</div><!-- end .main-content-row -->';
             echo '</div><!-- end .row -->';
