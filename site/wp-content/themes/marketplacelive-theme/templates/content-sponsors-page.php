@@ -172,107 +172,15 @@
     <?php endif; ?>
 
 
-    <!-- Exhibitors -->
+
     <div class="container">
 
+        <!-- Exhibitors foreach loop was removed. -->
 
-        <!-- Exhibitors  -->
+        <!-- Sponsors  -->
         <?php
-        if(is_page('exhibitors')) {
-            $args = array(
-                'vendor_type'	   =>  'exhibitor',
-                'orderby'          => 'title',
-                'order'            => 'ASC',
-                'post_type'        => 'sponsor',
-                'post_status'      => 'publish',
-                'posts_per_page'   => -1
-            );
 
-            $myposts = get_posts( $args );
-            // set up grid here
-            echo ' <div class="row">';
-            echo ' <div class="main-content-row grid-layout" >';
-
-            foreach ($myposts as $post) : setup_postdata( $post );
-                // this is what opens your modal - edit as needed
-                // reformat company title
-                $company = get_the_title();
-                $company = str_replace(' ', '-', $company);
-                $logo = wp_get_attachment_image(get_field('company_logo'),'thumbnail');
-
-
-                ?>
-
-                <!-- Button Trigger  -->
-                <div class="col-sm-6 col-md-3">
-                    <button class="show-modal center-block" type="button"  data-toggle="modal" data-target="#<?php echo $company;?>"><?php echo $logo; ?></button>
-                </div>
-
-                <!-- Modal  -->
-                <?php
-                $url = get_field('company_url');
-                $prettyUrl = get_field('company_url_name');
-                $snippet = get_field('company_snippet');
-                $twitter = get_field('company_twitter_url');
-                $linkedIn = get_field('company_linkedin_url');
-                $facebook = get_field('company_facebook_url');
-                $email = get_field('company_email'); ?>
-
-
-                <div class="modal fade" id="<?php echo $company;?>" role="dialog" aria-labelledby="<?php echo $company;?>-label" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-header">
-                            <button class="close" data-dismiss="modal" aria-label="Close">
-                                <span class="x-close" aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <h3><?php the_title();?></h3>
-                            <?php if($url) {
-                                echo '<span class="company-url clearfix">';
-                                if($prettyUrl) {
-                                    echo $prettyUrl;
-                                } else {
-                                    echo $url;
-                                }
-                                echo '</a>';
-                            }
-
-                            if ($snippet) {
-                                echo '<div class="snippet clearfix">'.$snippet.'</div>';
-                            }
-                            if ($twitter || $linkedIn || $facebook) { ?>
-                            <div class="modal-social clearfix">
-                                <div class="modal-social-wrapper">
-                                    <ul class="social">
-                                        <?php if($twitter) { ?>
-                                            <li class="item"><a href="<?php echo $twitter;?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                        <?php }
-                                        if ($linkedIn) { ?>
-                                            <li class="item"><a href="<?php echo $linkedIn;?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                        <?php }
-                                        if($facebook) {?>
-                                            <li class="item"><a href="<?php echo $facebook;?>" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
-                                        <?php } ?>
-                                    </ul>
-                                </div>
-                                <?php }
-                                if ($email) { ?>
-                                    <div class="modal-email-wrapper">
-                                        <a href="mailto:<?php echo $email;?>" class="email" target="_blank"><i class="fa fa-envelope-o"></i></a>
-                                    </div>
-                                <?php } ?>
-                            </div>
-                        </div>
-                    </div><!-- end .modal-dialog  -->
-                </div><!-- end modal  -->
-
-            <?php endforeach;
-            // close grid here
-            echo '</div><!-- end .main-content-row -->';
-            echo '</div><!-- end .row -->';
-            wp_reset_postdata();
-        } // end exhibitors
+        // Sponsors
 
         if(is_page('sponsors')) {
             $argsAll = array(
@@ -287,8 +195,9 @@
             $sponsors = get_posts($argsAll);
             // set up grid here
             echo ' <div class="row">';
+            echo ' <div class="main-content-row grid-layout" >';
 
-            foreach ($argsAll as $post) : setup_postdata( $post );
+            foreach ($sponsors as $post) : setup_postdata( $post );
                 // this is what opens your modal - edit as needed
                 // reformat company title
                 $company = get_the_title();
@@ -311,7 +220,7 @@
                 $email = get_field('company_email'); ?>
 
 
-                <div class="modal fade" id="<?php echo $company;?>" role="dialog" arial-labelledby="<?php echo $company;?>-label" aria-hidden="true">
+                <div class="modal fade" id="<?php echo $company;?>" role="dialog" aria-labelledby="<?php echo $company;?>-label" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-header">
                             <button class="close" data-dismiss="modal" aria-label="Close">
@@ -361,7 +270,7 @@
 
 
             <?php
-                var_dump( $argsAll );
+
             endforeach;
             // close grid here
             echo '</div><!-- end .main-content-row -->';

@@ -3,20 +3,19 @@
     <div class="big-kahuna">
         <div class="container">
             <div class="row">
-                
-                <div class="col-md-offset-4 col-md-7 col-xs-offset-1 col-xs-10">
+                <div class="col-sm-4 col-xs-12">
+                    <span class="telx-intro"><?php the_field('hero_text') ?></span>
+                </div>
+                <div class="col-sm-8 col-xs-12">
                     <div>
-                        <img src="<?= get_template_directory_uri(); ?>/dist/images/blue-tall.svg" alt="" class="rect-blue">
+                        <img src="<?= get_template_directory_uri(); ?>/dist/images/rect1.svg" alt="" class="rect-red">
                     </div>
 
 
                     <div class="page-header">
                         <?php use Roots\Sage\Titles; ?>
                         <div class="title"><?= Titles\title(); ?></div>
-                        <h1><strong><?php the_field('hero_title'); ?></strong><br>
-
-                            <?php the_field('hero_text'); ?></h1>
-                        <div class="telx-intro"><?php the_field('telx_introduction') ?></div>
+                      <h1><?php the_field('hero_title'); ?></h1>
                     </div>
                     
                 </div>

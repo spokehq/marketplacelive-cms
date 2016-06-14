@@ -3,6 +3,7 @@
 
     <main class="main">
 
+
         <?php
 
         // assignments
@@ -17,11 +18,17 @@
         // check if the flexible content field has rows of data
         if( have_rows('build_agenda') ):
 
+            echo 'build agenda'.'<br>';
+
+
             // loop through the rows of data
             while ( have_rows('build_agenda') ) : the_row();
+                echo 'build agenda';
 
                 // check current row layout
                 if( get_row_layout() == 'new_agenda_item' ):
+
+                    echo 'new agenda item';
 
                     // check if the nested repeater field has rows of data
                     if( have_rows('time_position') ):
@@ -32,68 +39,81 @@
 
                     endif; // time field
 
-                    // check if the nested repeater field has rows of data
-                    if( have_rows('time') ):
-
-                        $time = get_sub_field( 'time' );
-
-                        echo $time;
-
-                    endif; // time field
-
-                    // check if the nested repeater field has rows of data
-                    if( have_rows('set_period') ):
-
-                        $period = get_sub_field( 'set_period' );
-
-                        echo $period;
-
-                    endif; // set_period field
-
-                    // check if the nested repeater field has rows of data
-                    if( have_rows('session_title') ):
-
-                        $session_title = get_sub_field( 'session_title' );
-
-                        echo $session_title;
-
-                    endif; // session_title field
-
-                    // check if the nested repeater field has rows of data
-                    if( have_rows('short_text') ):
-
-                        $short_text = get_sub_field( 'short_text' );
-
-                        echo $short_text;
-
-                    endif; // short_text field
-
-                    // check if the nested repeater field has rows of data
-                    if( have_rows('speaker') ):
-
-                        $speaker = get_sub_field( 'speaker' );
-
-                        echo $speaker;
-
-                    endif; // speaker field
-
-                    // check if the nested repeater field has rows of data
-                    if( have_rows('location') ):
-
-                        $location = get_sub_field( 'location' );
-
-                        echo $location;
-
-                    endif; // location field
-
-                    // check if the nested repeater field has rows of data
-                    if( have_rows('description') ):
-
-                        $description = get_sub_field( 'description' );
-
-                        echo $description;
-
-                    endif; // description field
+//                    // check if the nested repeater field has rows of data
+//                    if( have_rows('time') ):
+//
+//                        $time = get_sub_field( 'time' );
+//
+//                        echo $time;
+//
+//                    endif; // time field
+//
+//                    // check if the nested repeater field has rows of data
+//                    if( have_rows('set_period') ):
+//
+//                        $period = get_sub_field( 'set_period' );
+//
+//                        echo $period;
+//
+//                    endif; // set_period field
+//
+//                    // check if the nested repeater field has rows of data
+//                    if( have_rows('session_title') ):
+//
+//                        $session_title = get_sub_field( 'session_title' );
+//
+//                        echo $session_title;
+//
+//                    endif; // session_title field
+//
+//                    // check if the nested repeater field has rows of data
+//                    if( have_rows('short_text') ):
+//
+//                        $short_text = get_sub_field( 'short_text' );
+//
+//                        echo $short_text;
+//
+//                    endif; // short_text field
+//
+//                    // check if the nested repeater field has rows of data
+//                    if( have_rows('speaker') ):
+//
+//                        $speaker = get_sub_field( 'speaker' );
+//
+//                        echo '<ul>';
+//
+//                        // loop through the rows of data
+//                        while ( have_rows('speakers') ) : the_row();
+//
+//                            $speaker = get_sub_field('speaker');
+//                            ?>
+<!---->
+<!--                            <li>--><?php //echo $speaker ?><!--</li>-->
+<!---->
+<!--                        --><?php
+//                        endwhile;
+//
+//                        echo '</ul>';
+//
+//                    endif; // speaker field
+//
+//                    // check if the nested repeater field has rows of data
+//                    if( have_rows('location') ):
+//
+//                        $location = get_sub_field( 'location' );
+//
+//                        echo $location;
+//
+//                    endif; // location field
+//
+//                    // check if the nested repeater field has rows of data
+//                    if( have_rows('description') ):
+//
+//                        $description = get_sub_field( 'description' );
+//
+//                        echo $description;
+//
+//                    endif; // description field
 
                 endif; // new_agenda_item ( layout: repeater )
 

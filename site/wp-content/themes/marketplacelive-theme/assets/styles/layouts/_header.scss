@@ -122,6 +122,7 @@
           color: $froly;
           font-weight: 400;
           font-style: normal;
+          background-color: rgb(7, 35, 58);
         }
       }
     }
@@ -260,6 +261,17 @@
     }
   }
 }
+.agenda {
+  .telx-intro {
+    font-size: 14px;
+    float: left;
+    position: relative;
+    top: 49px;
+    right: auto;
+    color: white;
+    text-align: left;
+  }
+}
 
 .error404,
 .come-back-soon {
@@ -293,12 +305,18 @@
     background: url("../images/banner-connect.jpg") no-repeat scroll 20% 99% / cover $black-pearl;
   }
 }
+.agenda {
+  .top-content {
+    background: url("../images/banner-agenda.jpg") no-repeat scroll 20% 99% / cover $black-pearl;
+  }
+}
 .come-back-soon,
 .venue,
 .why-attend,
 .exhibitors,
 .sponsors,
 .connect,
+.agenda,
 .error404 {
   .top-content {
 
@@ -434,22 +452,16 @@
   left: -6%;
   @include centerer;
 }
-@media (max-width: 767px) {
-//  .navbar-default .navbar-nav .open .dropdown-menu>li>a {
-//    color: white;
-//  }
-//  .navbar-default .navbar-nav .open .dropdown-menu>.active>a, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover {
-//    color: $froly;
-//    background-color: transparent;
-//  }
-//  .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
-//    color: $froly;
-//    background-color: transparent;
-//  }
-}
+
 @media (min-width: $screen-xs-min) { // min-width 480
   .social {
     float: right;
+  }
+  .agenda {
+    .telx-intro {
+      font-size: 16px;
+
+    }
   }
 
 }
@@ -483,6 +495,7 @@
   .exhibitors,
   .sponsors,
   .connect,
+  .agenda,
   .error404 {
     .top-content {
       .page-header {
@@ -515,9 +528,43 @@
 
     }
   }
+  .agenda {
+    .telx-intro {
+      top: 81px;
+      float: right;
+      text-align:right;
+      right: -30px;
+    }
+    .top-content {
+      .title {
+
+      }
+    }
+    .navbar-nav {
+      margin: 0;
+      &> li {
+        &.live {
+          &> a {
+
+            color: $smalt-blue;
+            background-color: transparent;
+            &:hover {
+              color: $smalt-blue;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media (min-width: $screen-md-min) { // min-width 992
+  .agenda {
+    .telx-intro {
+      top: 93px;
 
+    }
+  }
 }
 @media (min-width: $screen-lg-min) {  // min-width 1200
 
