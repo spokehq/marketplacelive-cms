@@ -35,7 +35,7 @@
                                             target="_blank"><i class="fa fa-vimeo"></i></a></li>
                         <li class="item"><a href="https://plus.google.com/+TelxGroup"
                                             target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                        <li class="item"><a href="https://twitter.com/TelxMPLIVE"
+                        <li class="item"><a href="https://twitter.com/MPLevent"
                                             target="_blank"><i class="fa fa-twitter"></i></a></li>
                         <li class="item"><a href="http://www.linkedin.com/company/telx"
                                             target="_blank"><i class="fa fa-linkedin"></i></a></li>
