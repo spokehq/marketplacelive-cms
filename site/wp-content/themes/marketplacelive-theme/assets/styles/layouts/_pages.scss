@@ -29,6 +29,7 @@ blockquote {
   }
 }
 
+
 .main-content-row {
   margin: 40px 0;
   //float: left;
@@ -213,7 +214,8 @@ blockquote {
     }
   }
 
-}
+} // .main-content-row
+
 .secondary-content-row {
   margin-bottom: 40px;
 }
@@ -238,47 +240,50 @@ blockquote {
   background-color: rgba(#cbcbcb, 0.5);
 }
 
-.modal-dialog {
-  background-color: white;
-  box-shadow:  0 0 2px #cbcbcb;
-
-  .modal-header {
+.exhibitors,
+.sponsors {
+  .modal-dialog {
     background-color: white;
-    border: 0;
-    padding: 15px 15px 0;
-  }
-  .modal-body {
-    padding: 0 80px 20px;
-    .modal-social {
-      .fa {
-        color: $froly;
+    box-shadow:  0 0 2px #cbcbcb;
+
+    .modal-header {
+      background-color: white;
+      border: 0;
+      padding: 15px 15px 0;
+    }
+    .modal-body {
+      padding: 0 80px 20px;
+      .modal-social {
+        .fa {
+          color: $froly;
+          font-size: 20px;
+        }
+      }
+      h3 {
+        margin: 0;
+        font-size: 35px;
+        color: $astronaut;
+        font-weight: 300;
+      }
+      .company-url {
+        color: $astronaut;
+        font-weight: 300;
+      }
+      .snippet {
+        margin: 20px 0;
+      }
+      .modal-email-wrapper {
+        float: right;
+        position: relative;
+        top: -27px;
         font-size: 20px;
       }
     }
-    h3 {
-      margin: 0;
-      font-size: 35px;
-      color: $astronaut;
-      font-weight: 300;
+    .x-close {
+      font-family: $fira-stack;
+      font-size: 50px;
+      font-weight: 100;
     }
-    .company-url {
-      color: $astronaut;
-      font-weight: 300;
-    }
-    .snippet {
-      margin: 20px 0;
-    }
-    .modal-email-wrapper {
-      float: right;
-      position: relative;
-      top: -27px;
-      font-size: 20px;
-    }
-  }
-  .x-close {
-    font-family: $fira-stack;
-    font-size: 50px;
-    font-weight: 100;
   }
 }
 
@@ -351,6 +356,125 @@ blockquote {
   }
 }
 
+.agenda {
+  .main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .main-content-row {
+    margin: 20px 0;
+    float: left;
+    display: block;
+
+  }
+  .left-agenda,
+  .right-agenda {
+    .time {
+      font-family: $expo-stack;
+      font-style: italic;
+      font-weight: 300;
+      animation-delay:0.6s;
+      .start {
+        font-size: 72px;
+        color: $silver;
+      }
+      .period {
+        font-size: 30px;
+        color: $froly;
+        text-transform: uppercase;
+      }
+    }
+    .session {
+      font-family: $museo-stack;
+      font-size: 14px;
+      line-height: 1.4;
+      color: $froly;
+      // to vert center on row
+      position: relative;
+      transform: translateY(20%);
+      animation-delay:0.2s;
+
+      .title {
+        font-weight: 600;
+      }
+      .short  {
+      }
+    }
+
+  }
+  .agenda-wrapper {
+    button {
+      border: 0;
+      background: transparent;
+      padding: 0;
+
+
+      &:hover {
+        background: transparent;
+      }
+      &:active,
+      &:focus {
+        outline: 0;
+      }
+    }
+    .fade.in {
+      opacity: 0.8;
+    }
+    .modal {
+      width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+      h3 {
+        font-family: $fira-stack;
+        font-size: 50px;
+        font-weight: 100;
+        line-height: 1;
+        margin: 40px 0;
+      }
+      .start {
+        font-family: $expo-stack;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 100px;
+        line-height: 1;
+        color: $silver;
+      }
+      .period {
+        font-family: $expo-stack;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 1;
+        color: $froly;
+        text-transform: uppercase;
+      }
+      .modal-header {
+        border-bottom: 0;
+      }
+      .x-close {
+        font-family: $fira-stack;
+        font-size: 50px;
+        font-weight: 100;
+      }
+      .modal-body {
+        border: 0;
+        box-shadow: none;
+        .speaker {
+          color: $froly;
+          font-weight:600;
+        }
+        .description {
+          font-size: 25px;
+        }
+      }
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+    }
+  }
+}
 
 // Row Spacing Accommodations
 
@@ -448,6 +572,15 @@ blockquote {
 
 
 @media (min-width: $screen-xs-min) { // min-width 480
+  .agenda {
+    .top-bar {
+      width: 99%;
+    }
+    .left-agenda,
+    .right-agenda {
+
+    }
+  }
 }
 
 @media (min-width: $screen-sm-min) { // min-width 768
@@ -488,6 +621,53 @@ blockquote {
     margin: 80px 0 10px;
   }
 
+  .agenda {
+    .main-content-row {
+      margin: 0;
+    }
+    .top-bar {
+      width: 100%;
+      height: 30px;
+      border: 0;
+      border-right-width: 1px;
+      border-right-style: solid;
+      -webkit-border-image:
+              -webkit-gradient(linear, 0 100%, 0 0, from(rgb(196,196, 196)), to(rgba(0, 0, 0, 0))) 1 100%;
+      -webkit-border-image:
+              -webkit-linear-gradient(bottom, rgb(196,196, 196), rgba(0, 0, 0, 0)) 1 100%;
+      -moz-border-image:
+              -moz-linear-gradient(bottom, rgb(196,196, 196), rgba(0, 0, 0, 0)) 1 100%;
+      -o-border-image:
+              -o-linear-gradient(bottom, rgb(196,196, 196), rgba(0, 0, 0, 0)) 1 100%;
+      border-image:
+              linear-gradient(to top, rgb(196,196, 196), rgba(0, 0, 0, 0)) 1 100%;
+    }
+    .left-agenda,
+    .right-agenda {
+      .bar {
+        width: 100%;
+        border-right: 1px solid $silver;
+        &:before {
+          font-family: FontAwesome;
+          content: "\f111";
+          display: block;
+          text-align: right;
+          font-size: 5px;
+          position: relative;
+          right: -3px;
+          padding-top: 130%;
+          color: $froly;
+          z-index: 2;
+        }
+        &:after {
+          content: "";
+          display: block;
+          padding-bottom: 250%;
+        }
+      }
+    }
+  }
+
 }
 @media (min-width: $screen-md-min) { // min-width 992
   .page,
@@ -515,6 +695,42 @@ blockquote {
     }
     &.right-img {
       float: right;
+    }
+  }
+  .agenda {
+    .top-bar {
+      width: 100%;
+    }
+    .left-agenda,
+    .right-agenda {
+
+      .time {
+        font-family: $expo-stack;
+        font-style: italic;
+        font-weight: 300;
+        .start {
+
+
+        }
+        .period {
+
+        }
+      }
+
+      .bar {
+        width: 100%;
+        &:before {
+          padding-top: 100%;
+        }
+        &:after {
+          padding-bottom: 250%;
+        }
+      }
+      .session {
+        // to vert center on row
+        position: relative;
+        transform: translateY(20%);
+      }
     }
   }
   .message-wrapper {
@@ -636,5 +852,9 @@ blockquote {
 
 }
 @media (min-width: $screen-lg-min) {  // min-width 1200
-
+  .agenda {
+    .top-bar {
+      width: 100%;
+    }
+  }
 }

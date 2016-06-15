@@ -271,6 +271,13 @@
     color: white;
     text-align: left;
   }
+  .top-content {
+    .social {
+      .fa {
+        color: $ny-pink;
+      }
+    }
+  }
 }
 
 .error404,

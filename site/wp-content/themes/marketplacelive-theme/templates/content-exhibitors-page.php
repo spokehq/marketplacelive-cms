@@ -219,7 +219,7 @@
                 $email = get_field('company_email'); ?>
 
 
-                <div class="modal fade" id="<?php echo $company;?>" role="dialog" arial-labelledby="<?php echo $company;?>-label" aria-hidden="true">
+                <div class="modal fade" id="<?php echo $company;?>" role="dialog" aria-labelledby="<?php echo $company;?>-label" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-header">
                             <button class="close" data-dismiss="modal" aria-label="Close">

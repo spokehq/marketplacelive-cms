@@ -109,8 +109,31 @@
       init: function() {
         // JavaScript to be fired on the about us page
       }
-    }
+    },
+      // Agenda page.
+      'agenda': {
+          init: function() {
+              // JavaScript to be fired on the about us page
+
+              // position modal
+              $(document).ready(function(){
+                  var mainHeight = $('#main').outerHeight();
+                  var destination = $('#main').offset();
+                  //$('.agenda-wrapper>.modal').css({ height: mainHeight+'px' });
+                  //$('.agenda-wrapper>.modal').offset(destination);
+              });
+
+              // animate elements on load
+              $(document).ready(function() {
+                  $('.time').addClass('animated fadeInLeft');
+                  $('.session').addClass('animated fadeInLeft');
+              });
+
+
+          } // closing function
+      } // closing page
   };
+
 
   // The routing fires all common scripts, followed by the page specific scripts.
   // Add additional events for more control over timing e.g. a finalize event

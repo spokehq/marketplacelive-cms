@@ -12,10 +12,12 @@ $sidebar-sm-columns:    4;
 
 
 $concrete : #f2f2f2;              // page background
+$silver : rgb(196,196, 196);      // #c4c4c4;
 $polo-blue : rgb( 146, 181, 211 );// #92B5D3  -  anchor on footer
 $astronaut : rgb( 37, 74, 109 );  // #254A6D - Dark blue
 $smalt-blue: rgb(82, 118, 143 );  // #52768f; .main-content-row - left H2
-$froly   : #cb6469;               //
+$froly   :  rgb(203, 100, 105);   // #cb6469  all links
+$ny-pink : rgb(223, 128, 131);    // #df8083 - for agenda header social icons
 $elephant : rgb(12,40,59);        // #0C283B background to header images
 $black-pearl : #071c2d;           // #071c2d navbar bkg on mobile
 $veil : rgba(255,255,255,0.11);   // Navbar background ( desktop )
@@ -34,6 +36,7 @@ $brand-primary : $froly;
 
 $museo-stack :  "museo-sans", sans-serif;
 $fira-stack :  "fira-sans", sans-serif;
+$expo-stack : "expo-serif-pro", serif;
 
 
 
