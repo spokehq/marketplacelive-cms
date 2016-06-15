@@ -79,13 +79,8 @@
                                 </div> <!-- /.main-content-row -->
 
                                 <!-- Modal  -->
-                                <?php
-
-                                $add_speaker = get_sub_field('add_speaker');
-                                $location = get_sub_field('session_location');
-                                $description = get_sub_field('long_description');
-
-                                ?>
+                                <?php   $location = get_sub_field('session_location');
+                                        $description = get_sub_field('long_description');?>
 
 
                                 <div class="modal fade" id="modal<?php echo $int++;?>" role="dialog" aria-labelledby="<?php echo $title;?>-label" aria-hidden="true">
@@ -109,25 +104,22 @@
                                                 // print nothing
                                             }
 
-                                            if ( have_rows('speakers') ):
+                                            if($location) {
+                                                echo $location;
+                                            }
 
-                                                // sub-repeater
-
-                                                ?>
-
+                                            if ( have_rows('speakers') ): // sub-repeater ?>
                                                 <ul>
                                                     <?php while( have_rows('speakers') ): the_row();
                                                         // display each speaker as a list item
-                                                    ?>
-                                                            <li class="speaker" ><?php echo $add_speaker; ?></li>
-
-                                                        <?php endwhile; ?>
+                                                        $add_speaker = get_sub_field('add_speaker');
+                                                        ?>
+                                                        <li class="speaker" ><?php echo $add_speaker; ?></li>
+                                                    <?php endwhile; ?>
                                                 </ul>
+                                            <?php endif; // end of speakers repeater
 
-                                            <?php endif;
-                                             ?>
 
-                                            <?php
                                             if ($description) { ?>
                                                 <div class="description">
                                                     <?php echo $description;?>
@@ -140,7 +132,7 @@
                         </div><!-- /.row -->
 
 
-                        <?php endif; ?>
+                <?php endif; // end position === "left"  ?>
 
 
                         <?php if( $position === "right" ): ?>
@@ -171,13 +163,8 @@
                                     </div> <!-- /.main-content-row -->
 
                                     <!-- Modal  -->
-                                    <?php
-
-                                    $add_speaker = get_sub_field('add_speaker');
-                                    $location = get_sub_field('session_location');
-                                    $description = get_sub_field('long_description');
-
-                                    ?>
+                                    <?php   $location = get_sub_field('session_location');
+                                    $description = get_sub_field('long_description');?>
 
 
                                     <div class="modal fade" id="modal<?php echo $int++;?>" role="dialog" aria-labelledby="<?php echo $title;?>-label" aria-hidden="true">
@@ -201,47 +188,41 @@
                                                     // print nothing
                                                 }
 
-                                                if ( have_rows('speakers') ):
+                                                if($location) {
+                                                    echo $location;
+                                                }
 
-
-
-                                                    ?>
-
-
-
+                                                if ( have_rows('speakers') ): // sub-repeater ?>
                                                     <ul>
                                                         <?php while( have_rows('speakers') ): the_row();
                                                             // display each speaker as a list item
-
-
+                                                            $add_speaker = get_sub_field('add_speaker');
                                                             ?>
                                                             <li class="speaker" ><?php echo $add_speaker; ?></li>
-
                                                         <?php endwhile; ?>
                                                     </ul>
+                                                <?php endif; // end of speakers repeater
 
-                                                <?php endif; //if( get_sub_field('speakers') ): ?>
 
-                                                <?php
                                                 if ($description) { ?>
                                                     <div class="description">
                                                         <?php echo $description;?>
                                                     </div>
                                                 <?php } ?>
                                             </div>
-                                        </div>
-                                    </div><!-- end .modal-dialog  -->
-                                </div><!-- end modal  -->
+                                        </div><!-- end .modal-dialog  -->
+                                    </div><!-- end modal  -->
+                                </div><!-- end .agenda-wrapper  -->
                             </div><!-- /.row -->
 
 
-                         <?php endif; ?>
+                         <?php endif; // end position == "right" ?>
 
 
-                <?php endwhile; ?> <!-- / end parent repeater -->
+                <?php endwhile; // end parent repeater ?>
 
 
-        <?php endif; ?>
+        <?php endif; // new_agenda_items ?>
         </div> <!-- /.container -->
 
     </main>

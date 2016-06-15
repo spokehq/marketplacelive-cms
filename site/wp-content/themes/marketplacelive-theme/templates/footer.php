@@ -35,25 +35,27 @@
 <!-- TODO: padding between .adjustment and next row is missing padding or margin. Compare to live site.  -->
 
         <div class="row">
-            <div class="bird">
-                <img class="tbird" src="<?= get_template_directory_uri(); ?>/dist/images/soc-twitter.svg" alt="">
-            </div>
-            <div class="col-sm-4">
+            <div class="news">
+                <div class="bird">
+                    <img class="tbird" src="<?= get_template_directory_uri(); ?>/dist/images/soc-twitter.svg" alt="">
+                </div>
+                <div class="col-sm-4">
 
-                <!--  Twitter Feed  -->
-                <?php dynamic_sidebar('sidebar-footer-1'); ?>
-            </div>
+                    <!--  Twitter Feed  -->
+                    <?php dynamic_sidebar('sidebar-footer-1'); ?>
+                </div>
 
-            <div class="col-sm-2 col-sm-offset-1">
-                <!--  Footer Menu  -->
-                <?php dynamic_sidebar('sidebar-footer-2'); ?>
-            </div>
+                <div class="col-sm-2 col-sm-offset-1">
+                    <!--  Footer Menu  -->
+                    <?php dynamic_sidebar('sidebar-footer-2'); ?>
+                </div>
 
-            <!--  Register Link  -->
-            <div class="col-sm-3 col-sm-offset-2">
-                <div class="button-wrapper">
-                    <a href="https://marketplacelive2016.eventbrite.com/"
-                       class="btn btn-standard" type="button" target="_blank" >REGISTER</a>
+                <!--  Register Link  -->
+                <div class="col-sm-3 col-sm-offset-2">
+                    <div class="button-wrapper">
+                        <a href="https://marketplacelive2016.eventbrite.com/"
+                           class="btn btn-standard" type="button" target="_blank" >REGISTER</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -5,6 +5,10 @@
   position: relative; // hack to fix odd gap
   bottom: -2px;
 
+  .news {
+    margin-top: 0;
+  }
+
   .twitget {
     list-style-type: none;
     list-style-image: url(../images/twitter.png);
@@ -176,6 +180,9 @@
 }
 @media (min-width: $screen-md-min) { // min-width 992
   .content-info {
+    .news {
+      margin-top: 47px;
+    }
     .bird {
       margin-top: 24px;
     }
