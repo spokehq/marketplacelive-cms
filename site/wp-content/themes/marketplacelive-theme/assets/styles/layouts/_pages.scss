@@ -361,6 +361,9 @@ blockquote {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  .custom {
+    display: none !important;
+  }
   .main-content-row {
     margin: 20px 0;
     float: left;
@@ -572,15 +575,7 @@ blockquote {
 
 
 @media (min-width: $screen-xs-min) { // min-width 480
-  .agenda {
-    .top-bar {
-      width: 99%;
-    }
-    .left-agenda,
-    .right-agenda {
 
-    }
-  }
 }
 
 @media (min-width: $screen-sm-min) { // min-width 768
@@ -624,6 +619,9 @@ blockquote {
   .agenda {
     .main-content-row {
       margin: 0;
+    }
+    .custom {
+      display: block !important;
     }
     .top-bar {
       width: 100%;
