@@ -1,6 +1,8 @@
 # Include your project-specific ignores in this file
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
-dist
+
+# Removed dist so it is included in our beanstalk repo
+#dist
 bower_components
 node_modules
 npm-debug.log

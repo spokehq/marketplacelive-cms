@@ -12,13 +12,15 @@
             $link_target = "_blank";                                   // pre-assign link target value
             $count = "1";                                              // row margin overrides
 
+            $intro = get_field('introduction');
+
             ?>
 
             <div class="row">
                 <div class="main-content-row custom<?php echo $count++; ?>">
                     <div class="col-sm-offset-2 col-sm-8">
                         <div class="text-wrapper introduction">
-                            <?php the_field('introduction'); ?>
+                            <?php echo $intro; ?>
                         </div>
                     </div>
                 </div>
@@ -26,7 +28,9 @@
 
             <?php endif ?>
 
-            <?php if( have_rows('build_speaker') ):
+            <?php // flexible content layout
+
+             if( have_rows('build_speaker') ):
 
                 while( have_rows('build_speaker') ): the_row();
 

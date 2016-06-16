@@ -131,6 +131,37 @@
 
 
           } // closing function
+      }, // closing page
+
+      // Sponsors page.
+      'sponsors': {
+          init: function() {
+              // JavaScript to be fired on the about us page
+
+              // fade modal button to opacity 1 on hover & click
+              // $(document).ready(function(){
+              //     $('.show-modal').click(function(){
+              //         $(this).toggleClass(showing, addOrRemove);
+              //     });
+              // });
+
+
+          } // closing function
+      }, // closing page
+
+      // Exhibitors page.
+      'exhibitors': {
+          init: function() {
+              // JavaScript to be fired on the about us page
+
+
+            // fade modal button to opacity 1 on hover & click
+            //   $('.show-modal').click(function(){
+            //       $('.dim').addClass('showing');
+            //   });
+
+
+          } // closing function
       } // closing page
   };
 

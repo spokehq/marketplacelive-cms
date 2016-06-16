@@ -205,7 +205,7 @@
 
                 <!-- Button Trigger  -->
                 <div class="col-sm-6 col-md-3">
-                    <button class="show-modal center-block" type="button"  data-toggle="modal" data-target="#<?php echo $company;?>"><?php echo $logo; ?></button>
+                    <button class="show-modal center-block dim" type="button"  data-toggle="modal" data-target="#<?php echo $company;?>"><?php echo $logo; ?></button>
                 </div>
 
                 <!-- Modal  -->

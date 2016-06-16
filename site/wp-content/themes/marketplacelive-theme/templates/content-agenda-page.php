@@ -57,7 +57,7 @@
 
                                 <div class="main-content-row left-agenda custom<?php echo $count++; ?>">
 
-                                   <div class="col-xs-12 col-sm-offset-1 col-sm-4 col-md-offset-2 col-md-3">
+                                   <div class="col-xs-12 col-sm-offset-1 col-sm-4 ">
                                        <div class="time">
                                            <span class="start"><?php echo $start; ?></span>
                                            <span class="period"><?php echo $period; ?></span>
@@ -153,7 +153,7 @@
                                             <div class="bar"></div>
                                         </div>
 
-                                        <div class="col-xs-12 col-sm-offset-1 col-sm-4 col-sm-pull-5 col-md-offset-2 col-md-3 col-md-pull-5">
+                                        <div class="col-xs-12 col-sm-offset-1 col-sm-4 col-sm-pull-5 ">
                                             <div class="session">
                                                 <div class="title"><button type="button" data-toggle="modal" data-target="#modal<?php echo $int;?>"><?php echo $title; ?></button></div>
                                                 <div class="short"><?php echo $short; ?></div>
@@ -188,21 +188,46 @@
                                                     // print nothing
                                                 }
 
-                                                if($location) {
-                                                    echo $location;
+
+                                                if ( have_rows('speakers') ): // sub-repeater
+
+                                                   // this is an optional field
+                                                    if ( have_rows('speaker_images') ): the_row();
+
+                                                        echo '<div class="speaker-images">';
+                                                            echo '<ul>';
+                                                            while( have_rows('speaker_images') ): the_row();
+                                                                // display speaker image(s) to left of names
+                                                                $image = get_sub_field('speaker_image');
+
+
+                                                                echo '<li><img src="' . $image['url'] . '" alt="' . $image['alt'] . '" /></li>';
+
+                                                            endwhile;
+                                                            echo '</ul>';
+                                                        echo '</div>';
+
+                                                    endif;
+
+
+                                                    echo '<div class="speakers">';
+                                                        echo '<ul>';
+                                                            while( have_rows('speakers') ): the_row();
+                                                                // display each speaker as a list item
+                                                                $speaker = get_sub_field('add_speaker');
+                                                                $title = get_sub_field('add_title');
+
+                                                                // TODO add style to add colon after speaker
+
+                                                                echo '<li class="speaker" >' . $speaker . $title . '</li>';
+                                                            endwhile;
+                                                    echo '</ul>';
+                                                echo '</div>';
+                                               endif; // end of speakers repeater
+
+                                                if($location) { // TODO add style to add colon after location
+                                                    echo '<p class="location"><span>Location</span>' . $location . '</p>';
                                                 }
-
-                                                if ( have_rows('speakers') ): // sub-repeater ?>
-                                                    <ul>
-                                                        <?php while( have_rows('speakers') ): the_row();
-                                                            // display each speaker as a list item
-                                                            $add_speaker = get_sub_field('add_speaker');
-                                                            ?>
-                                                            <li class="speaker" ><?php echo $add_speaker; ?></li>
-                                                        <?php endwhile; ?>
-                                                    </ul>
-                                                <?php endif; // end of speakers repeater
-
 
                                                 if ($description) { ?>
                                                     <div class="description">

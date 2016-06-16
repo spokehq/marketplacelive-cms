@@ -242,9 +242,36 @@ blockquote {
 
 .exhibitors,
 .sponsors {
+  &.modal-open {
+    .showing {
+      img {
+        opacity: 1;
+        transition: easeInOut 1s;
+      }
+    }
+  }
+  .dim {
+    img {
+      opacity: .7;
+    }
+  }
+  .modal {
+    position: fixed;
+    overflow: auto;
+    background-clip: padding-box;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 778px;
+    border-radius: 0;
+    box-shadow: none;
+    border: 0;
+    background: transparent;
+
+  }
   .modal-dialog {
     background-color: white;
     box-shadow:  0 0 2px #cbcbcb;
+    max-width: 778px;
 
     .modal-header {
       background-color: white;
@@ -284,6 +311,9 @@ blockquote {
       font-size: 50px;
       font-weight: 100;
     }
+  }
+  .modal-backdrop {
+    display: none;
   }
 }
 
@@ -361,7 +391,7 @@ blockquote {
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  .custom {
+  .custom { // this hides the top-bar row in mobile
     display: none !important;
   }
   .main-content-row {
@@ -433,6 +463,7 @@ blockquote {
         font-weight: 100;
         line-height: 1;
         margin: 40px 0;
+        color: $froly;
       }
       .start {
         font-family: $expo-stack;
