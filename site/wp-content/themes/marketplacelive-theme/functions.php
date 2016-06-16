@@ -77,7 +77,7 @@ add_action('login_footer','spokehq_loginfooter');
  * Call on template pages when working with ACF
  * Refactor for specific uses
  */
-function acf_change_title_text( $title ){
+function spoke_change_title_text( $title ){
   $screen = get_current_screen();
   
   // replace 'sponsor' with your post type slug
@@ -87,5 +87,4 @@ function acf_change_title_text( $title ){
 
   return $title;
 }
-
-add_filter( 'enter_title_here', 'acf_change_title_text' );
+add_filter( 'enter_title_here', 'spoke_change_title_text' );
