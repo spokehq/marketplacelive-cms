@@ -71,3 +71,20 @@ function pre($arg1, $arg2 = null) {
   }
   echo '</pre>';
 }
+
+/**
+ * Replace title with page title
+ * Call on template pages when working with ACF
+ * Refactor for specific uses
+ */
+function wpb_change_title_text( $title ){
+    $screen = get_current_screen();
+    // replace 'testimonials' with your post type slug
+    if  ( 'testimonials' == $screen->post_type ) {
+        $title = "Enter person's name here";
+    }
+
+    return $title;
+}
+
+add_filter( 'enter_title_here', 'wpb_change_title_text' );
