@@ -32,8 +32,6 @@
             </div>
         </div>
 
-<!-- TODO: padding between .adjustment and next row is missing padding or margin. Compare to live site.  -->
-
         <div class="row">
             <div class="news">
                 <div class="bird">

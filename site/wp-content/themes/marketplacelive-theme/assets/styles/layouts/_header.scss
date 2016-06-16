@@ -279,7 +279,7 @@
     }
   }
 }
-
+// TODO: set correct background for .speakers
 .error404,
 .come-back-soon {
    .top-content {
@@ -292,7 +292,8 @@
     background: url("../images/venue-banner.jpg") no-repeat scroll 60% 99% / cover $black-pearl;
   }
 }
-.why-attend {
+.why-attend,
+.speakers {
   .top-content {
     background: url("../images/venue-banner.jpg") no-repeat scroll 60% 99% / cover $black-pearl;
   }

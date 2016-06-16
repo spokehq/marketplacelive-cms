@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-sm-8 col-xs-12">
                     <div>
-                        <img src="<?= get_template_directory_uri(); ?>/dist/images/rect1.svg" alt="" class="rect-red">
+                        <img src="<?= get_template_directory_uri(); ?>/dist/images/rect-blue.svg" alt="" class="rect-blue">
                     </div>
 
 

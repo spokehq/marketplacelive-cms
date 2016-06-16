@@ -715,13 +715,14 @@ blockquote {
         }
       }
 
+      // positions fa-circle on right edge of .bar
       .bar {
         width: 100%;
         &:before {
-          padding-top: 100%;
+          padding-top: 62%;
         }
         &:after {
-          padding-bottom: 250%;
+          padding-bottom: 200%;
         }
       }
       .session {
