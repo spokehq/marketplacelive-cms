@@ -72,18 +72,20 @@ function spokehq_loginfooter() { ?>
 
 add_action('login_footer','spokehq_loginfooter');
 
-
-
-
 /**
- * Add search functionality to Navigation Bar
- *
+ * Replace title with page title
+ * Call on template pages when working with ACF
+ * Refactor for specific uses
  */
-//function add_nav_menu_search($args) {
-//    //ensure it's the nav menu you want to add the search form to
-//    if($args['theme_location'] == 'primary_navigation') {
-//        $args['items_wrap'] = $args['items_wrap'].get_search_form();
-//    }
-//    return $args;
-//}
-//add_filter('wp_nav_menu_args', 'add_nav_menu_search', 20);
+function acf_change_title_text( $title ){
+  $screen = get_current_screen();
+  
+  // replace 'sponsor' with your post type slug
+  if  ( 'sponsor' == $screen->post_type ) {
+    $title = "Company name";
+  }
+
+  return $title;
+}
+
+add_filter( 'enter_title_here', 'acf_change_title_text' );
