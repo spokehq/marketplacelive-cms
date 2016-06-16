@@ -217,23 +217,7 @@
                 $linkedIn = get_field('company_linkedin_url');
                 $facebook = get_field('company_facebook_url');
                 $email = get_field('company_email'); ?>
-
-
-               
-               
-               
-               
-               
-               
-               
-               
-               
-               
-               
-               
-               
-               
-               
+     
 <div class="modal fade" id="<?php echo $company;?>" role="dialog" aria-labelledby="<?php echo $company;?>-label" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-header">
