@@ -22,7 +22,7 @@
 
           // Find Register in top nav and add target attribute
           $(document).ready(function(){
-              $('#menu-primary-navigation li.menu-item-134 a').attr('target', '_blank').attr('title','Register for MarketplaceLIVE 2016! This link will open a new tab.');
+              $('#menu-primary-navigation li.menu-item-134 a').attr('target', '_blank').attr('title','Register for MarketplaceLIVE 2016!');
           });
 
           // Nav icon animation
@@ -144,6 +144,13 @@
               //         $(this).toggleClass(showing, addOrRemove);
               //     });
               // });
+              // $('.show-modal .dim').click(function(e) {
+              //     $('.dim').css('opacity', 1);
+              // });
+              // $('.modal').on('hidden.bs.modal', function () {
+              //     $('.dim').css('', '').attr('title','');
+              // });
+              
 
 
           } // closing function

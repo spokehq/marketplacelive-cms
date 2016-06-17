@@ -194,18 +194,20 @@
             $myposts = get_posts( $args );
             // set up grid here
             echo ' <div class="row">';
-            echo ' <div class="main-content-row grid-layout" >';
+            echo ' <div class="grid-layout" >';
 
             foreach ($myposts as $post) : setup_postdata( $post );
                 // this is what opens your modal - edit as needed
                 // reformat company title
                 $company = get_the_title();
                 $company = str_replace(' ', '-', $company);
-                $logo = wp_get_attachment_image(get_field('company_logo'),'thumbnail');?>
+                $logo = wp_get_attachment_image(get_field('company_logo'),'thumbnail', false,
+                    $attr=array('class' => 'img-responsive size-thumbnail dim'));?>
 
                 <!-- Button Trigger  -->
-                <div class="col-sm-6 col-md-3">
-                    <button class="show-modal center-block dim" type="button"  data-toggle="modal" data-target="#<?php echo $company;?>"><?php echo $logo; ?></button>
+                <div class="col-xs-6 col-sm-3">
+                    <button class="show-modal center-block" type="button"
+                            data-toggle="modal" data-target="#<?php echo $company;?>"><?php echo $logo; ?></button>
                 </div>
 
                 <!-- Modal  -->
@@ -218,61 +220,68 @@
                 $facebook = get_field('company_facebook_url');
                 $email = get_field('company_email'); ?>
 
-
                 <div class="modal fade" id="<?php echo $company;?>" role="dialog" aria-labelledby="<?php echo $company;?>-label" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-header">
                             <button class="close" data-dismiss="modal" aria-label="Close">
                                 <span class="x-close" aria-hidden="true">&times;</span>
                             </button>
-                        </div>
+                        </div><!-- modal header-->
                         <div class="modal-body">
                             <h3><?php the_title();?></h3>
-                            <?php if($url) {
+                            <?php
+                            if($url) {
                                 echo '<span class="company-url clearfix">';
                                 if($prettyUrl) {
-                                    echo $prettyUrl;
+                                    echo '<a href="'.$url.'" target="_blank">'.$prettyUrl.'</a>';
                                 } else {
-                                    echo $url;
+                                    echo '<a href="'.$url.'" target="_blank">'.$url.'</a>';
                                 }
-                                echo '</a>';
+                                echo '</span>';
                             }
-
                             if ($snippet) {
                                 echo '<div class="snippet clearfix">'.$snippet.'</div>';
                             }
+
                             if ($twitter || $linkedIn || $facebook) { ?>
-                            <div class="modal-social clearfix">
-                                <div class="modal-social-wrapper">
-                                    <ul class="social">
-                                        <?php if($twitter) { ?>
-                                            <li class="item"><a href="<?php echo $twitter;?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                        <?php }
-                                        if ($linkedIn) { ?>
-                                            <li class="item"><a href="<?php echo $linkedIn;?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                        <?php }
-                                        if($facebook) {?>
-                                            <li class="item"><a href="<?php echo $facebook;?>" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
-                                        <?php } ?>
-                                    </ul>
-                                </div>
-                                <?php }
-                                if ($email) { ?>
-                                    <div class="modal-email-wrapper">
-                                        <a href="mailto:<?php echo $email;?>" class="email" target="_blank"><i class="fa fa-envelope-o"></i></a>
+                                <div class="modal-social clearfix">
+                                    <div class="modal-social-wrapper">
+                                        <ul class="social">
+                                            <?php if($twitter) { ?>
+                                                <li class="item"><a href="<?php echo $twitter;?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                            <?php }
+                                            if ($linkedIn) { ?>
+                                                <li class="item"><a href="<?php echo $linkedIn;?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                            <?php }
+                                            if($facebook) {?>
+                                                <li class="item"><a href="<?php echo $facebook;?>" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+                                            <?php } ?>
+                                        </ul>
                                     </div>
-                                <?php } ?>
-                            </div>
-                        </div>
+                                </div>
+                            <?php }
+                            if ($email) { ?>
+                                <div class="modal-email-wrapper">
+                                    <a href="mailto:<?php echo $email;?>"><i class="fa fa-envelope-o"></i></a>
+                                </div>
+                            <?php } ?>
+                        </div><!-- modal body -->
+
+
                     </div><!-- end .modal-dialog  -->
-                </div><!-- end modal  -->
-            <?php endforeach;
+                </div><!-- end modal fade -->
+
+
+                <?php
+
+            endforeach;
             // close grid here
-            echo '</div><!-- end .main-content-row -->';
+            echo '</div><!-- end .gridlayout-->';
             echo '</div><!-- end .row -->';
             wp_reset_postdata();
 
-        } // end exhibitors
+
+        }  // end exhibitors
 
         ?>
 

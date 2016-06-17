@@ -1,7 +1,9 @@
 .page, .post {
   background-color: $concrete;
 }
-
+main {
+  padding-bottom: 50px;
+}
 .wrap {
   min-width: 320px; // set min width for site
 }
@@ -224,15 +226,18 @@ blockquote {
 // modal
 // centers image in column in grid
 .grid-layout {
-  margin-bottom: 200px;
-  .modal {
-    top: 25%;
+  .show-modal {
+    border: none;
+    background: #fff;
     outline: none;
-  }
-  button {
-    border: 0;
-    background: transparent;
-    outline: none;
+    height: 150px;
+    max-height: 150px;
+    max-width: 150px;
+    margin-bottom: 50px;
+    .dim {
+      //filter: grayscale(100%);
+      //opacity: 0.7;
+    }
   }
 }
 // a lighter backdrop from default
@@ -250,11 +255,6 @@ blockquote {
       }
     }
   }
-  .dim {
-    img {
-      opacity: .7;
-    }
-  }
   .modal {
     position: fixed;
     overflow: auto;
@@ -266,8 +266,10 @@ blockquote {
     box-shadow: none;
     border: 0;
     background: transparent;
+    top: 25%;
 
-  }
+    }
+
   .modal-dialog {
     background-color: white;
     box-shadow:  0 0 2px #cbcbcb;
@@ -293,8 +295,10 @@ blockquote {
         font-weight: 300;
       }
       .company-url {
-        color: $astronaut;
-        font-weight: 300;
+        a {
+          color: $astronaut;
+          font-weight: 300;
+        }
       }
       .snippet {
         margin: 20px 0;
@@ -304,6 +308,16 @@ blockquote {
         position: relative;
         top: -27px;
         font-size: 20px;
+        .fa {
+          color: $froly;
+        }
+
+      }
+    }
+    .close {
+      &:focus,
+      &:active {
+        outline: none;
       }
     }
     .x-close {
@@ -781,6 +795,10 @@ blockquote {
       padding: 0 0 10px 0;
       margin: 0 -100px 0 50px;
     }
+  }
+  .grid-layout {
+    max-width: 752px;
+    margin: 0 auto;
   }
   // Row Spacing Accommodations
 

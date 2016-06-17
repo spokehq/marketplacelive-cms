@@ -194,18 +194,20 @@
             $sponsors = get_posts($argsAll);
             // set up grid here
             echo ' <div class="row">';
-            echo ' <div class="main-content-row grid-layout" >';
+            echo ' <div class="grid-layout" >';
 
             foreach ($sponsors as $post) : setup_postdata( $post );
                 // this is what opens your modal - edit as needed
                 // reformat company title
                 $company = get_the_title();
                 $company = str_replace(' ', '-', $company);
-                $logo = wp_get_attachment_image(get_field('company_logo'),'thumbnail', false, $attr=array('class' => 'img-responsive size-thumbnail'));?>
+                $logo = wp_get_attachment_image(get_field('company_logo'),'thumbnail', false,
+                    $attr=array('class' => 'img-responsive size-thumbnail dim'));?>
 
                 <!-- Button Trigger  -->
-                <div class="col-sm-6 col-md-3">
-                    <button class="show-modal center-block" type="button"  data-toggle="modal" data-target="#<?php echo $company;?>"><?php echo $logo; ?></button>
+                <div class="col-xs-6 col-sm-3">
+                    <button class="show-modal center-block" type="button"
+                            data-toggle="modal" data-target="#<?php echo $company;?>"><?php echo $logo; ?></button>
                 </div>
 
                 <!-- Modal  -->
@@ -224,48 +226,48 @@
 			<button class="close" data-dismiss="modal" aria-label="Close">
 				<span class="x-close" aria-hidden="true">&times;</span>
 			</button>
-		
-			<div class="modal-body">
-				<h3><?php the_title();?></h3>	
-				<?php 
-				if($url) {
-					echo '<span class="company-url clearfix">';
-					if($prettyUrl) {
-						echo '<a href="'.$url.'" target="_blank">'.$prettyUrl.'</a>';
-					} else {
-						echo '<a href="'.$url.'" target="_blank">'.$url.'</a>';
-					}
-					echo '</span>';
-				} 
-				if ($snippet) {
-                    echo '<div class="snippet clearfix">'.$snippet.'</div>';
-                } 
-	            
-	            if ($twitter || $linkedIn || $facebook) { ?>
-                    <div class="modal-social clearfix">
-                        <div class="modal-social-wrapper">
-                            <ul class="social">
-                                <?php if($twitter) { ?>
-                                    <li class="item"><a href="<?php echo $twitter;?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/dist/images/rsoc-twitter.svg" alt="" class="rsoc icon"></a></li>
-                                <?php }
-                                if ($linkedIn) { ?>
-                                    <li class="item"><a href="<?php echo $linkedIn;?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/dist/images/rsoc-linkedin.svg" alt="" class="rsoc icon"></a></li>
-                                <?php }
-                                if($facebook) {?>
-                                    <li class="item"><a href="<?php echo $facebook;?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/dist/images/rsoc-faceook.svg" alt="" class="rsoc icon"></a></li>
-                                <?php } ?>
-                            </ul>
-                        </div>
+        </div><!-- modal header-->
+        <div class="modal-body">
+            <h3><?php the_title();?></h3>	
+            <?php 
+            if($url) {
+                echo '<span class="company-url clearfix">';
+                if($prettyUrl) {
+                    echo '<a href="'.$url.'" target="_blank">'.$prettyUrl.'</a>';
+                } else {
+                    echo '<a href="'.$url.'" target="_blank">'.$url.'</a>';
+                }
+                echo '</span>';
+            } 
+            if ($snippet) {
+                echo '<div class="snippet clearfix">'.$snippet.'</div>';
+            } 
+            
+            if ($twitter || $linkedIn || $facebook) { ?>
+                <div class="modal-social clearfix">
+                    <div class="modal-social-wrapper">
+                        <ul class="social">
+                            <?php if($twitter) { ?>
+                                <li class="item"><a href="<?php echo $twitter;?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <?php }
+                            if ($linkedIn) { ?>
+                                <li class="item"><a href="<?php echo $linkedIn;?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <?php }
+                            if($facebook) {?>
+                                <li class="item"><a href="<?php echo $facebook;?>" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+                            <?php } ?>
+                        </ul>
                     </div>
-                <?php }
-                if ($email) { ?>
-                    <div class="modal-email-wrapper">
-                        <a href="mailto:<?php echo $email;?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/dist/images/rsoc-email.svg" alt="" class="rsoc"></a>
-                    </div>
-                <?php } ?>
-			</div><!-- modal body -->
+                </div>
+            <?php }
+            if ($email) { ?>
+                <div class="modal-email-wrapper">
+                    <a href="mailto:<?php echo $email;?>"><i class="fa fa-envelope-o"></i></a>
+                </div>
+            <?php } ?>
+        </div><!-- modal body -->
 		
-		</div><!-- modal header-->
+
 	</div><!-- end .modal-dialog  -->
 </div><!-- end modal fade -->
                 
@@ -274,7 +276,7 @@
 
             endforeach;
             // close grid here
-            echo '</div><!-- end .main-content-row -->';
+            echo '</div><!-- end .gridlayout-->';
             echo '</div><!-- end .row -->';
             wp_reset_postdata();
 
