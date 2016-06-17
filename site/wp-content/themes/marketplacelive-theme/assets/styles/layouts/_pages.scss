@@ -266,7 +266,7 @@ blockquote {
     box-shadow: none;
     border: 0;
     background: transparent;
-    top: 25%;
+    top: 0;
 
     }
 
@@ -281,7 +281,7 @@ blockquote {
       padding: 15px 15px 0;
     }
     .modal-body {
-      padding: 0 80px 20px;
+      padding: 0 80px 30px;
       .modal-social {
         .fa {
           color: $froly;
@@ -624,6 +624,12 @@ blockquote {
 }
 
 @media (min-width: $screen-sm-min) { // min-width 768
+  .sponsors,
+  .exhibitors {
+    .modal {
+      top: 25%;
+    }
+  }
   .main-content-row {
     float: left;
     width: 100%;
@@ -798,7 +804,7 @@ blockquote {
   }
   .grid-layout {
     max-width: 752px;
-    margin: 0 auto;
+    margin: 50px auto;
   }
   // Row Spacing Accommodations
 
