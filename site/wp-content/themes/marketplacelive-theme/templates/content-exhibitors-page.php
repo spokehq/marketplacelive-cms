@@ -172,7 +172,15 @@
 
     <?php endif; ?>
 
-
+    <div class="row">
+        <div class="main-content-row custom<?php echo $count++; ?>">
+            <div class="col-sm-offset-2 col-sm-8">
+                <div class="text-wrapper introduction <?php echo get_field('subheading_color'); ?>">
+                    <?php the_field('exhibitor_subheading'); ?>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Exhibitors -->

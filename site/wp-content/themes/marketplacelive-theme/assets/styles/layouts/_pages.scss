@@ -261,19 +261,24 @@ blockquote {
     background-clip: padding-box;
     width: 100%;
     margin: 0 auto;
+    width: 100%;
     max-width: 778px;
     border-radius: 0;
     box-shadow: none;
     border: 0;
     background: transparent;
     top: 0;
-
+    left: 0;
+    right: auto;
+    padding: 0;
     }
 
   .modal-dialog {
     background-color: white;
     box-shadow:  0 0 2px #cbcbcb;
+    width: 100%;
     max-width: 778px;
+    margin: 0;
 
     .modal-header {
       background-color: white;
@@ -281,7 +286,7 @@ blockquote {
       padding: 15px 15px 0;
     }
     .modal-body {
-      padding: 0 80px 30px;
+      padding: 0 20px 30px;
       .modal-social {
         .fa {
           color: $froly;
@@ -308,6 +313,7 @@ blockquote {
         position: relative;
         top: -27px;
         font-size: 20px;
+        margin-right: 20px;
         .fa {
           color: $froly;
         }
@@ -315,6 +321,8 @@ blockquote {
       }
     }
     .close {
+       padding-right: 20px;
+      margin-top: 20px;
       &:focus,
       &:active {
         outline: none;
@@ -628,6 +636,9 @@ blockquote {
   .exhibitors {
     .modal {
       top: 25%;
+    }
+    .modal-body {
+      padding: 0 80px 30px;
     }
   }
   .main-content-row {

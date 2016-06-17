@@ -68,7 +68,7 @@
     width:255px;
     height: 70px;
     top: -20px;
-    right: -9%;
+    right: auto;
 
     &:hover {
       color: white;
@@ -477,6 +477,7 @@
 
 
   .navbar-default {
+
     background-color: rgba(255,255,255, 0.11);
     .navbar-collapse {
       border: 0;
@@ -485,6 +486,9 @@
       background-color: transparent;
       position: relative;
       top: 3px;
+      .navbar-brand {
+        right: -9%;
+      }
     }
     .top-content {
       padding: 116px 0 30px;
