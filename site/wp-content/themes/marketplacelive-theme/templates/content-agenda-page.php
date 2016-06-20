@@ -72,7 +72,7 @@
                                         <div class="session">
                                             <!-- Open modal -->
                                             <div class="title"><button type="button" data-toggle="modal" data-target="#modal<?php echo $int;?>"><?php echo $title; ?></button></div>
-                                            <div class="short"><?php echo $short; ?></div>
+                                            <div class="short"><button type="button" data-toggle="modal" data-target="#modal<?php echo $int;?>"><?php echo $short; ?></button></div>
                                         </div>
                                     </div>
 
