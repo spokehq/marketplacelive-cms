@@ -10,6 +10,7 @@ main {
 .btn, .btn-standard {
   font-weight: 100 !important; // museo sans
   font-style: normal;
+  white-space: normal;
 }
 .message-wrapper {
   margin: 100px 0;
@@ -228,7 +229,7 @@ blockquote {
 .grid-layout {
   .show-modal {
     border: none;
-    background: #fff;
+    background: $concrete;
     outline: none;
     height: 150px;
     max-height: 150px;
@@ -636,6 +637,8 @@ blockquote {
   .exhibitors {
     .modal {
       top: 25%;
+      left: auto;
+      right: auto;
     }
     .modal-body {
       padding: 0 80px 30px;
