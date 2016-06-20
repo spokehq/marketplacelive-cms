@@ -138,7 +138,7 @@
                                                         while( have_rows('speakers') ): the_row();
                                                         // display each speaker as a list item
                                                         $speaker = get_sub_field('add_speaker');
-                                                        $address = get_sub_field('session_address');
+                                                        //$address = get_sub_field('session_address');
                                                         $title = get_sub_field('speaker_title');
 
                                                         // TODO add style to add colon after speaker
@@ -153,9 +153,9 @@
                                                                 echo '<p class="location"><span>Location</span>' . '<span class="colon"> : </span>' . $location . '</p>';
                                                                 }
 
-                                                                if($address) {
-                                                                    echo '<p class="address"><span>Address</span>' . '<span class="colon"> : </span>' . $address . '</p>';
-                                                                }
+//                                                                if($address) {
+//                                                                    echo '<p class="address"><span>Address</span>' . '<span class="colon"> : </span>' . $address . '</p>';
+//                                                                }
 
                                                 if ($description) { ?>
                                                 <div class="description">
@@ -209,7 +209,7 @@
 
                                     <!-- Modal  -->
                                     <?php   $location = get_sub_field('session_location');
-                                            $address = get_sub_field('session_address');
+                                            //$address = get_sub_field('session_address');
                                             $description = get_sub_field('long_description');?>
 
 
@@ -273,9 +273,9 @@
                                                 if($location) {
                                                     echo '<p class="location"><span>Location</span>' . '<span class="colon"> : </span>' . $location . '</p>';
                                                 }
-                                                if($address) {
-                                                    echo '<p class="address"><span>Address</span>' . '<span class="colon"> : </span>' . address . '</p>';
-                                                }
+//                                                if($address) {
+//                                                    echo '<p class="address"><span>Address</span>' . '<span class="colon"> : </span>' . address . '</p>';
+//                                                }
 
                                                 if ($description) { ?>
                                                     <div class="description">
