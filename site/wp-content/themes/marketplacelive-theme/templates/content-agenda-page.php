@@ -85,12 +85,16 @@
 
                                 <div class="modal fade" id="modal<?php echo $int++;?>" role="dialog" aria-labelledby="<?php echo $title;?>-label" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
-                                        <div class="modal-header">
-                                            <button class="close" data-dismiss="modal" aria-label="Close">
-                                                <span class="x-close" aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
+<!--                                        <div class="modal-header">-->
+<!---->
+<!--                                        </div>-->
+                                        <button class="close" data-dismiss="modal" aria-label="Close">
+                                            <span class="x-close" aria-hidden="true">&times;</span>
+                                        </button>
+
                                         <div class="modal-body">
+
+
 
                                             <?php if($start) {
                                                 echo '<span class="start">' . $start .'</span>' . '<span class="period">' . $period .'</span>';
@@ -104,27 +108,63 @@
                                                 // print nothing
                                             }
 
-                                            if($location) {
-                                                echo $location;
-                                            }
 
-                                            if ( have_rows('speakers') ): // sub-repeater ?>
-                                                <ul>
-                                                    <?php while( have_rows('speakers') ): the_row();
+
+
+
+                                                if ( have_rows('speakers') ): // sub-repeater
+
+                                                // this is an optional field
+                                                if ( have_rows('speaker_images') ): the_row();
+
+                                                echo '<div class="speaker-images">';
+                                                    echo '<ul>';
+                                                        while( have_rows('speaker_images') ): the_row();
+                                                        // display speaker image(s) to left of names
+                                                        $image = get_sub_field('speaker_image');
+
+
+                                                        echo '<li><img src="' . $image['url'] . '" alt="' . $image['alt'] . '" /></li>';
+
+                                                        endwhile;
+                                                        echo '</ul>';
+                                                    echo '</div>';
+
+                                                                endif;
+
+
+                                                                echo '<div class="speakers">';
+                                                    echo '<ul>';
+                                                        while( have_rows('speakers') ): the_row();
                                                         // display each speaker as a list item
-                                                        $add_speaker = get_sub_field('add_speaker');
-                                                        ?>
-                                                        <li class="speaker" ><?php echo $add_speaker; ?></li>
-                                                    <?php endwhile; ?>
-                                                </ul>
-                                            <?php endif; // end of speakers repeater
+                                                        $speaker = get_sub_field('add_speaker');
+                                                        $title = get_sub_field('speaker_title');
 
+                                                        // TODO add style to add colon after speaker
 
-                                            if ($description) { ?>
+                                                        echo '<li class="speaker" >' . $speaker . '<span class="colon"> : </span>' . $title . '</li>';
+                                                        endwhile;
+                                                        echo '</ul>';
+                                                    echo '</div>';
+                                                                endif; // end of speakers repeater
+
+                                                                if($location) { // TODO add style to add colon after location
+                                                                echo '<p class="location"><span>Location</span>' . '<span class="colon"> : </span>' . $location . '</p>';
+                                                                                                                                                                       }
+
+                                                                                                                                                                       if ($description) { ?>
                                                 <div class="description">
                                                     <?php echo $description;?>
                                                 </div>
+
+
+
+
                                             <?php } ?>
+
+
+
+
                                         </div>
                                     </div><!-- end .modal-dialog  -->
                                 </div><!-- end modal  -->
@@ -156,7 +196,7 @@
                                         <div class="col-xs-12 col-sm-offset-1 col-sm-4 col-sm-pull-5 ">
                                             <div class="session">
                                                 <div class="title"><button type="button" data-toggle="modal" data-target="#modal<?php echo $int;?>"><?php echo $title; ?></button></div>
-                                                <div class="short"><?php echo $short; ?></div>
+                                                <div class="short"><button type="button" data-toggle="modal" data-target="#modal<?php echo $int;?>"><?php echo $short; ?></button></div>
                                             </div>
                                         </div>
 
@@ -169,11 +209,11 @@
 
                                     <div class="modal fade" id="modal<?php echo $int++;?>" role="dialog" aria-labelledby="<?php echo $title;?>-label" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
-                                            <div class="modal-header">
-                                                <button class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span class="x-close" aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
+
+                                            <button class="close" data-dismiss="modal" aria-label="Close">
+                                                <span class="x-close" aria-hidden="true">&times;</span>
+                                            </button>
+
                                             <div class="modal-body">
 
                                                 <?php if($start) {
@@ -215,18 +255,18 @@
                                                             while( have_rows('speakers') ): the_row();
                                                                 // display each speaker as a list item
                                                                 $speaker = get_sub_field('add_speaker');
-                                                                $title = get_sub_field('add_title');
+                                                                $title = get_sub_field('speaker_title');
 
                                                                 // TODO add style to add colon after speaker
 
-                                                                echo '<li class="speaker" >' . $speaker . $title . '</li>';
+                                                                echo '<li class="speaker" >' . $speaker . '<span class="colon"> : </span>' . $title . '</li>';
                                                             endwhile;
                                                     echo '</ul>';
                                                 echo '</div>';
                                                endif; // end of speakers repeater
 
                                                 if($location) { // TODO add style to add colon after location
-                                                    echo '<p class="location"><span>Location</span>' . $location . '</p>';
+                                                    echo '<p class="location"><span>Location</span>' . '<span class="colon"> : </span>' . $location . '</p>';
                                                 }
 
                                                 if ($description) { ?>

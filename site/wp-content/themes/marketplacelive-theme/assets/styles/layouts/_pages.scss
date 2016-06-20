@@ -288,6 +288,7 @@ blockquote {
     }
     .modal-body {
       padding: 0 20px 30px;
+      top: 25px;
       .modal-social {
         .fa {
           color: $froly;
@@ -324,6 +325,8 @@ blockquote {
     .close {
        padding-right: 20px;
       margin-top: 20px;
+      position: relative;
+      z-index: 100;
       &:focus,
       &:active {
         outline: none;
@@ -333,6 +336,10 @@ blockquote {
       font-family: $fira-stack;
       font-size: 50px;
       font-weight: 100;
+      &:focus,
+      &:active {
+        outline: none;
+      }
     }
   }
   .modal-backdrop {
@@ -409,6 +416,10 @@ blockquote {
   }
 }
 
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
 .agenda {
   .main {
     padding-top: 50px;
@@ -440,6 +451,7 @@ blockquote {
         text-transform: uppercase;
       }
     }
+
     .session {
       font-family: $museo-stack;
       font-size: 14px;
@@ -453,28 +465,29 @@ blockquote {
       .title {
         font-weight: 600;
       }
-      .short  {
-      }
     }
 
   }
   .agenda-wrapper {
-    button {
-      border: 0;
-      background: transparent;
-      padding: 0;
-
-
-      &:hover {
+    .title,
+    .short {
+      button {
+        border: 0;
         background: transparent;
-      }
-      &:active,
-      &:focus {
-        outline: 0;
+        padding: 0;
+        text-align: left !important;
+        &:hover {
+          background: transparent;
+        }
+        &:active,
+        &:focus {
+          outline: 0;
+        }
       }
     }
+
     .fade.in {
-      opacity: 0.8;
+      opacity: 0.9;
     }
     .modal {
       width: 100%;
@@ -485,14 +498,14 @@ blockquote {
         font-size: 50px;
         font-weight: 100;
         line-height: 1;
-        margin: 40px 0;
+        margin: 32px 0 40px;
         color: $froly;
       }
       .start {
         font-family: $expo-stack;
         font-style: italic;
         font-weight: 300;
-        font-size: 100px;
+        font-size: 72px;
         line-height: 1;
         color: $silver;
       }
@@ -507,28 +520,46 @@ blockquote {
       }
       .modal-header {
         border-bottom: 0;
+        height: 50px;
       }
       .x-close {
         font-family: $fira-stack;
-        font-size: 50px;
+        font-size: 120px;
         font-weight: 100;
+        position: relative;
+        z-index: 100;
+        &:focus,
+        &:active {
+          outline: none;
+        }
       }
       .modal-body {
         border: 0;
         box-shadow: none;
-        .speaker {
+        top: 25px;
+        ul {
+          margin-bottom: 0;
+        }
+        .speaker,
+        .location {
           color: $froly;
           font-weight:600;
+          .colon {
+            margin: 0 4px;
+          }
         }
         .description {
-          font-size: 25px;
+          font-size: 14px;
         }
       }
       ul {
         list-style-type: none;
         padding-left: 0;
       }
-
+      .close {
+        position: relative;
+        z-index: 100;
+      }
     }
   }
 }
@@ -629,7 +660,26 @@ blockquote {
 
 
 @media (min-width: $screen-xs-min) { // min-width 480
+  .agenda {
+    .left-agenda,
+    .agenda-wrapper {
+      .modal {
+        .modal-dialog {
+          width: 80%;
+          max-width: 986px;
+        }
+        .modal-body {
+          top: 19px;
+        }
+        .start {
+          font-size: 100px;
+        }
+        .period {
 
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: $screen-sm-min) { // min-width 768
@@ -644,6 +694,7 @@ blockquote {
       padding: 0 80px 30px;
     }
   }
+
   .main-content-row {
     float: left;
     width: 100%;
@@ -778,6 +829,7 @@ blockquote {
         .period {
 
         }
+
       }
 
       // positions fa-circle on right edge of .bar
