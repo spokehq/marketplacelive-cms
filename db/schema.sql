@@ -105,7 +105,7 @@ CREATE TABLE `si121_options` (
   `autoload` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=638 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=664 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,7 +123,7 @@ CREATE TABLE `si121_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=4541 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4931 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -162,7 +162,7 @@ CREATE TABLE `si121_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=476 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=487 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -279,6 +279,368 @@ CREATE TABLE `si121_users` (
   KEY `user_email` (`user_email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfBadLeechers`
+--
+
+DROP TABLE IF EXISTS `si121_wfBadLeechers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfBadLeechers` (
+  `eMin` int(10) unsigned NOT NULL,
+  `IP` binary(16) NOT NULL DEFAULT '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',
+  `hits` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`eMin`,`IP`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfBlockedIPLog`
+--
+
+DROP TABLE IF EXISTS `si121_wfBlockedIPLog`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfBlockedIPLog` (
+  `IP` binary(16) NOT NULL DEFAULT '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',
+  `countryCode` varchar(2) NOT NULL,
+  `blockCount` int(10) unsigned NOT NULL DEFAULT '0',
+  `unixday` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`IP`,`unixday`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfBlocks`
+--
+
+DROP TABLE IF EXISTS `si121_wfBlocks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfBlocks` (
+  `IP` binary(16) NOT NULL DEFAULT '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',
+  `blockedTime` bigint(20) NOT NULL,
+  `reason` varchar(255) NOT NULL,
+  `lastAttempt` int(10) unsigned DEFAULT '0',
+  `blockedHits` int(10) unsigned DEFAULT '0',
+  `wfsn` tinyint(3) unsigned DEFAULT '0',
+  `permanent` tinyint(3) unsigned DEFAULT '0',
+  PRIMARY KEY (`IP`),
+  KEY `k1` (`wfsn`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfBlocksAdv`
+--
+
+DROP TABLE IF EXISTS `si121_wfBlocksAdv`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfBlocksAdv` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `blockType` char(2) NOT NULL,
+  `blockString` varchar(255) NOT NULL,
+  `ctime` int(10) unsigned NOT NULL,
+  `reason` varchar(255) NOT NULL,
+  `totalBlocked` int(10) unsigned DEFAULT '0',
+  `lastBlocked` int(10) unsigned DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfConfig`
+--
+
+DROP TABLE IF EXISTS `si121_wfConfig`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfConfig` (
+  `name` varchar(100) NOT NULL,
+  `val` longblob,
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfCrawlers`
+--
+
+DROP TABLE IF EXISTS `si121_wfCrawlers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfCrawlers` (
+  `IP` binary(16) NOT NULL DEFAULT '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',
+  `patternSig` binary(16) NOT NULL,
+  `status` char(8) NOT NULL,
+  `lastUpdate` int(10) unsigned NOT NULL,
+  `PTR` varchar(255) DEFAULT '',
+  PRIMARY KEY (`IP`,`patternSig`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfFileMods`
+--
+
+DROP TABLE IF EXISTS `si121_wfFileMods`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfFileMods` (
+  `filenameMD5` binary(16) NOT NULL,
+  `filename` varchar(1000) NOT NULL,
+  `knownFile` tinyint(3) unsigned NOT NULL,
+  `oldMD5` binary(16) NOT NULL,
+  `newMD5` binary(16) NOT NULL,
+  PRIMARY KEY (`filenameMD5`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfHits`
+--
+
+DROP TABLE IF EXISTS `si121_wfHits`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfHits` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `attackLogTime` double(17,6) unsigned NOT NULL,
+  `ctime` double(17,6) unsigned NOT NULL,
+  `IP` binary(16) DEFAULT NULL,
+  `jsRun` tinyint(4) DEFAULT '0',
+  `statusCode` int(11) NOT NULL DEFAULT '200',
+  `isGoogle` tinyint(4) NOT NULL,
+  `userID` int(10) unsigned NOT NULL,
+  `newVisit` tinyint(3) unsigned NOT NULL,
+  `URL` text,
+  `referer` text,
+  `UA` text,
+  `action` varchar(64) NOT NULL DEFAULT '',
+  `actionDescription` text,
+  `actionData` text,
+  PRIMARY KEY (`id`),
+  KEY `k1` (`ctime`),
+  KEY `k2` (`IP`,`ctime`),
+  KEY `attackLogTime` (`attackLogTime`)
+) ENGINE=InnoDB AUTO_INCREMENT=809 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfHoover`
+--
+
+DROP TABLE IF EXISTS `si121_wfHoover`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfHoover` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `owner` text,
+  `host` text,
+  `path` text,
+  `hostKey` binary(4) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `k2` (`hostKey`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfIssues`
+--
+
+DROP TABLE IF EXISTS `si121_wfIssues`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfIssues` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `time` int(10) unsigned NOT NULL,
+  `status` varchar(10) NOT NULL,
+  `type` varchar(20) NOT NULL,
+  `severity` tinyint(3) unsigned NOT NULL,
+  `ignoreP` char(32) NOT NULL,
+  `ignoreC` char(32) NOT NULL,
+  `shortMsg` varchar(255) NOT NULL,
+  `longMsg` text,
+  `data` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfLeechers`
+--
+
+DROP TABLE IF EXISTS `si121_wfLeechers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfLeechers` (
+  `eMin` int(10) unsigned NOT NULL,
+  `IP` binary(16) NOT NULL DEFAULT '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',
+  `hits` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`eMin`,`IP`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfLockedOut`
+--
+
+DROP TABLE IF EXISTS `si121_wfLockedOut`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfLockedOut` (
+  `IP` binary(16) NOT NULL DEFAULT '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',
+  `blockedTime` bigint(20) NOT NULL,
+  `reason` varchar(255) NOT NULL,
+  `lastAttempt` int(10) unsigned DEFAULT '0',
+  `blockedHits` int(10) unsigned DEFAULT '0',
+  PRIMARY KEY (`IP`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfLocs`
+--
+
+DROP TABLE IF EXISTS `si121_wfLocs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfLocs` (
+  `IP` binary(16) NOT NULL DEFAULT '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',
+  `ctime` int(10) unsigned NOT NULL,
+  `failed` tinyint(3) unsigned NOT NULL,
+  `city` varchar(255) DEFAULT '',
+  `region` varchar(255) DEFAULT '',
+  `countryName` varchar(255) DEFAULT '',
+  `countryCode` char(2) DEFAULT '',
+  `lat` float(10,7) DEFAULT '0.0000000',
+  `lon` float(10,7) DEFAULT '0.0000000',
+  PRIMARY KEY (`IP`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfLogins`
+--
+
+DROP TABLE IF EXISTS `si121_wfLogins`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfLogins` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `hitID` int(11) DEFAULT NULL,
+  `ctime` double(17,6) unsigned NOT NULL,
+  `fail` tinyint(3) unsigned NOT NULL,
+  `action` varchar(40) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `userID` int(10) unsigned NOT NULL,
+  `IP` binary(16) DEFAULT NULL,
+  `UA` text,
+  PRIMARY KEY (`id`),
+  KEY `k1` (`IP`,`fail`),
+  KEY `hitID` (`hitID`)
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfNet404s`
+--
+
+DROP TABLE IF EXISTS `si121_wfNet404s`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfNet404s` (
+  `sig` binary(16) NOT NULL,
+  `ctime` int(10) unsigned NOT NULL,
+  `URI` varchar(1000) NOT NULL,
+  PRIMARY KEY (`sig`),
+  KEY `k1` (`ctime`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfReverseCache`
+--
+
+DROP TABLE IF EXISTS `si121_wfReverseCache`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfReverseCache` (
+  `IP` binary(16) NOT NULL DEFAULT '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',
+  `host` varchar(255) NOT NULL,
+  `lastUpdate` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`IP`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfScanners`
+--
+
+DROP TABLE IF EXISTS `si121_wfScanners`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfScanners` (
+  `eMin` int(10) unsigned NOT NULL,
+  `IP` binary(16) NOT NULL DEFAULT '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',
+  `hits` smallint(5) unsigned NOT NULL,
+  PRIMARY KEY (`eMin`,`IP`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfStatus`
+--
+
+DROP TABLE IF EXISTS `si121_wfStatus`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfStatus` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `ctime` double(17,6) unsigned NOT NULL,
+  `level` tinyint(3) unsigned NOT NULL,
+  `type` char(5) NOT NULL,
+  `msg` varchar(1000) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `k1` (`ctime`),
+  KEY `k2` (`type`)
+) ENGINE=InnoDB AUTO_INCREMENT=3479 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfThrottleLog`
+--
+
+DROP TABLE IF EXISTS `si121_wfThrottleLog`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfThrottleLog` (
+  `IP` binary(16) NOT NULL DEFAULT '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',
+  `startTime` int(10) unsigned NOT NULL,
+  `endTime` int(10) unsigned NOT NULL,
+  `timesThrottled` int(10) unsigned NOT NULL,
+  `lastReason` varchar(255) NOT NULL,
+  PRIMARY KEY (`IP`),
+  KEY `k2` (`endTime`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `si121_wfVulnScanners`
+--
+
+DROP TABLE IF EXISTS `si121_wfVulnScanners`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `si121_wfVulnScanners` (
+  `IP` binary(16) NOT NULL DEFAULT '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',
+  `ctime` int(10) unsigned NOT NULL,
+  `hits` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`IP`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -289,4 +651,4 @@ CREATE TABLE `si121_users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-06-15 21:51:53
+-- Dump completed on 2016-06-20 16:29:45

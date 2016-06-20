@@ -138,6 +138,7 @@
                                                         while( have_rows('speakers') ): the_row();
                                                         // display each speaker as a list item
                                                         $speaker = get_sub_field('add_speaker');
+                                                        $address = get_sub_field('session_address');
                                                         $title = get_sub_field('speaker_title');
 
                                                         // TODO add style to add colon after speaker
@@ -150,9 +151,13 @@
 
                                                                 if($location) { // TODO add style to add colon after location
                                                                 echo '<p class="location"><span>Location</span>' . '<span class="colon"> : </span>' . $location . '</p>';
-                                                                                                                                                                       }
+                                                                }
 
-                                                                                                                                                                       if ($description) { ?>
+                                                                if($address) {
+                                                                    echo '<p class="address"><span>Address</span>' . '<span class="colon"> : </span>' . $address . '</p>';
+                                                                }
+
+                                                if ($description) { ?>
                                                 <div class="description">
                                                     <?php echo $description;?>
                                                 </div>
@@ -204,7 +209,8 @@
 
                                     <!-- Modal  -->
                                     <?php   $location = get_sub_field('session_location');
-                                    $description = get_sub_field('long_description');?>
+                                            $address = get_sub_field('session_address');
+                                            $description = get_sub_field('long_description');?>
 
 
                                     <div class="modal fade" id="modal<?php echo $int++;?>" role="dialog" aria-labelledby="<?php echo $title;?>-label" aria-hidden="true">
@@ -257,7 +263,6 @@
                                                                 $speaker = get_sub_field('add_speaker');
                                                                 $title = get_sub_field('speaker_title');
 
-                                                                // TODO add style to add colon after speaker
 
                                                                 echo '<li class="speaker" >' . $speaker . '<span class="colon"> : </span>' . $title . '</li>';
                                                             endwhile;
@@ -265,8 +270,11 @@
                                                 echo '</div>';
                                                endif; // end of speakers repeater
 
-                                                if($location) { // TODO add style to add colon after location
+                                                if($location) {
                                                     echo '<p class="location"><span>Location</span>' . '<span class="colon"> : </span>' . $location . '</p>';
+                                                }
+                                                if($address) {
+                                                    echo '<p class="address"><span>Address</span>' . '<span class="colon"> : </span>' . address . '</p>';
                                                 }
 
                                                 if ($description) { ?>
