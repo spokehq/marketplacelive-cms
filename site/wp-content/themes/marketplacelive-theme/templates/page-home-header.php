@@ -31,16 +31,33 @@
             <div class="row">
                 <div class="col-md-4 col-md-offset-8 col-xs-12">
                     <ul class="social">
-                        <li class="item"><a href="https://vimeo.com/telx"
-                                            target="_blank"><i class="fa fa-vimeo"></i></a></li>
-                        <li class="item"><a href="https://plus.google.com/+TelxGroup"
-                                            target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                        <li class="item"><a href="https://twitter.com/MPLevent"
-                                            target="_blank"><i class="fa fa-twitter"></i></a></li>
-                        <li class="item"><a href="http://www.linkedin.com/company/telx"
-                                            target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                        <li class="item"><a href="https://www.facebook.com/MarketplaceLive/"
-                                            target="_blank"><i class="fa fa-facebook"></i></a></li>
+	                    <?php
+		                 $home = get_page_by_title('A Community for Building Digital Success');
+		                 $vimeo = get_field('vimeo_link', $home);
+		                 $google = get_field('google_plus_link', $home);
+		                 $twitter = get_field('twitter_link', $home);
+		                 $linkedin = get_field('linkedin_link', $home);
+		                 $facebook = get_field('facebook_link', $home);
+		                 $instagram = get_field('instagram_link', $home);
+		                
+		                if ($vimeo) { ?>
+	                        <li class="item"><a href="'.$vimeo.'" target="_blank"><i class="fa fa-vimeo"></i></a></li>
+                        <?php }
+	                    if ($instagram) { ?>
+			                <li class="item"><a href="'.$instagram.'" target="_blank"><i class="fa fa-instagram"></i></a></li>
+		                <?php }
+						if($google) { ?>                        
+	                        <li class="item"><a href="'.$google.'" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+	                    <?php }
+		                if ($twitter) { ?>
+	                        <li class="item"><a href="'.$twitter.'" target="_blank"><i class="fa fa-twitter"></i></a></li>
+	                    <?php } 
+		                if ($linkedin) { ?>
+	                        <li class="item"><a href="'.$linkedin.'" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+	                    <?php }
+		                if($facebook) { ?>
+	                        <li class="item"><a href="'.$facebook.'" target="_blank"><i class="fa fa-facebook"></i></a></li>
+	                    <?php } ?>
                     </ul>
                 </div>
             </div>
