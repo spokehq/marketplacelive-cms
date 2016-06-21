@@ -41,22 +41,22 @@
 		                 $instagram = get_field('instagram_link', $home);
 		                
 		                if ($vimeo) { ?>
-	                        <li class="item"><a href="'.$vimeo.'" target="_blank"><i class="fa fa-vimeo"></i></a></li>
+	                        <li class="item"><a href="<?php echo $vimeo;?>" target="_blank"><i class="fa fa-vimeo"></i></a></li>
                         <?php }
 	                    if ($instagram) { ?>
-			                <li class="item"><a href="'.$instagram.'" target="_blank"><i class="fa fa-instagram"></i></a></li>
+			                <li class="item"><a href="<?php echo $instagram;?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
 		                <?php }
 						if($google) { ?>                        
-	                        <li class="item"><a href="'.$google.'" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+	                        <li class="item"><a href="<?php echo $google;?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
 	                    <?php }
 		                if ($twitter) { ?>
-	                        <li class="item"><a href="'.$twitter.'" target="_blank"><i class="fa fa-twitter"></i></a></li>
+	                        <li class="item"><a href="<?php echo $twitter;?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
 	                    <?php } 
 		                if ($linkedin) { ?>
-	                        <li class="item"><a href="'.$linkedin.'" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+	                        <li class="item"><a href="<?php echo $linkedin;?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 	                    <?php }
 		                if($facebook) { ?>
-	                        <li class="item"><a href="'.$facebook.'" target="_blank"><i class="fa fa-facebook"></i></a></li>
+	                        <li class="item"><a href="<?php echo $facebook;?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
 	                    <?php } ?>
                     </ul>
                 </div>
