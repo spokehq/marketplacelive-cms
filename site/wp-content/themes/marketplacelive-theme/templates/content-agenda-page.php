@@ -58,7 +58,7 @@
                                 <div class="main-content-row left-agenda custom<?php echo $count++; ?>">
 
                                    <div class="col-xs-12 col-sm-offset-1 col-sm-4 ">
-                                       <div class="time">
+                                       <div class="time js-fadeInElement">
                                            <span class="start"><?php echo $start; ?></span>
                                            <span class="period"><?php echo $period; ?></span>
                                        </div>
@@ -69,7 +69,7 @@
                                     </div>
 
                                     <div class="col-xs-12 col-sm-4">
-                                        <div class="session">
+                                        <div class="session js-fadeInElement">
                                             <!-- Open modal -->
                                             <div class="title"><button type="button" data-toggle="modal" data-target="#modal<?php echo $int;?>"><?php echo $title; ?></button></div>
                                             <div class="short"><button type="button" data-toggle="modal" data-target="#modal<?php echo $int;?>"><?php echo $short; ?></button></div>
@@ -188,7 +188,7 @@
                                     <div class="main-content-row left-agenda custom<?php echo $int; ?>">
 
                                         <div class="col-xs-12 col-sm-4 col-sm-push-6">
-                                            <div class="time">
+                                            <div class="time js-fadeInElement">
                                                 <span class="start"><?php echo $start; ?></span>
                                                 <span class="period"><?php echo $period; ?></span>
                                             </div>
@@ -199,7 +199,7 @@
                                         </div>
 
                                         <div class="col-xs-12 col-sm-offset-1 col-sm-4 col-sm-pull-5 ">
-                                            <div class="session">
+                                            <div class="session js-fadeInElement">
                                                 <div class="title"><button type="button" data-toggle="modal" data-target="#modal<?php echo $int;?>"><?php echo $title; ?></button></div>
                                                 <div class="short"><button type="button" data-toggle="modal" data-target="#modal<?php echo $int;?>"><?php echo $short; ?></button></div>
                                             </div>

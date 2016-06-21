@@ -238,7 +238,9 @@
   height: 110px;
   padding-top:30px;
   & > .container {
-    width: 100% !important;
+    width: 98% !important;
+    max-width: 1165px;
+    padding: 0 2%;
   }
 
   .collapse {

@@ -1,7 +1,7 @@
 
 <!-- .main removed from base template  -->
 
-<main class="main">
+<main id="main" class="main">
 
     <?php if( have_rows('exhibitors_row_layout') ):
 

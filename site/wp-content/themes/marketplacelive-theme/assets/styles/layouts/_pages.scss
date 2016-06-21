@@ -415,6 +415,19 @@ blockquote {
     list-style: square outside url('../images/bullet.png');
   }
 }
+// Agenda
+.fade-in-element {
+
+}
+
+.js-fade-element-hide {
+  opacity: 0;
+}
+
+.js-fade-element-show {
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
 
 .animated {
   animation-duration: 1s;

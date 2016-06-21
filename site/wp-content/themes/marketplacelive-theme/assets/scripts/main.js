@@ -32,6 +32,9 @@
               });
           });
 
+
+
+
           // Parallax effect at hover
 
           $(".parallax").mousemove(
@@ -124,10 +127,41 @@
               });
 
               // animate elements on load
+              // $(document).ready(function() {
+              //     $('.time').addClass('animated fadeInLeft');
+              //     $('.session').addClass('animated fadeInLeft');
+              // });
+
+              // Fade in when element is displayed on page
               $(document).ready(function() {
-                  $('.time').addClass('animated fadeInLeft');
-                  $('.session').addClass('animated fadeInLeft');
+                  var element = document.getElementsByClassName("js-fadeInElement");
+                  var $window = $(window);
+
+                  $(element).addClass('js-fade-element-hide animated');
+
+                  $(window).scroll(function() {
+                      if( $(".js-fadeInElement").length > 0 ) {
+                          var elementTopToPageTop = $(element).offset().top;
+                          var windowTopToPageTop = $(window).scrollTop();
+                          var windowInnerHeight = window.innerHeight;
+                          var elementTopToWindowTop = elementTopToPageTop - windowTopToPageTop;
+                          var elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop;
+                          var distanceFromBottomToAppear = 100;
+                          
+
+                          if(elementTopToWindowBottom > distanceFromBottomToAppear) {
+                              $(element).addClass('js-fade-element-show fadeInLeft animated');
+                          }
+                          else if(elementTopToWindowBottom < 0) {
+                              $(element).removeClass('js-fade-element-show fadeInLeft animated');
+                              $(element).addClass('js-fade-element-hide animated');
+                          }
+                      }
+                  });
+
               });
+
+
 
 
           } // closing function

@@ -2,8 +2,11 @@
 .vagrant
 .idea/
 
+
 # Wordpress
-#/site/.htaccess
+/site/.htaccess
+/site/wp-content/uploads/
+/site/wp-config.php
 #/site/sitemap.xml
 #/site/sitemap.xml.gz
 #/site/wp-config.php
