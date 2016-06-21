@@ -15,7 +15,7 @@
                     <div class="page-header">
                         <?php use Roots\Sage\Titles; ?>
                         <div class="title"><?= Titles\title(); ?></div>
-                      <h1><?php the_field('hero_title'); ?></h1>
+                      <h1><?php the_field('hero_text'); ?></h1>
                     </div>
                     
                 </div>

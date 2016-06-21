@@ -74,9 +74,11 @@
     color: white;
     position: relative;
     width:255px;
+    max-width: 80%;
     height: 70px;
     top: -20px;
     right: auto;
+
 
     &:hover {
       color: white;
@@ -237,11 +239,17 @@
 .navbar {
   height: 110px;
   padding-top:30px;
-  & > .container {
-    width: 98% !important;
-    max-width: 1165px;
-    padding: 0 2%;
+  &> .container {
+    width: 100%;
+    // fixes positioning probs with navbar-brand
+    &>.header-wrap {
+      width: 98%;
+      max-width: 1165px;
+      padding: 0 2%;
+      margin: 0 auto;
+    }
   }
+
 
   .collapse {
     //float: right; // float makes text push out of the way
@@ -498,6 +506,7 @@
       top: 3px;
       .navbar-brand {
         right: -9%;
+
       }
     }
     .top-content {
